@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<p>
+  A web-based portfolio of randomized generative art examples alongside exposed interface variables that provide the user with the means to experiment with and manipulate the state of each example. Through interacting with each piece the user will more-fully appreciate and understand the process of making computer-aided generative art, and enjoy creating something uniquely their own.<br>
+</p>
+
+<p>
+  Each example below is a P5JS Processing sketch running within a canvas DOM element in the browser. Try clicking on an example to view it's sketch page.
+</p>
+
+
+<div class="home">
+
+    <div class="row">
+
+        {% assign projects = site.projects | sort: 'title' %}
+        {% for project in projects %}
+          <div class="col-lg-4 col-md-4 col-sm-6">
+              <a href="{{ project.url | relative_url }}">
+                  <div class="img__wrap">
+                  {%if project.thumbnail %}
+                    <img class="img__img" src="{{site.baseurl}}/{{ project.url | replace: "/", " " | truncatewords: 2, "" | replace: " ", "/" }}/{{ project.thumbnail }}"></img>
+                  {% else %}
+                    <img class="img__img" src="{{ "assets/default_thumbnail.png" | relative_url }}"></img>
+                  {% endif %}
+                    <div class="img__description_layer">
+                        <p class="img__description">{{ project.title }}</p>
+                    </div>
+                </div>
+              </a>
+        </div>
+        {% endfor %}
+    </div>
+
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+
+</div>
+
+<p>
+  Leveraging simplified physics, Perlin noise values, interactive experimentation, and generative discovery, each sketch is a unique artistic presentation being rendered in real-time.
+</p>
+
+<a href="/resources"> View Project Resources Here </a>
