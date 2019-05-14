@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2D Ray Casting"
-date:   2019-05-06
+<!-- date:   2019-05-07 -->
 thumbnail: thumbnail.png
 dependencies:
     - p5

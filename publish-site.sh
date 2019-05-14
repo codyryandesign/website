@@ -13,7 +13,7 @@ sudo rm -rf /var/www/html/*
 exit
 EOT
 echo "Copy site files to server"
-sudo scp -rp -i "DrakeCS178keypair.pem" /Users/cody/Documents/Comp-Sci/WorkSpace/jekyll-p5-site/_site/*  ec2-user@ec2-3-86-197-52.compute-1.amazonaws.com:
+sudo scp -rp -i "DrakeCS178keypair.pem" /Users/cody/Documents/Comp-Sci/WorkSpace/codyryandesign/_site/*  ec2-user@ec2-3-86-197-52.compute-1.amazonaws.com:
 ssh -tt -i "DrakeCS178keypair.pem" ec2-user@ec2-3-86-197-52.compute-1.amazonaws.com <<EOT
 sudo mv * /var/www/html
 exit

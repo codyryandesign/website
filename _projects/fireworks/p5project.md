@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fireworks!"
-date:   2019-05-06
+<!-- date:   2019-05-06 -->
 thumbnail: thumbnail.png
 dependencies:
     - p5

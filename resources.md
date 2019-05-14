@@ -35,7 +35,7 @@ A robust assortment of graphical rendering tools made with artists and creative 
 
   ![Static Site Generation](/assets/static_site_generation.png)
 
-    - Jekyll employs the following tools:
+    - ### Jekyll Toolset
 
       - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 

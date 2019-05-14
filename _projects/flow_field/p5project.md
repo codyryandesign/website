@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Flow Field"
-date:   2019-05-06
+<!-- date:   2019-05-06 -->
 thumbnail: thumbnail.png
 dependencies:
     - p5
