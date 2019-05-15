@@ -79,17 +79,155 @@ The graphical presentation and user input operations of this application will be
     - [Flowfield](/projects/flow_field/p5project.html): Swarms of particles are propelled across a field of vector forces.
     - [Perlin Noise Blob](/projects/the_blob/p5project.html): An oozing blob is drawn using Perlin noise coordinates.
     - [Lissajous Curve Table](/projects/lissajous_curve_table/p5project.html): A visualization of harmonic-resonance.
-- [Website Hosting Services](#website-hosting-services):
-  - [AWS](#aws): Amazon web services are used to host this site utilizing:
-    - [S3 Linux environment](#s3-linux-environment): Virtualization of a Linux environment on an S3 machine.
-    - [Apache Web server](#apache-web-server): An open-source HTTP web-server.
-- [Version Control](#version-control):
-  - [GitHub](#github): Github is used to maintain version control of the project.
+  - [Website Hosting Services](#website-hosting-services):
+    - [AWS](#aws): Amazon web services are used to host this site utilizing:
+      - [S3 Linux environment](#s3-linux-environment): Virtualization of a Linux environment on an S3 machine.
+      - [Apache Web server](#apache-web-server): An open-source HTTP web-server.
+      - [Version Control](#version-control):
+        - [GitHub](#github): Github is used to maintain version control of the project.
 - [Resources and References](/resources): A listing of all resources, sources, and inspiration utilized in the production of this website.
+
+## Definitions and Terminology:
+
+## Frequently Asked Questions:
 
 ## System Overview:
 
-This project is a full-stack development, utilizing a cloud-hosted linux environment on [AWS S3](https://aws.amazon.com/s3/), an [Apache](https://httpd.apache.org/) web server, a static-site generator, [Jekyll](https://jekyllrb.com/), and sketch renderings built in The [Processing Foundation's](https://processing.org/) [P5JS](https://p5js.org/) with additional features added through community [library extensions](https://p5js.org/libraries/).  
-
+This project is a full-stack development, utilizing a cloud-hosted linux environment on [AWS S3](https://aws.amazon.com/s3/), an [Apache](https://httpd.apache.org/) web server, version-control through [GitHub](https://github.com/codyryandesign/website), a static-site generator, [Jekyll](https://jekyllrb.com/), and sketch renderings built in The [Processing Foundation's](https://processing.org/) [P5JS](https://p5js.org/) with additional features added through community [library extensions](https://p5js.org/libraries/).  
 
 This project utilizes a number of libraries and toolsets across multiple languages. A complete list of resources used for this project can be found [here](/resources/).
+
+- ### Static Site Generation:
+  - #### What Is A Static Site?  
+A static site is one or more HTML documents stored on a server and delivered to the User when they visit the website. Static site documents are presented to the User in a mostly unaltered format from how they are stored within the server. Because static-site files do not need to be created or changed on the fly, static-sites often load faster and react more quickly to User navigation needs.
+  - #### What Is A Dynamic Site?  
+A dynamic site is in many ways the opposite of a static site. Instead of delivering content to the User as it is stored on the server, content in generated, based on User needs and interactions, by a server-side scripting language (like [PHP](https://php.net/)).
+  - #### Static v Dynamic Sites  
+  For more information on how static and dynamic sites differ, check out [this handy presentation](http://nilclass.com/courses/what-is-a-static-website/#1) by Nilclass outlining the key differences between the two implementations.
+    - Take-aways:
+      - Static Sites Are:
+        - Flexible
+        - Cheap
+        - Very efficient
+        - Incredibly fast
+        - Best-fit for content that rarely changes over time
+        - Easily transferrable between hosting services
+        - More Secure
+      - Dynamic Sites Are:
+        - Pages are created through run-time server-side scripting
+        - Can utilize popular and familiar web-tools, like Wordpress.
+        - Slower compared to static sites
+
+  - #### What Is A Static-Site Generator?
+One of the biggest complaints when it comes to managing a static site is page-management and updates. In earlier implementations of static sites, before dynamic sites were around, there was constant maintenance and updating of static website pages when changes were required. If you wanted to make the same change to every page on your site, you would have to manually edit the HTML of each page.  
+In order to address this issue, many tools have been created that allow for many static site pages to be generated quickly and easily through a templating process. The output from a static-site generator is ultimately just static HTML files and assets, and can easily be transferred to a host service. For this website, I decided to use a Ruby-based SSG called Jekyll to quickly build site assets from a minimal code-base.
+    - Jekyll, A Static-Site Generator
+      - Jekyll's Toolset:
+        - HTML5
+        : The most-recent implementation of the [Hyper-text Markup Language](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) standard for communicating between computers on the internet.
+        - CSS
+        : A [declarative styling language](https://developer.mozilla.org/en-US/docs/Web/CSS) for specifying how HTML content should be rendered on the page.
+        - SCSS
+        : Sometimes referred to as [SASS](https://sass-lang.com/documentation/syntax), SCSS extends the capabilities of CSS.
+        - Liquid
+        : A Ruby-native [templating language](https://shopify.github.io/liquid/) created by Shopify and used as part of Jekyll's theming tool-set.
+        - Markdown
+        : A lightweight [HTML markup language](https://daringfireball.net/projects/markdown/basics) that uses plain text conversion to make the process of writing for the web easier. The entirety of this website overview is written in Markdown and converted to HTML on build.
+        - kramdown
+        : A [Markdown converter](https://kramdown.gettalong.org/quickref.html#tables) written in Ruby.
+        - FrontMatter
+        : A [meta-data parser](https://www.npmjs.com/package/front-matter) for page-specific variables that stores data in a YAML or JSON format. Jekyll uses Frontmatter to detect what content for a page should be displayed, how pages might be ordered in a list, and how the layout of a page should be formatted, among other potential uses.
+        - Rogue
+        : A quick and simple [sytax-highlighting](http://rouge.jneen.net/) tool for embedded code snippets displayed on web pages.
+
+          It can take something like this:  
+          ```
+          <div id="sketch-holder">
+            <script type="text/javascript" src="sketch/sketch.js"></script>
+          </div>
+          ```
+            and transform it into this:
+
+            ``` html
+            <div id="sketch-holder">
+              <script type="text/javascript" src="sketch/sketch.js"></script>
+            </div>
+            ```
+        - minima Theme
+        : The [base theme](https://github.com/jekyll/minima) assets for building Jekyll's default site. This site utilizes an extension of the minima theme by [Benjamin Habert](https://github.com/BenjaminHabert/jekyll-p5-portfolio) to include support for P5JS sketches.
+
+      - Jekyll's File Structure:
+        -  \_config.yml
+        : Settings and configuration preferences for site-wide setup.
+        - \_layouts  
+        : This folder contains a template for specifying the layout of the gallery page.   
+        - \_includes  
+        : This folder contains additional layout snippets used for repeating implementations of page headers, footers, gallery image positioning, and included dependencies.
+        - #### \_data  
+        : This folder contains the list of dependencies any sketch can utilize as needed. This is especially useful for multiple sketches that utilize the same dependencies.  
+        - \_projects  
+        : Each sub-folder within the projects folder contains a P5JS sketch, it's associated .js helper files, and a Markdown document that builds to HTML. See the [P5JS Project File Structure](#p5js-project-file-structure) section for more details.
+        - \_site  
+        : When Jekyll builds the site, this folder is populated with all the static files needed to implement the static site. This folder can then be uploaded to a web host and deployed.
+        - Site Pages  
+        The individual sections of the site.
+          - gallery.md:  
+          A basic home page for selecting from available sketches.
+          - introduction.md:  
+          A page dedicated to introducing and explaining the functionalities and goals of this project. You are currently viewing this page.
+          - resources.md:  
+          A page listing all relevant resources, references, and inspiration utilized in the creation of this website project.
+        - assets:  
+        This folder contains default assets and the SCSS styling for the minima theme.
+        - Gemfile:  
+        A Ruby file containing a list of gems needed for the project to execute properly.
+        - gemfile.lock:  
+        A container for housing all gems specified in the Gemfile.
+- ### Processing P5JS:
+
+  - #### P5JS Project File Structure:
+    - #### [p5.js](https://p5js.org/)
+    A Javascript library, based off the original Java library [Processing](http://processing.org/), made for artists, designers and creative coders with a robust toolset for drawing in 2D and 3D on the web.
+    - #### [p5.dom](https://p5js.org/reference/#/libraries/p5.dom)
+    A library extension for P5JS that allows for easy DOM element manipulation through the browser.
+    - #### sketch.js
+    The main file for executing sketch processes.
+    - #### [quicksettings.js](https://github.com/bit101/quicksettings)
+
+    - #### [p5.gui](https://github.com/bitcraftlab/p5.gui)
+    A P5JS-compatible library extension of quicksettings that allows for quick, clean GUI panel generation from minimal code. 
+    - Example Custom Classes:
+      - Particle.js
+      :
+      - Boundary.js
+      :
+- ### Sketch Gallery
+
+  - #### Sketch Layout and Controls:
+    - Sketch Title:
+    - Sketch Description:
+    - Interactivity Options:
+      - GUI Controls:
+
+        - Toggling GUI Visibility:
+
+        - Moving GUI Panels Within Window:
+
+        - Collapsing GUI Panels:
+
+        - Manipulating Sketch Variables:
+
+    - The Canvas Window:  
+
+      - Mouse Interactions With The Canvas:
+
+      - Reloading Randomized Conditions:
+
+      - Capturing The Canvas:
+
+    - Sketch Manipulation Suggestions:  
+    ##### Sketch-specific suggestions on how to manipulate GUI variables and interact with the canvas. These suggestions merely guide the viewer towards particular experiences with the sketch, and are only a fraction of possible sketch alterations.
+
+|[return to top of page](#)|
+|:------------------------:|
+| [view project resources](/resources) |

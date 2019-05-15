@@ -85,4 +85,14 @@ A gathering of particle objects traverse the canvas. They are propelled by vecto
 
 This flow field system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html).
 
+### Here are a few examples of stills created through this generator:
+
+![Flow_Field_1](flow_field_captures/Flow_Fields-resized.png)  
+![Flow_Field_2](flow_field_captures/Flow_Fields2-resized.png)  
+![Flow_Field_3](flow_field_captures/Flow_Fields3-resized.png)  
+![Flow_Field_4](flow_field_captures/Flow_Fields4-resized.png)  
+![Flow_Field_5](flow_field_captures/Flow_Fields5-resized.png)  
+![Flow_Field_6](flow_field_captures/Flow_Fields6-resized.png)  
+![Flow_Field_7](flow_field_captures/Flow_Fields7-resized.png)
+
 Project Resources can be found [here](/resources).

@@ -45,5 +45,5 @@ collections:
 #   - vendor/ruby/
 
 exclude:
-  - publish-jekyll.sh
+  - publish-site.sh
   - _ignore/

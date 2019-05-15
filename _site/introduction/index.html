@@ -8,7 +8,7 @@
   <meta name="description" content="A website for deploying portfolio examples of P5JS (Processing) sketches on the web!">
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="/introduction/">
+  <link rel="canonical" href="http://localhost:4000/introduction/">
   <link rel="alternate" type="application/rss+xml" title="A portfolio for CODYRYANDESIGN P5JS examples" href="/feed.xml">
   <!-- dependencies -->
   
@@ -199,31 +199,321 @@
           <li><a href="/projects/lissajous_curve_table/p5project.html">Lissajous Curve Table</a>: A visualization of harmonic-resonance.</li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li><a href="#website-hosting-services">Website Hosting Services</a>:
-    <ul>
-      <li><a href="#aws">AWS</a>: Amazon web services are used to host this site utilizing:
+      <li><a href="#website-hosting-services">Website Hosting Services</a>:
         <ul>
-          <li><a href="#s3-linux-environment">S3 Linux environment</a>: Virtualization of a Linux environment on an S3 machine.</li>
-          <li><a href="#apache-web-server">Apache Web server</a>: An open-source HTTP web-server.</li>
+          <li><a href="#aws">AWS</a>: Amazon web services are used to host this site utilizing:
+            <ul>
+              <li><a href="#s3-linux-environment">S3 Linux environment</a>: Virtualization of a Linux environment on an S3 machine.</li>
+              <li><a href="#apache-web-server">Apache Web server</a>: An open-source HTTP web-server.</li>
+              <li><a href="#version-control">Version Control</a>:
+                <ul>
+                  <li><a href="#github">GitHub</a>: Github is used to maintain version control of the project.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li><a href="#version-control">Version Control</a>:
-    <ul>
-      <li><a href="#github">GitHub</a>: Github is used to maintain version control of the project.</li>
     </ul>
   </li>
   <li><a href="/resources">Resources and References</a>: A listing of all resources, sources, and inspiration utilized in the production of this website.</li>
 </ul>
 
+<h2 id="definitions-and-terminology">Definitions and Terminology:</h2>
+
+<h2 id="frequently-asked-questions">Frequently Asked Questions:</h2>
+
 <h2 id="system-overview">System Overview:</h2>
 
-<p>This project is a full-stack development, utilizing a cloud-hosted linux environment on <a href="https://aws.amazon.com/s3/">AWS S3</a>, an <a href="https://httpd.apache.org/">Apache</a> web server, a static-site generator, <a href="https://jekyllrb.com/">Jekyll</a>, and sketch renderings built in The <a href="https://processing.org/">Processing Foundation’s</a> <a href="https://p5js.org/">P5JS</a> with additional features added through community <a href="https://p5js.org/libraries/">library extensions</a>.</p>
+<p>This project is a full-stack development, utilizing a cloud-hosted linux environment on <a href="https://aws.amazon.com/s3/">AWS S3</a>, an <a href="https://httpd.apache.org/">Apache</a> web server, version-control through <a href="https://github.com/codyryandesign/website">GitHub</a>, a static-site generator, <a href="https://jekyllrb.com/">Jekyll</a>, and sketch renderings built in The <a href="https://processing.org/">Processing Foundation’s</a> <a href="https://p5js.org/">P5JS</a> with additional features added through community <a href="https://p5js.org/libraries/">library extensions</a>.</p>
 
 <p>This project utilizes a number of libraries and toolsets across multiple languages. A complete list of resources used for this project can be found <a href="/resources/">here</a>.</p>
+
+<ul>
+  <li>
+    <h3 id="static-site-generation">Static Site Generation:</h3>
+    <ul>
+      <li>
+        <h4 id="what-is-a-static-site">What Is A Static Site?</h4>
+        <p>A static site is one or more HTML documents stored on a server and delivered to the User when they visit the website. Static site documents are presented to the User in a mostly unaltered format from how they are stored within the server. Because static-site files do not need to be created or changed on the fly, static-sites often load faster and react more quickly to User navigation needs.</p>
+      </li>
+      <li>
+        <h4 id="what-is-a-dynamic-site">What Is A Dynamic Site?</h4>
+        <p>A dynamic site is in many ways the opposite of a static site. Instead of delivering content to the User as it is stored on the server, content in generated, based on User needs and interactions, by a server-side scripting language (like <a href="https://php.net/">PHP</a>).</p>
+      </li>
+      <li>
+        <h4 id="static-v-dynamic-sites">Static v Dynamic Sites</h4>
+        <p>For more information on how static and dynamic sites differ, check out <a href="http://nilclass.com/courses/what-is-a-static-website/#1">this handy presentation</a> by Nilclass outlining the key differences between the two implementations.</p>
+        <ul>
+          <li>Take-aways:
+            <ul>
+              <li>Static Sites Are:
+                <ul>
+                  <li>Flexible</li>
+                  <li>Cheap</li>
+                  <li>Very efficient</li>
+                  <li>Incredibly fast</li>
+                  <li>Best-fit for content that rarely changes over time</li>
+                  <li>Easily transferrable between hosting services</li>
+                  <li>More Secure</li>
+                </ul>
+              </li>
+              <li>Dynamic Sites Are:
+                <ul>
+                  <li>Pages are created through run-time server-side scripting</li>
+                  <li>Can utilize popular and familiar web-tools, like Wordpress.</li>
+                  <li>Slower compared to static sites</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4 id="what-is-a-static-site-generator">What Is A Static-Site Generator?</h4>
+        <p>One of the biggest complaints when it comes to managing a static site is page-management and updates. In earlier implementations of static sites, before dynamic sites were around, there was constant maintenance and updating of static website pages when changes were required. If you wanted to make the same change to every page on your site, you would have to manually edit the HTML of each page.<br />
+In order to address this issue, many tools have been created that allow for many static site pages to be generated quickly and easily through a templating process. The output from a static-site generator is ultimately just static HTML files and assets, and can easily be transferred to a host service. For this website, I decided to use a Ruby-based SSG called Jekyll to quickly build site assets from a minimal code-base.</p>
+        <ul>
+          <li>Jekyll, A Static-Site Generator
+            <ul>
+              <li>Jekyll’s Toolset:
+                <ul>
+                  <li>
+                    <dl>
+                      <dt>HTML5</dt>
+                      <dd>The most-recent implementation of the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">Hyper-text Markup Language</a> standard for communicating between computers on the internet.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>CSS</dt>
+                      <dd>A <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">declarative styling language</a> for specifying how HTML content should be rendered on the page.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>SCSS</dt>
+                      <dd>Sometimes referred to as <a href="https://sass-lang.com/documentation/syntax">SASS</a>, SCSS extends the capabilities of CSS.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>Liquid</dt>
+                      <dd>A Ruby-native <a href="https://shopify.github.io/liquid/">templating language</a> created by Shopify and used as part of Jekyll’s theming tool-set.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>Markdown</dt>
+                      <dd>A lightweight <a href="https://daringfireball.net/projects/markdown/basics">HTML markup language</a> that uses plain text conversion to make the process of writing for the web easier. The entirety of this website overview is written in Markdown and converted to HTML on build.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>kramdown</dt>
+                      <dd>A <a href="https://kramdown.gettalong.org/quickref.html#tables">Markdown converter</a> written in Ruby.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>FrontMatter</dt>
+                      <dd>A <a href="https://www.npmjs.com/package/front-matter">meta-data parser</a> for page-specific variables that stores data in a YAML or JSON format. Jekyll uses Frontmatter to detect what content for a page should be displayed, how pages might be ordered in a list, and how the layout of a page should be formatted, among other potential uses.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>Rogue</dt>
+                      <dd>A quick and simple <a href="http://rouge.jneen.net/">sytax-highlighting</a> tool for embedded code snippets displayed on web pages.</dd>
+                    </dl>
+
+                    <p>It can take something like this:</p>
+                    <div class="highlighter-rouge"><pre class="highlight"><code>&lt;div id="sketch-holder"&gt;
+  &lt;script type="text/javascript" src="sketch/sketch.js"&gt;&lt;/script&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <p>and transform it into this:</p>
+
+                    <div class="language-html highlighter-rouge"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sketch-holder"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"sketch/sketch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</code></pre>
+                    </div>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>minima Theme</dt>
+                      <dd>The <a href="https://github.com/jekyll/minima">base theme</a> assets for building Jekyll’s default site. This site utilizes an extension of the minima theme by <a href="https://github.com/BenjaminHabert/jekyll-p5-portfolio">Benjamin Habert</a> to include support for P5JS sketches.</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </li>
+              <li>Jekyll’s File Structure:
+                <ul>
+                  <li>
+                    <dl>
+                      <dt>_config.yml</dt>
+                      <dd>Settings and configuration preferences for site-wide setup.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>_layouts</dt>
+                      <dd>This folder contains a template for specifying the layout of the gallery page.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>_includes</dt>
+                      <dd>This folder contains additional layout snippets used for repeating implementations of page headers, footers, gallery image positioning, and included dependencies.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <h4 id="_data">_data</h4>
+                    <p>: This folder contains the list of dependencies any sketch can utilize as needed. This is especially useful for multiple sketches that utilize the same dependencies.</p>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>_projects</dt>
+                      <dd>Each sub-folder within the projects folder contains a P5JS sketch, it’s associated .js helper files, and a Markdown document that builds to HTML. See the <a href="#p5js-project-file-structure">P5JS Project File Structure</a> section for more details.</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>_site</dt>
+                      <dd>When Jekyll builds the site, this folder is populated with all the static files needed to implement the static site. This folder can then be uploaded to a web host and deployed.</dd>
+                    </dl>
+                  </li>
+                  <li>Site Pages<br />
+The individual sections of the site.
+                    <ul>
+                      <li>gallery.md:<br />
+A basic home page for selecting from available sketches.</li>
+                      <li>introduction.md:<br />
+A page dedicated to introducing and explaining the functionalities and goals of this project. You are currently viewing this page.</li>
+                      <li>resources.md:<br />
+A page listing all relevant resources, references, and inspiration utilized in the creation of this website project.</li>
+                    </ul>
+                  </li>
+                  <li>assets:<br />
+This folder contains default assets and the SCSS styling for the minima theme.</li>
+                  <li>Gemfile:<br />
+A Ruby file containing a list of gems needed for the project to execute properly.</li>
+                  <li>gemfile.lock:<br />
+A container for housing all gems specified in the Gemfile.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="processing-p5js">Processing P5JS:</h3>
+
+    <ul>
+      <li>
+        <h4 id="p5js-project-file-structure">P5JS Project File Structure:</h4>
+        <ul>
+          <li>
+            <h4 id="p5js"><a href="https://p5js.org/">p5.js</a></h4>
+            <p>A Javascript library, based off the original Java library <a href="http://processing.org/">Processing</a>, made for artists, designers and creative coders with a robust toolset for drawing in 2D and 3D on the web.</p>
+          </li>
+          <li>
+            <h4 id="p5dom"><a href="https://p5js.org/reference/#/libraries/p5.dom">p5.dom</a></h4>
+            <p>A library extension for P5JS that allows for easy DOM element manipulation through the browser.</p>
+          </li>
+          <li>
+            <h4 id="sketchjs">sketch.js</h4>
+            <p>The main file for executing sketch processes.</p>
+          </li>
+          <li>
+            <h4 id="quicksettingsjs"><a href="https://github.com/bit101/quicksettings">quicksettings.js</a></h4>
+          </li>
+          <li>
+            <h4 id="p5gui"><a href="https://github.com/bitcraftlab/p5.gui">p5.gui</a></h4>
+            <p>A P5JS-compatible library extension of quicksettings that allows for quick, clean GUI panel generation from minimal code.</p>
+          </li>
+          <li>Example Custom Classes:
+            <ul>
+              <li>Particle.js
+:</li>
+              <li>Boundary.js
+:</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="sketch-gallery">Sketch Gallery</h3>
+
+    <ul>
+      <li>
+        <h4 id="sketch-layout-and-controls">Sketch Layout and Controls:</h4>
+        <ul>
+          <li>Sketch Title:</li>
+          <li>Sketch Description:</li>
+          <li>Interactivity Options:
+            <ul>
+              <li>
+                <p>GUI Controls:</p>
+
+                <ul>
+                  <li>
+                    <p>Toggling GUI Visibility:</p>
+                  </li>
+                  <li>
+                    <p>Moving GUI Panels Within Window:</p>
+                  </li>
+                  <li>
+                    <p>Collapsing GUI Panels:</p>
+                  </li>
+                  <li>
+                    <p>Manipulating Sketch Variables:</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>The Canvas Window:</p>
+
+            <ul>
+              <li>
+                <p>Mouse Interactions With The Canvas:</p>
+              </li>
+              <li>
+                <p>Reloading Randomized Conditions:</p>
+              </li>
+              <li>
+                <p>Capturing The Canvas:</p>
+              </li>
+            </ul>
+          </li>
+          <li>Sketch Manipulation Suggestions:
+            <h5 id="sketch-specific-suggestions-on-how-to-manipulate-gui-variables-and-interact-with-the-canvas-these-suggestions-merely-guide-the-viewer-towards-particular-experiences-with-the-sketch-and-are-only-a-fraction-of-possible-sketch-alterations">Sketch-specific suggestions on how to manipulate GUI variables and interact with the canvas. These suggestions merely guide the viewer towards particular experiences with the sketch, and are only a fraction of possible sketch alterations.</h5>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="#">return to top of page</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="/resources">view project resources</a></td>
+    </tr>
+  </tbody>
+</table>
 
   </div>
 

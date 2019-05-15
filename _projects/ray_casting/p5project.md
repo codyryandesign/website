@@ -16,12 +16,6 @@ dependencies:
 
 ##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
 
-<!-- {%highlight html %}
-<div id="sketch-holder">
-  <script type="text/javascript" src="sketch/sketch.js"></script>
-</div>
-{% endhighlight %} -->
-
 <div id="sketch-holder">
     <script type="text/javascript" src="sketch/sketch.js"></script>
     <script type="text/javascript" src="sketch/boundary.js"></script>
@@ -73,3 +67,10 @@ This 2D ray cast system is [based on an example by The Coding Train](https://www
 Another excellent tutorial on ray casting [by Red Blob Games is available here](https://www.redblobgames.com/articles/visibility/).
 
 A third tutorial on ray casting [by ncase is available here](https://ncase.me/sight-and-light/).
+
+### Here are a few examples of stills created through this generator:
+
+![Ray_Casting_1](ray_casting_captures/Ray_Casting-resized.png)  
+![Ray_Casting_2](ray_casting_captures/Ray_Casting2-resized.png)
+![Ray_Casting_3](ray_casting_captures/Ray_Casting3-resized.png)
+![Ray_Casting_4](ray_casting_captures/Ray_Casting4-resized.png)
