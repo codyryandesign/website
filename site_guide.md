@@ -40,22 +40,12 @@ In addition to the challenge of incorporating interactive javascript content int
     - Static v Dynamic Sites
     : ##### A comparison of static and dynamic websites.
     - What Is a Static Site Generator?
-      - [Jekyll](#jekyll), a static-site generator.
-        - [Jekyll Tool-Set](#jekyll-tool-set): A full list of Jekyll's tools can be found in the [resource section](/resources/#jekyll-toolset).
-        - [Jekyll File Structure](#jekyll-file-structure): An explanation of Jekyll's file organization.
-          - [\_config.yml](#_configyml)
-          - [\_layouts](#_layouts)
-          - [\_includes](#_includes)
-          - [\_data](#_data)
-          - [\_projects](#_projects)
-          - [Site Pages](#site-pages)
-            - [gallery.md](#gallerymd)
-            - [introduction.md](#introductionmd)
-            - [resources.md](#resourcesmd)
-          - [\_site](#_site)
-          - [assets](#assets)
-          - [Gemfile](#gemfile)
-          - [gemfile.lock](#gemfilelock)
+      - [Jekyll](#jekyll)
+      ##### A static-site generator.
+        - [Jekyll's Tool-Set](#jekyll-tool-set)
+        ##### A full list of Jekyll's tools.
+        - [Jekyll's File Structure](#jekyll-file-structure)
+        ##### An explanation of Jekyll's file organization.
   - [Processing's P5JS](#processings-p5js)
   ##### An explanation of a typical P5JS project's file structure.
     - [p5.js](#p5js)
@@ -113,7 +103,7 @@ This project utilizes a number of libraries and toolsets across multiple languag
   - #### What Is A Dynamic Site?  
 ##### A dynamic site is, in many ways, the opposite of a static site. Instead of delivering content to the User as it is stored on the server, content in generated, based on User needs and interactions, by a server-side scripting language (like [PHP](https://php.net/)) in real-time.
   - #### Static v Dynamic Sites  
-  ##### For more information on how static and dynamic sites differ, check out [this handy presentation](http://nilclass.com/courses/what-is-a-static-website/#1) by Nilclass outlining the key differences between the two implementations.
+  ##### For more information on how static and dynamic sites differ, check out [this handy presentation](http://nilclass.com/courses/what-is-a-static-website/#1) by Nilclass.com outlining the key differences between the two implementations.
     - Take-aways:
       - Static Sites Are:
         - ##### Flexible
@@ -132,8 +122,7 @@ This project utilizes a number of libraries and toolsets across multiple languag
   - #### What Is A Static Site Generator?
 One of the biggest complaints when it comes to managing a static site is page-management and updates. In earlier implementations of static sites, before dynamic sites were around, there was constant maintenance and updating of static website pages when changes were required. If you wanted to make the same change to every page on your site, you would have to manually edit the HTML of each page.  
 In order to address this issue, many tools have been created that allow for many static site pages to be generated quickly and easily through a templating process. The output from a static-site generator is ultimately just static HTML files and assets, and can easily be transferred to a host service. For this website, I decided to use a Ruby-based SSG called Jekyll to quickly build site assets from a minimal code-base.
-    - #### __Still not sure what a static site generator is?__ Check out [this handy presentation](http://nilclass.com/courses/what-is-a-static-website/) describing the key differences between dynamic and static sites.
-    - [Jekyll: A Static-Site Generator]()
+    - #### Jekyll
       - Jekyll's Toolset:
         - HTML5
         : ##### The most-recent implementation of the [Hyper-text Markup Language](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) standard for communicating between computers on the internet.
