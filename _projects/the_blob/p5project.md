@@ -9,11 +9,13 @@ dependencies:
     - quicksettings
     - p5.gui
 ---
+### This sketch example is in-progress and not all features have yet been implemented. 
 
+##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
 
-Below is an example sketch based off The Coding Train's 2D Perlin noise tutorial.
+##### Take a snapshot of the canvas at any time by pressing ***'p'***.
 
-Try pressing 's' on your keyboard to bring up sketch manipulation options.
+##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
 
 <!-- {%highlight html %}
 <div id="sketch-holder">

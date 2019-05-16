@@ -1,6 +1,12 @@
+//Fireworks!
+
+//Create a gloabl fireworks var
+//for holding all active fireworks
 var fireworks = [];
 
-//GUI vars
+//Declare global GUI vars
+//These vars can be referenced
+//anywhere in the sketch
 var backgroundC = '#090017';
 var backgroundA = 0.06;
 var backgroundAMin = 0;
@@ -47,21 +53,26 @@ var particleVelocityMin = 0;
 var particleVelocityMax = 2;
 var particleVelocityStep = .01;
 
-var zoom = 1.0;
-var zoomMin = 1.0;
-var zoomMax = 10;
-var zoomStep = 1;
-
+//Create the gui panel
 var gui;
+//and toggle it's visibility
 var visible = true;
 
+//The setup function is only run once
 function setup() {
+  //Create a canvas object whose
+  //dimensions are based off the browser
+  //window size
   canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
   canvas.parent('sketch-holder');
   // colorMode(HSB, 360, 100, 100, 1)
+  //Draw all colors using
+  //Hue, Saturation, Brightness, and Alpha
   colorMode(HSB);
 
+  //Title the GUI panel
   gui = createGui('HSV GUI');
+  //and add in all global GUI vars
   gui.addGlobals(
     'backgroundC',
     'backgroundA',
@@ -72,42 +83,62 @@ function setup() {
     'particleDecay',
     'gravityAmount',
     'windAmount',
-    'particleVelocity',
-    'zoom');
+    'particleVelocity');
+  //Initially hide the GUI from view
   gui.hide();
-  // stroke(255);
-  // strokeWeight(4);
 }
 
+//The draw loop attempts to execute
+//60 frames every second
 function draw() {
-  scale(zoom);
+  //Create a gravitational force
+  //vector based off the gravityAmount
   gravity = createVector(0, gravityAmount);
+  //Create a gravitational force
+  //vector based off the windAmount
   wind = createVector(windAmount, 0);
+  //Take in background color-picker
+  //value as a color
   bColor = color(backgroundC)
+  //Render the background according to the
+  //hue, saturation, brightness of bColor
+  //Also assign alpha based off backgroundA
   background(hue(bColor), saturation(bColor), brightness(bColor), backgroundA);
+  //Change probability of a new rocket being
+  //spawned based off rocketChance value
   if(random(1) < rocketSpawnChance) {
+    //Push the new rocket object into the
+    //rockets array
     fireworks.push(new Firework());
   }
-
+  //Working backwards through the rockets array
   for(var i = fireworks.length - 1; i >= 0; i--) {
+    //update every rocket's properties
     fireworks[i].update();
+    //and show it on the screen
     fireworks[i].show();
+    //When a rocket has finished activities
     if(fireworks[i].done)
+      //Remove it from the rockets array
       fireworks.splice(i, 1);
-      //console.log("'spliced'")
   }
-
+  //Listen for user key presses
   detectKeyPress();
 
 }
 
+//Handle user key presses
 function detectKeyPress() {
+  //If the user presses the 'p' key
   if(key == 'p') {
+    //Take a snapshot of the canvas
     save('fireworks.png');
     //nullify key value to prevent multiple downloads on subsequent loops
     key = null;
   }
+    //If the user presses the 's' key
   if(key == 's') {
+    //Toggle the visibility of GUI panel(s)
     if(visible) {
       gui.show();
     }
@@ -115,6 +146,7 @@ function detectKeyPress() {
       gui.hide();
     }
     visible = !visible;
+    //nullify key value to prevent multiple downloads on subsequent loops
     key = null;
   }
 }

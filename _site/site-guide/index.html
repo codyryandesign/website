@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Site Guide</title>
+  <meta name="description" content="A website for deploying portfolio examples of P5JS (Processing) sketches on the web!">
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/site-guide/">
+  <link rel="alternate" type="application/rss+xml" title="A portfolio for CODYRYANDESIGN P5JS examples" href="/feed.xml">
+  <!-- dependencies -->
+  
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" />
+    
+
+    
+
+
+  <!-- dev-dependencies -->
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    
+
+
+  
+  <!-- custom page dependencies -->
+  
+  <!-- google analytics -->
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">A portfolio for CODYRYANDESIGN P5JS examples</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Sketch Gallery</a><a class="page-link" href="/resources/">Project Resources</a><a class="page-link" href="/site-guide/">Site Guide</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Site Guide</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="hello-and-thank-you-for-visiting-codyryandesigns-website-portfolio-for-showcasing-interactive-graphical-sketches-written-in-p5js-on-the-web-below-is-a-guide-detailing-the-contents-of-this-website-and-how-to-interact-with-it-future-expansions-to-this-project-will-feature-addition-sketches-broader-theme-integration-and-addition-details-on-the-vector-based-physics-system-for-now-enjoy-the-site">Hello and thank you for visiting CODYRYANDESIGN’s website portfolio for showcasing interactive graphical sketches, written in P5JS, on the web! Below is a guide detailing the contents of this website and how to interact with it. Future expansions to this project will feature addition sketches, broader theme integration, and addition details on the vector-based physics system. For now, enjoy the site!</h1>
+
+<p><img src="/assets/ray_casting.png" alt="Ray_Casting" /></p>
+
+<h2 id="introduction-to-this-site">Introduction To This Site</h2>
+
+<p>A web-based portfolio of randomized generative art examples alongside exposed interface variables that provide the user with the means to experiment with and manipulate the state of each example. Through interacting with each piece the user will more-fully appreciate and understand the process of making computer-aided generative art, and enjoy creating something uniquely their own.</p>
+
+<p>Though only an initial attempt, the goal of this site is to provide anyone with access to a modern internet browser the means to interact with, observe, and record their experiences with complex behavioral systems, such as flow fields, generative art, and vector mathematics, within a responsive graphical environment.</p>
+
+<p>The graphical presentation and user input operations of this application will be updated and displayed in real-time to provide the user a greater sense of control and feedback from the program than one would attain from static images or diagrams describing these types of systems. In essence, this application is a real-time learning and testing playground for the user.</p>
+
+<p>In addition to the challenge of incorporating interactive javascript content into a browser interface, this project was also my introduction into static-site generation and front-end toolsets which allow me to present this content in a clean and organized manner.</p>
+
+<h2 id="site-guide-content-listing">Site-Guide Content Listing</h2>
+
+<ul>
+  <li><a href="/site-guide">Welcome</a></li>
+  <li><a href="#introduction-to-this-site">Introduction To This Site</a></li>
+  <li><a href="#site-overview">Site Overview</a></li>
+  <li>
+    <h4 id="site-navigation"><a href="#site-navigation">Site Navigation</a></h4>
+    <ul>
+      <li>
+        <h5 id="access-any-page-on-this-site-through-the-navigation-bar-at-the-top-of-the-screen-or-choose-from-the-selection-below"><a href="/site-guide">Access any page on this site through the navigation bar at the top of the screen, or choose from the selection below:</a></h5>
+      </li>
+      <li>
+        <dl>
+          <dt><a href="/">Sketch Gallery</a></dt>
+          <dd>
+            <h5 id="sketch-gallery-choose-from-a-selection-of-sketches-to-view-and-interact-with">Sketch Gallery: Choose from a selection of sketches to view and interact with.</h5>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><a href="/site-guide">Site Guide</a></dt>
+          <dd>
+            <h5 id="an-overview-of-the-contents-of-this-site-and-the-tools-required-to-implement-it-you-are-currently-here">An overview of the contents of this site, and the tools required to implement it. You are currently here.</h5>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><a href="/resources">Resources</a></dt>
+          <dd>
+            <h5 id="additional-commentary-on-references-and-inspiration">Additional commentary on references and inspiration.</h5>
+          </dd>
+        </dl>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#system-overview">System Overview</a>: An overview of the system’s organization and file structures.
+    <ul>
+      <li><a href="#static-site-generation">Static Site Generation</a>
+        <ul>
+          <li>
+            <dl>
+              <dt>What Is A Static Site?</dt>
+              <dd>
+                <h5 id="a-brief-overview-of-a-static-site">A brief overview of a static site.</h5>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>What Is A Dynamic Site?</dt>
+              <dd>
+                <h5 id="a-brief-overview-of-a-dynamic-site">A brief overview of a dynamic site.</h5>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Static v Dynamic Sites</dt>
+              <dd>
+                <h5 id="a-comparison-of-static-and-dynamic-websites">A comparison of static and dynamic websites.</h5>
+              </dd>
+            </dl>
+          </li>
+          <li>What Is a Static Site Generator?
+            <ul>
+              <li><a href="#jekyll">Jekyll</a>, a static-site generator.
+                <ul>
+                  <li><a href="#jekyll-tool-set">Jekyll Tool-Set</a>: A full list of Jekyll’s tools can be found in the <a href="/resources/#jekyll-toolset">resource section</a>.</li>
+                  <li><a href="#jekyll-file-structure">Jekyll File Structure</a>: An explanation of Jekyll’s file organization.
+                    <ul>
+                      <li><a href="#_configyml">_config.yml</a></li>
+                      <li><a href="#_layouts">_layouts</a></li>
+                      <li><a href="#_includes">_includes</a></li>
+                      <li><a href="#_data">_data</a></li>
+                      <li><a href="#_projects">_projects</a></li>
+                      <li><a href="#site-pages">Site Pages</a>
+                        <ul>
+                          <li><a href="#gallerymd">gallery.md</a></li>
+                          <li><a href="#introductionmd">introduction.md</a></li>
+                          <li><a href="#resourcesmd">resources.md</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#_site">_site</a></li>
+                      <li><a href="#assets">assets</a></li>
+                      <li><a href="#gemfile">Gemfile</a></li>
+                      <li><a href="#gemfilelock">gemfile.lock</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#processings-p5js">Processing’s P5JS</a>
+        <h5 id="an-explanation-of-a-typical-p5js-projects-file-structure">An explanation of a typical P5JS project’s file structure.</h5>
+        <ul>
+          <li><a href="#p5js">p5.js</a></li>
+          <li><a href="#p5dom">p5.dom</a></li>
+          <li><a href="#quicksettingsjs">quicksettings.js</a></li>
+          <li>
+            <p><a href="#p5gui">p5.gui</a></p>
+          </li>
+          <li><a href="#sketch-files">Sketch Files</a>:
+            <ul>
+              <li><a href="#sketchjs">sketch.js</a></li>
+              <li><a href="#particlejs">particle.js</a></li>
+              <li><a href="#rocketjs">rocket.js</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#sketch-gallery">Sketch Gallery</a>: Home Page For All Sketches
+    <ul>
+      <li>Sketch Layout
+        <h5 id="a-description-of-a-typical-sketch-page-on-this-site">A description of a typical sketch page on this site.</h5>
+      </li>
+      <li>
+        <p><a href="#interactivity-options">Interactivity Options</a></p>
+
+        <ul>
+          <li>
+            <dl>
+              <dt><a href="#gui-controls">GUI Controls</a></dt>
+              <dd>
+                <h5 id="a-description-of-gui-interaction">A Description of GUI Interaction</h5>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt><a href="#the-canvas-window">The Canvas Window</a></dt>
+              <dd>
+                <h5 id="a-dom-element-that-is-embedded-into-the-html-code-and-renders-the-scene-at-60-frames-per-second">A DOM element that is embedded into the HTML code and renders the scene at 60 frames per-second.</h5>
+              </dd>
+            </dl>
+            <ul>
+              <li>
+                <dl>
+                  <dt><a href="#mouse-interaction-with-the-canvas">Mouse Interaction With The Canvas</a></dt>
+                  <dd>
+                    <h5 id="a-description-of-mouse-interaction">A Description of Mouse Interaction</h5>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt><a href="#reloading-randomized-conditions">Reloading Randomized Conditions</a></dt>
+                  <dd>
+                    <h5 id="instructions-on-resetting-the-canvas">Instructions on resetting the canvas.</h5>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt><a href="#capturing-the-canvas">Capturing The Canvas</a></dt>
+                  <dd>
+                    <h5 id="instructions-on-how-to-download-snapshots-of-canvas-renderings">Instructions on how to download snapshots of canvas renderings.</h5>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#sketch-description">Sketch Description</a>: A description of the general behavior of the sketch.</li>
+          <li><a href="#sketch-manipulation-suggestions">Sketch Manipulation Suggestions</a>: A few examples of how the sketch might be interacted with.</li>
+          <li><a href="#gui-variable-descriptions">GUI Variable Descriptions</a>: A listing of interactable sketch variables accessed from within the GUI panel.</li>
+          <li><a href="#mouse-interaction-descriptions">Mouse Interaction Descriptions</a>: A listing of interactive input through the mouse.</li>
+        </ul>
+      </li>
+      <li><a href="#sketches">Sketches</a>
+        <h5 id="a-listing-of-available-sketches">A listing of available sketches.</h5>
+      </li>
+      <li><a href="#back-end-services">Back End Services</a>
+        <h5 id="a-brief-listing-of-minimal-back-end-resources-required-for-this-project">A brief listing of minimal back-end resources required for this project.</h5>
+        <ul>
+          <li><a href="#amazon-web-services">Amazon Web Services</a>: Amazon web services are used to host this site utilizing:
+            <ul>
+              <li><a href="#s3-cloud-storage">S3 Cloud Storage</a></li>
+              <li><a href="#linux-environment">Linux Environment</a></li>
+              <li><a href="#apache-web-server">Apache Web server</a></li>
+            </ul>
+          </li>
+          <li><a href="#version-control">Version Control</a>
+            <ul>
+              <li><a href="#github">GitHub</a></li>
+              <li><a href="#github-pages-coming-soon">GitHub Pages</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/perlin_noise_blob.png" alt="Perlin Noise Blob" /></p>
+
+<h2 id="system-overview">System Overview:</h2>
+
+<p>This project is a full-stack development, utilizing a cloud-hosted linux environment on <a href="https://aws.amazon.com/s3/">AWS S3</a>, an <a href="https://httpd.apache.org/">Apache</a> web server, version-control through <a href="https://github.com/codyryandesign/website">GitHub</a>, a static-site generator, <a href="https://jekyllrb.com/">Jekyll</a>, and sketch renderings built in The <a href="https://processing.org/">Processing Foundation’s</a> <a href="https://p5js.org/">P5JS</a> with additional features added through community <a href="https://p5js.org/libraries/">library extensions</a>.</p>
+
+<p>This project utilizes a number of libraries and toolsets across multiple languages. A complete list of resources used for this project can be found <a href="/resources/">here</a>.</p>
+
+<ul>
+  <li>
+    <h3 id="static-site-generation">Static Site Generation:</h3>
+    <ul>
+      <li>
+        <h4 id="what-is-a-static-site">What Is A Static Site?</h4>
+        <h5 id="a-static-site-is-one-or-more-html-documents-stored-on-a-server-and-delivered-to-the-user-when-they-visit-the-website-static-site-documents-are-presented-to-the-user-in-a-mostly-unaltered-format-from-how-they-are-stored-within-the-server-because-static-site-files-do-not-need-to-be-created-or-changed-on-the-fly-static-sites-often-load-faster-and-react-more-quickly-to-user-navigation-needs">A static site is one or more HTML documents stored on a server and delivered to the User when they visit the website. Static site documents are presented to the User in a mostly unaltered format from how they are stored within the server. Because static-site files do not need to be created or changed on the fly, static-sites often load faster and react more quickly to User navigation needs.</h5>
+      </li>
+      <li>
+        <h4 id="what-is-a-dynamic-site">What Is A Dynamic Site?</h4>
+        <h5 id="a-dynamic-site-is-in-many-ways-the-opposite-of-a-static-site-instead-of-delivering-content-to-the-user-as-it-is-stored-on-the-server-content-in-generated-based-on-user-needs-and-interactions-by-a-server-side-scripting-language-like-php-in-real-time">A dynamic site is, in many ways, the opposite of a static site. Instead of delivering content to the User as it is stored on the server, content in generated, based on User needs and interactions, by a server-side scripting language (like <a href="https://php.net/">PHP</a>) in real-time.</h5>
+      </li>
+      <li>
+        <h4 id="static-v-dynamic-sites">Static v Dynamic Sites</h4>
+        <h5 id="for-more-information-on-how-static-and-dynamic-sites-differ-check-out-this-handy-presentation-by-nilclass-outlining-the-key-differences-between-the-two-implementations">For more information on how static and dynamic sites differ, check out <a href="http://nilclass.com/courses/what-is-a-static-website/#1">this handy presentation</a> by Nilclass outlining the key differences between the two implementations.</h5>
+        <ul>
+          <li>Take-aways:
+            <ul>
+              <li>Static Sites Are:
+                <ul>
+                  <li>
+                    <h5 id="flexible">Flexible</h5>
+                  </li>
+                  <li>
+                    <h5 id="dependable">Dependable</h5>
+                  </li>
+                  <li>
+                    <h5 id="cheap">Cheap</h5>
+                  </li>
+                  <li>
+                    <h5 id="very-efficient">Very efficient</h5>
+                  </li>
+                  <li>
+                    <h5 id="incredibly-fast">Incredibly fast</h5>
+                  </li>
+                  <li>
+                    <h5 id="best-fit-for-content-that-rarely-changes-over-time">Best-fit for content that rarely changes over time</h5>
+                  </li>
+                  <li>
+                    <h5 id="easily-transferrable-between-hosting-services">Easily transferrable between hosting services</h5>
+                  </li>
+                  <li>
+                    <h5 id="more-secure">More Secure</h5>
+                  </li>
+                </ul>
+              </li>
+              <li>Dynamic Sites Are:
+                <ul>
+                  <li>
+                    <h5 id="pages-are-created-through-run-time-server-side-scripting">Pages are created through run-time server-side scripting</h5>
+                  </li>
+                  <li>
+                    <h5 id="can-utilize-popular-and-familiar-web-tools-like-wordpress">Can utilize popular and familiar web-tools, like Wordpress.</h5>
+                  </li>
+                  <li>
+                    <h5 id="slower-to-load-and-interact-with-compared-to-static-sites">Slower to load and interact with, compared to static sites</h5>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4 id="what-is-a-static-site-generator">What Is A Static Site Generator?</h4>
+        <p>One of the biggest complaints when it comes to managing a static site is page-management and updates. In earlier implementations of static sites, before dynamic sites were around, there was constant maintenance and updating of static website pages when changes were required. If you wanted to make the same change to every page on your site, you would have to manually edit the HTML of each page.<br />
+In order to address this issue, many tools have been created that allow for many static site pages to be generated quickly and easily through a templating process. The output from a static-site generator is ultimately just static HTML files and assets, and can easily be transferred to a host service. For this website, I decided to use a Ruby-based SSG called Jekyll to quickly build site assets from a minimal code-base.</p>
+        <ul>
+          <li>
+            <h4 id="still-not-sure-what-a-static-site-generator-is-check-out-this-handy-presentation-describing-the-key-differences-between-dynamic-and-static-sites"><strong>Still not sure what a static site generator is?</strong> Check out <a href="http://nilclass.com/courses/what-is-a-static-website/">this handy presentation</a> describing the key differences between dynamic and static sites.</h4>
+          </li>
+          <li><a href="">Jekyll: A Static-Site Generator</a>
+            <ul>
+              <li>Jekyll’s Toolset:
+                <ul>
+                  <li>
+                    <dl>
+                      <dt>HTML5</dt>
+                      <dd>
+                        <h5 id="the-most-recent-implementation-of-the-hyper-text-markup-language-standard-for-communicating-between-computers-on-the-internet">The most-recent implementation of the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">Hyper-text Markup Language</a> standard for communicating between computers on the internet.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>CSS</dt>
+                      <dd>
+                        <h5 id="a-declarative-styling-language-for-specifying-how-html-content-should-be-rendered-on-the-page">A <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">declarative styling language</a> for specifying how HTML content should be rendered on the page.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>SCSS</dt>
+                      <dd>
+                        <h5 id="sometimes-referred-to-as-sass-scss-extends-the-capabilities-of-css">Sometimes referred to as <a href="https://sass-lang.com/documentation/syntax">SASS</a>, SCSS extends the capabilities of CSS.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>Liquid</dt>
+                      <dd>
+                        <h5 id="a-ruby-native-templating-language-created-by-shopify-and-used-as-part-of-jekylls-theming-tool-set">A Ruby-native <a href="https://shopify.github.io/liquid/">templating language</a> created by Shopify and used as part of Jekyll’s theming tool-set.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>Markdown</dt>
+                      <dd>
+                        <h5 id="a-lightweight-html-markup-language-that-uses-plain-text-conversion-to-make-the-process-of-writing-for-the-web-easier-the-entirety-of-this-website-overview-is-written-in-markdown-and-converted-to-html-on-build">A lightweight <a href="https://daringfireball.net/projects/markdown/basics">HTML markup language</a> that uses plain text conversion to make the process of writing for the web easier. The entirety of this website overview is written in Markdown and converted to HTML on build.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>kramdown</dt>
+                      <dd>
+                        <h5 id="a-markdown-converter-written-in-ruby">A <a href="https://kramdown.gettalong.org/quickref.html#tables">Markdown converter</a> written in Ruby.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>FrontMatter</dt>
+                      <dd>
+                        <h5 id="a-meta-data-parser-for-page-specific-variables-that-stores-data-in-a-yaml-or-json-format-jekyll-uses-frontmatter-to-detect-what-content-for-a-page-should-be-displayed-how-pages-might-be-ordered-in-a-list-and-how-the-layout-of-a-page-should-be-formatted-among-other-potential-uses">A <a href="https://www.npmjs.com/package/front-matter">meta-data parser</a> for page-specific variables that stores data in a YAML or JSON format. Jekyll uses Frontmatter to detect what content for a page should be displayed, how pages might be ordered in a list, and how the layout of a page should be formatted, among other potential uses.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>Rogue</dt>
+                      <dd>
+                        <h5 id="a-quick-and-simple-sytax-highlighting-tool-for-embedded-code-snippets-displayed-on-web-pages">A quick and simple <a href="http://rouge.jneen.net/">sytax-highlighting</a> tool for embedded code snippets displayed on web pages.</h5>
+                      </dd>
+                    </dl>
+
+                    <h5 id="it-can-take-something-like-this">It can take something like this:</h5>
+                    <div class="highlighter-rouge"><pre class="highlight"><code>&lt;div id="sketch-holder"&gt;
+  &lt;script type="text/javascript" src="sketch/sketch.js"&gt;&lt;/script&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <h5 id="and-transform-it-into-this">and transform it into this:</h5>
+
+                    <div class="language-html highlighter-rouge"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sketch-holder"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"sketch/sketch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</code></pre>
+                    </div>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>minima Theme</dt>
+                      <dd>
+                        <h5 id="the-base-theme-assets-for-building-jekylls-default-site-this-site-utilizes-an-extension-of-the-minima-theme-by-benjamin-habert-to-include-support-for-p5js-sketches">The <a href="https://github.com/jekyll/minima">base theme</a> assets for building Jekyll’s default site. This site utilizes an extension of the minima theme by <a href="https://github.com/BenjaminHabert/jekyll-p5-portfolio">Benjamin Habert</a> to include support for P5JS sketches.</h5>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </li>
+              <li>Jekyll’s File Structure:
+                <ul>
+                  <li>
+                    <h4 id="_configyml">_config.yml</h4>
+                    <h5 id="settings-and-configuration-preferences-for-site-wide-setup">Settings and configuration preferences for site-wide setup.</h5>
+                  </li>
+                  <li>
+                    <h4 id="_layouts">_layouts</h4>
+                    <h5 id="this-folder-contains-a-template-for-specifying-the-layout-of-the-gallery-page">This folder contains a template for specifying the layout of the gallery page.</h5>
+                  </li>
+                  <li>
+                    <h4 id="_includes">_includes</h4>
+                    <h5 id="this-folder-contains-additional-layout-snippets-used-for-repeating-implementations-of-page-headers-footers-gallery-image-positioning-and-included-dependencies">This folder contains additional layout snippets used for repeating implementations of page headers, footers, gallery image positioning, and included dependencies.</h5>
+                  </li>
+                  <li>
+                    <h4 id="_data">_data</h4>
+                    <h5 id="this-folder-contains-the-list-of-dependencies-any-sketch-can-utilize-as-needed-this-is-especially-useful-for-multiple-sketches-that-utilize-the-same-dependencies">This folder contains the list of dependencies any sketch can utilize as needed. This is especially useful for multiple sketches that utilize the same dependencies.</h5>
+                  </li>
+                  <li>
+                    <h4 id="_projects">_projects</h4>
+                    <h5 id="each-sub-folder-within-the-projects-folder-contains-a-p5js-sketch-its-associated-js-helper-files-and-a-markdown-document-that-builds-to-html-see-the-p5js-project-file-structure-section-for-more-details">Each sub-folder within the projects folder contains a P5JS sketch, it’s associated .js helper files, and a Markdown document that builds to HTML. See the <a href="#p5js-project-file-structure">P5JS Project File Structure</a> section for more details.</h5>
+                  </li>
+                  <li>
+                    <h4 id="site-pages">Site Pages</h4>
+                    <h5 id="the-individual-sections-of-the-site">The individual sections of the site.</h5>
+                    <ul>
+                      <li>
+                        <h4 id="gallerymd">gallery.md:</h4>
+                        <h5 id="the-home-page-of-the-site-this-is-populated-with-gallery-links-to-available-sketches-on-build">The “home” page of the site. This is populated with gallery links to available sketches on build.</h5>
+                      </li>
+                      <li>
+                        <h4 id="introductionmd">introduction.md:</h4>
+                        <h5 id="a-page-dedicated-to-introducing-and-explaining-the-functionalities-and-goals-of-this-project-you-are-currently-viewing-this-page">A page dedicated to introducing and explaining the functionalities and goals of this project. You are currently viewing this page.</h5>
+                      </li>
+                      <li>
+                        <h4 id="resourcesmd">resources.md:</h4>
+                        <h5 id="a-page-listing-all-relevant-resources-references-and-inspiration-utilized-in-the-creation-of-this-website-project">A page listing all relevant resources, references, and inspiration utilized in the creation of this website project.</h5>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 id="_site">_site</h4>
+                    <h5 id="when-jekyll-builds-the-site-this-folder-is-populated-with-all-the-static-files-needed-to-run-the-site-here-is-the-general-file-structure-of-this-folder">When Jekyll builds the site, this folder is populated with all the static files needed to run the site. Here is the general file structure of this folder</h5>
+                    <ul>
+                      <li>
+                        <dl>
+                          <dt>_site\assets</dt>
+                          <dd>
+                            <h5 id="this-folder-contains-css-styling-information-as-well-as-default-alternatives-to-page-resources">This folder contains CSS styling information, as well as default alternatives to page resources.</h5>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl>
+                          <dt>_site\introduction</dt>
+                          <dd>
+                            <h5 id="this-folder-contains-the-html-for-the-introduction-page">This folder contains the HTML for the “introduction” page.</h5>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl>
+                          <dt>_site\resources</dt>
+                          <dd>
+                            <h5 id="this-folder-contains-the-html-for-the-resources-page">This folder contains the HTML for the “resources” page.</h5>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl>
+                          <dt>_site\index.html</dt>
+                          <dd>
+                            <h5 id="the-html-for-the-home-page">The HTML for the “home” page.</h5>
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 id="assets">assets</h4>
+                    <h5 id="this-folder-contains-default-assets-and-the-scss-styling-for-the-minima-theme">This folder contains default assets and the SCSS styling for the minima theme.</h5>
+                  </li>
+                  <li>
+                    <h4 id="gemfile">Gemfile</h4>
+                    <h5 id="a-ruby-file-containing-a-list-of-gems-needed-for-the-project-to-execute-properly">A Ruby file containing a list of gems needed for the project to execute properly.</h5>
+                  </li>
+                  <li>
+                    <h4 id="gemfilelock">gemfile.lock</h4>
+                    <h5 id="a-container-for-housing-all-gems-specified-in-the-gemfile">A container for housing all gems specified in the Gemfile.</h5>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="processings-p5js">Processing’s P5JS:</h3>
+
+    <ul>
+      <li>
+        <h4 id="p5js-main-libraries-and-extensions">P5JS Main Libraries and Extensions</h4>
+        <ul>
+          <li>
+            <h4 id="p5js"><a href="https://p5js.org/">p5.js</a></h4>
+            <h5 id="a-javascript-library-based-off-the-original-java-library-processing-made-for-artists-designers-and-creative-coders-with-a-robust-toolset-for-drawing-in-2d-and-3d-on-the-web">A Javascript library, based off the original Java library <a href="http://processing.org/">Processing</a>, made for artists, designers and creative coders with a robust toolset for drawing in 2D and 3D on the web.</h5>
+          </li>
+          <li>
+            <h4 id="p5dom"><a href="https://p5js.org/reference/#/libraries/p5.dom">p5.dom</a></h4>
+            <h5 id="a-library-extension-for-p5js-that-allows-for-easy-dom-element-manipulation-through-the-browser">A library extension for P5JS that allows for easy DOM element manipulation through the browser.</h5>
+          </li>
+          <li>
+            <h4 id="quicksettingsjs"><a href="https://github.com/bit101/quicksettings">quicksettings.js</a></h4>
+            <h5 id="a-javascript-library-designed-to-make-gui-panel-creation-fast-and-easy">A JavaScript library designed to make GUI panel creation fast and easy.</h5>
+          </li>
+          <li>
+            <h4 id="p5gui"><a href="https://github.com/bitcraftlab/p5.gui">p5.gui</a></h4>
+            <h5 id="a-p5js-compatible-library-extension-of-quicksettings-that-allows-for-quick-clean-gui-panel-generation-in-a-p5js-sketch">A P5JS-compatible library extension of quicksettings that allows for quick, clean GUI panel generation in a P5JS sketch.</h5>
+          </li>
+          <li>
+            <h4 id="sketch-files">Sketch Files</h4>
+            <h5 id="the-main-file-for-executing-sketch-processes-is-sketchjs-this-is-a-custom-file-unique-to-every-sketch-below-is-an-example-of-a-simple-sketchjs-file-along-with-its-helper-classes-particlejs-and-rocketjs-this-example-borrows-from-the-fireworks-sketch">The main file for executing sketch processes is sketch.js. This is a custom file unique to every sketch. Below is an example of a simple sketch.js file, along with it’s helper classes: particle.js, and rocket.js. This example borrows from the <a href="/projects/fireworks/p5project.html">Fireworks! Sketch</a></h5>
+            <ul>
+              <li>
+                <h4 id="sketchjs">sketch.js</h4>
+                <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">//Fireworks!</span>
+
+<span class="c1">//Create a gloabl fireworks var</span>
+<span class="c1">//for holding all active fireworks</span>
+<span class="kd">var</span> <span class="nx">fireworks</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="c1">//Declare global GUI vars</span>
+<span class="c1">//These vars can be referenced</span>
+<span class="c1">//anywhere in the sketch</span>
+<span class="kd">var</span> <span class="nx">backgroundC</span> <span class="o">=</span> <span class="s1">'#090017'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">backgroundA</span> <span class="o">=</span> <span class="mf">0.06</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">backgroundAMin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">backgroundAMax</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">backgroundAStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">rocketSpawnChance</span> <span class="o">=</span> <span class="p">.</span><span class="mi">05</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">rocketSpawnChanceMin</span> <span class="o">=</span> <span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">rocketSpawnChanceMax</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">rocketSpawnChanceStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">rocketSize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">rocketSizeMin</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">rocketSizeMax</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">rocketSizeStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">particleSize</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleSizeMin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleSizeMax</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleSizeStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">explosionSize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">explosionSizeMin</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">explosionSizeMax</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">explosionSizeStep</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">particleDecay</span> <span class="o">=</span> <span class="p">.</span><span class="mi">013</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleDecayMin</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleDecayMax</span> <span class="o">=</span> <span class="p">.</span><span class="mi">03</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleDecayStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">001</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">gravityAmount</span> <span class="o">=</span> <span class="mf">0.19</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">gravityAmountMin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">gravityAmountMax</span> <span class="o">=</span> <span class="p">.</span><span class="mi">8</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">gravityAmountStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">windAmount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">windAmountMin</span> <span class="o">=</span> <span class="o">-</span><span class="p">.</span><span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">windAmountMax</span> <span class="o">=</span> <span class="p">.</span><span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">windAmountStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">001</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">particleVelocity</span> <span class="o">=</span> <span class="mf">0.85</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleVelocityMin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleVelocityMax</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">particleVelocityStep</span> <span class="o">=</span> <span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+
+<span class="c1">//Create the gui panel</span>
+<span class="kd">var</span> <span class="nx">gui</span><span class="p">;</span>
+<span class="c1">//and toggle it's visibility</span>
+<span class="kd">var</span> <span class="nx">visible</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="c1">//The setup function is only run once</span>
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//Create a canvas object whose</span>
+  <span class="c1">//dimensions are based off the browser</span>
+  <span class="c1">//window size</span>
+  <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+  <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">'sketch-holder'</span><span class="p">);</span>
+  <span class="c1">// colorMode(HSB, 360, 100, 100, 1)</span>
+  <span class="c1">//Draw all colors using</span>
+  <span class="c1">//Hue, Saturation, Brightness, and Alpha</span>
+  <span class="nx">colorMode</span><span class="p">(</span><span class="nx">HSB</span><span class="p">);</span>
+
+  <span class="c1">//Title the GUI panel</span>
+  <span class="nx">gui</span> <span class="o">=</span> <span class="nx">createGui</span><span class="p">(</span><span class="s1">'HSV GUI'</span><span class="p">);</span>
+  <span class="c1">//and add in all global GUI vars</span>
+  <span class="nx">gui</span><span class="p">.</span><span class="nx">addGlobals</span><span class="p">(</span>
+    <span class="s1">'backgroundC'</span><span class="p">,</span>
+    <span class="s1">'backgroundA'</span><span class="p">,</span>
+    <span class="s1">'rocketSpawnChance'</span><span class="p">,</span>
+    <span class="s1">'rocketSize'</span><span class="p">,</span>
+    <span class="s1">'particleSize'</span><span class="p">,</span>
+    <span class="s1">'explosionSize'</span><span class="p">,</span>
+    <span class="s1">'particleDecay'</span><span class="p">,</span>
+    <span class="s1">'gravityAmount'</span><span class="p">,</span>
+    <span class="s1">'windAmount'</span><span class="p">,</span>
+    <span class="s1">'particleVelocity'</span><span class="p">);</span>
+  <span class="c1">//Initially hide the GUI from view</span>
+  <span class="nx">gui</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">//The draw loop attempts to execute</span>
+<span class="c1">//60 frames every second</span>
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//Create a gravitational force</span>
+  <span class="c1">//vector based off the gravityAmount</span>
+  <span class="nx">gravity</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">gravityAmount</span><span class="p">);</span>
+  <span class="c1">//Create a gravitational force</span>
+  <span class="c1">//vector based off the windAmount</span>
+  <span class="nx">wind</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="nx">windAmount</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="c1">//Take in background color-picker</span>
+  <span class="c1">//value as a color</span>
+  <span class="nx">bColor</span> <span class="o">=</span> <span class="nx">color</span><span class="p">(</span><span class="nx">backgroundC</span><span class="p">)</span>
+  <span class="c1">//Render the background according to the</span>
+  <span class="c1">//hue, saturation, brightness of bColor</span>
+  <span class="c1">//Also assign alpha based off backgroundA</span>
+  <span class="nx">background</span><span class="p">(</span><span class="nx">hue</span><span class="p">(</span><span class="nx">bColor</span><span class="p">),</span> <span class="nx">saturation</span><span class="p">(</span><span class="nx">bColor</span><span class="p">),</span> <span class="nx">brightness</span><span class="p">(</span><span class="nx">bColor</span><span class="p">),</span> <span class="nx">backgroundA</span><span class="p">);</span>
+  <span class="c1">//Change probability of a new rocket being</span>
+  <span class="c1">//spawned based off rocketChance value</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">random</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nx">rocketSpawnChance</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Push the new rocket object into the</span>
+    <span class="c1">//rockets array</span>
+    <span class="nx">fireworks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">new</span> <span class="nx">Firework</span><span class="p">());</span>
+  <span class="p">}</span>
+  <span class="c1">//Working backwards through the rockets array</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">fireworks</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//update every rocket's properties</span>
+    <span class="nx">fireworks</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">update</span><span class="p">();</span>
+    <span class="c1">//and show it on the screen</span>
+    <span class="nx">fireworks</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
+    <span class="c1">//When a rocket has finished activities</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">fireworks</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">done</span><span class="p">)</span>
+      <span class="c1">//Remove it from the rockets array</span>
+      <span class="nx">fireworks</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">//Listen for user key presses</span>
+  <span class="nx">detectKeyPress</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+<span class="c1">//Handle user key presses</span>
+<span class="kd">function</span> <span class="nx">detectKeyPress</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//If the user presses the 'p' key</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">key</span> <span class="o">==</span> <span class="s1">'p'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Take a snapshot of the canvas</span>
+    <span class="nx">save</span><span class="p">(</span><span class="s1">'fireworks.png'</span><span class="p">);</span>
+    <span class="c1">//nullify key value to prevent multiple downloads on subsequent loops</span>
+    <span class="nx">key</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">}</span>
+    <span class="c1">//If the user presses the 's' key</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">key</span> <span class="o">==</span> <span class="s1">'s'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Toggle the visibility of GUI panel(s)</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">visible</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">gui</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">gui</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="nx">visible</span> <span class="o">=</span> <span class="o">!</span><span class="nx">visible</span><span class="p">;</span>
+    <span class="c1">//nullify key value to prevent multiple downloads on subsequent loops</span>
+    <span class="nx">key</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+                </div>
+              </li>
+              <li>
+                <h4 id="particlejs">particle.js</h4>
+                <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">//A simple class for creating vector-based objects</span>
+<span class="c1">//that can be influenced by other vector forces.</span>
+<span class="kd">function</span> <span class="nx">Particle</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span> <span class="nx">velocity</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">//Initialize the particle object with</span>
+<span class="c1">//an x,y position</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">pos</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">);</span>
+  <span class="c1">//and optional velocity</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">vel</span> <span class="o">=</span> <span class="nx">velocity</span> <span class="o">||</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+  <span class="c1">//Also give the object an acceleration vector</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">acc</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+  <span class="c1">//Keep track of how long the particle has existed for</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">lifespan</span><span class="p">;</span>
+  <span class="c1">//Keeps track of the size of the particle object</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">size</span><span class="p">;</span>
+
+<span class="c1">//A function for handling forces that act on the object</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">applyForce</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">force</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Pass in a vector force and</span>
+    <span class="c1">//add it to the particles acceleration</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">acc</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">force</span><span class="p">);</span>
+  <span class="p">}</span>
+
+<span class="c1">//Update particle object properties during every loop</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">update</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//Add the acceleration to the velocity</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">vel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">acc</span><span class="p">);</span>
+    <span class="c1">//Add the velocity to the object's position</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">vel</span><span class="p">);</span>
+    <span class="c1">//Reset acceleration information for the next frame</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">acc</span><span class="p">.</span><span class="nx">mult</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+                </div>
+              </li>
+              <li>
+                <h4 id="rocketjs">rocket.js</h4>
+                <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Firework</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//Inherit Particle class properties</span>
+  <span class="c1">//and initialize the particle object</span>
+  <span class="c1">//at a randomized position below the canvas</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">firework</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Particle</span><span class="p">(</span><span class="nx">random</span><span class="p">(</span><span class="nx">width</span><span class="p">),</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">20</span><span class="p">)));</span>
+  <span class="c1">//If the mouse is interacting with the sketch</span>
+  <span class="c1">//determine the rocket's color by the mouse's</span>
+  <span class="c1">//y coordinate</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">mouseIsPressed</span> <span class="p">?</span> <span class="nx">map</span><span class="p">(</span><span class="nx">mouseY</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span> <span class="p">:</span> <span class="nx">random</span><span class="p">(</span><span class="mi">360</span><span class="p">);</span>
+  <span class="c1">//Keep track of whether the rocket has</span>
+  <span class="c1">//exploded or not</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">exploded</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="c1">//The rocket is done when its children</span>
+  <span class="c1">//particles have all been removed from</span>
+  <span class="c1">//the scene</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">done</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="c1">//Create an empty particle array for holding</span>
+  <span class="c1">//explosion particles</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">particles</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="c1">//Update firework properties every frame,</span>
+  <span class="c1">//keeping track of applied vector forces,</span>
+  <span class="c1">//and explosion conditions</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">update</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">exploded</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//Only apply gravity to the rocket if</span>
+      <span class="c1">//it hasn't yet exploded</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">applyForce</span><span class="p">(</span><span class="nx">gravity</span><span class="p">);</span>
+      <span class="c1">//Update the rocket particle's</span>
+      <span class="c1">//position based on active forces</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+      <span class="c1">//When the rocket's velocity matches</span>
+      <span class="c1">//the gravitational force acting on it</span>
+      <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">vel</span><span class="p">.</span><span class="nx">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="c1">//EXPLODE!</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">explode</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">//For every child particle created</span>
+    <span class="c1">//when the rocket explodes</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//Apply gravity to the child-particle</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">applyForce</span><span class="p">(</span><span class="nx">gravity</span><span class="p">);</span>
+      <span class="c1">//Apply wind to the child-particle</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">applyForce</span><span class="p">(</span><span class="nx">wind</span><span class="p">);</span>
+      <span class="c1">//Update child-particle properties</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">update</span><span class="p">();</span>
+      <span class="c1">//If the child-particle's lifespan</span>
+      <span class="c1">//runs out</span>
+      <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">lifespan</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//Remove that child particle from the array</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">//Otherwise, decrement the child-particle's</span>
+        <span class="c1">//lifespan by a random amount of the particleDecay</span>
+        <span class="c1">//value</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">lifespan</span> <span class="o">-=</span> <span class="nx">random</span><span class="p">(</span><span class="nx">particleDecay</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//When the rocket has exploded and all</span>
+    <span class="c1">//child-particles have died</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">exploded</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="c1">//The rocket can be removed from the scene</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">done</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">//A function for generating a random amount</span>
+  <span class="c1">//of child-particles when the rocket explodes</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">explode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//Determine how many child-particles</span>
+    <span class="c1">//the rocket will have</span>
+    <span class="kd">var</span> <span class="nx">numParticles</span> <span class="o">=</span> <span class="nx">random</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
+    <span class="c1">//For every child-particle</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numParticles</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//Assign the child-particle a random</span>
+      <span class="c1">//position based off the location of</span>
+      <span class="c1">//the rocket's explosion</span>
+      <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Particle</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">p5</span><span class="p">.</span><span class="nx">Vector</span><span class="p">.</span><span class="nx">random2D</span><span class="p">());</span>
+      <span class="c1">//Give the child-particle a lifespan of 1</span>
+      <span class="nx">p</span><span class="p">.</span><span class="nx">lifespan</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="c1">//Randomly assign the size of the child-particle</span>
+      <span class="nx">p</span><span class="p">.</span><span class="nx">size</span> <span class="o">=</span> <span class="nx">random</span><span class="p">(</span><span class="nx">particleSize</span><span class="p">);</span>
+      <span class="c1">//Calculate the velocity of a child-particle</span>
+      <span class="c1">//based off the explosionSize value</span>
+      <span class="nx">p</span><span class="p">.</span><span class="nx">vel</span><span class="p">.</span><span class="nx">mult</span><span class="p">(</span><span class="nx">random</span><span class="p">(</span><span class="nx">explosionSize</span><span class="p">));</span>
+      <span class="c1">//Push the fully-built child-particle to</span>
+      <span class="c1">//the rocket's array</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//The rocket has now exploded</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">exploded</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">//Display the rocket particle</span>
+  <span class="c1">//as it soars into the sky</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">exploded</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//As long as it hasn't yet exploded</span>
+      <span class="nx">stroke</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+      <span class="nx">strokeWeight</span><span class="p">(</span><span class="nx">rocketSize</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">vel</span><span class="p">.</span><span class="nx">mag</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+      <span class="c1">//Render the rocket as a point at it's</span>
+      <span class="c1">//current position</span>
+      <span class="nx">point</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+      <span class="c1">//Otherwise, draw the child-particles instead</span>
+      <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//Add an additional fall amount to particles after they explode</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">vel</span><span class="p">.</span><span class="nx">mult</span><span class="p">(</span><span class="nx">particleVelocity</span><span class="p">);</span>
+        <span class="c1">//Color the particles based off the initial firework color, with a bit of randomness</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">color</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">firework</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+        <span class="nx">stroke</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">lifespan</span><span class="p">);</span>
+        <span class="nx">strokeWeight</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">size</span><span class="o">*</span><span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">lifespan</span><span class="p">);</span>
+        <span class="c1">//Render the child-particle as a point</span>
+        <span class="nx">point</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">particles</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="sketch-gallery">Sketch Gallery</h3>
+
+    <ul>
+      <li>
+        <h4 id="sketch-layout">Sketch Layout</h4>
+        <h5 id="each-sketch-page-on-this-site-follows-a-similar-layout-as-described-below">Each sketch page on this site follows a similar layout as described below.</h5>
+        <ul>
+          <li>
+            <dl>
+              <dt>Sketch Title</dt>
+              <dd>
+                <h5 id="the-title-of-the-sketch">The title of the sketch.</h5>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Sketch Description</dt>
+              <dd>
+                <h5 id="a-brief-introduction-to-the-general-behaviors-of-the-sketch">A brief introduction to the general behaviors of the sketch.</h5>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <h4 id="interactivity-options">Interactivity Options</h4>
+            <h5 id="this-section-guides-the-viewer-through-a-sketches-interactivity-options">This section guides the viewer through a sketches interactivity options.</h5>
+            <ul>
+              <li>
+                <h4 id="gui-controls">GUI Controls</h4>
+                <h5 id="manipulating-the-sketch-through-gui-variable-manipulation">Manipulating the sketch through GUI variable manipulation.</h5>
+
+                <ul>
+                  <li>
+                    <h4 id="toggling-gui-visibility">Toggling GUI Visibility</h4>
+                    <h5 id="gui-panel-visibility-can-be-toggled-by-pressing-the-s-key">GUI panel visibility can be toggled by pressing the <code class="highlighter-rouge">s</code> key</h5>
+                  </li>
+                  <li>
+                    <h4 id="moving-gui-panels-within-the-window">Moving GUI Panels Within The Window</h4>
+                    <h5 id="gui-panels-can-be-moved-around-the-window-by-dragging-the-title-bar-with-the-mouse">GUI panels can be moved around the window by dragging the title bar with the mouse.</h5>
+                  </li>
+                  <li>
+                    <h4 id="collapsing-gui-panels">Collapsing GUI Panels</h4>
+                    <h5 id="gui-panels-can-be-collapsed-into-a-discrete-form-by-double-clicking-the-title-of-the-panel">GUI panels can be collapsed into a discrete form by double-clicking the title of the panel.</h5>
+                  </li>
+                  <li>
+                    <h4 id="manipulating-sketch-variables">Manipulating Sketch Variables</h4>
+                    <h5 id="there-are-a-variety-of-ways-the-user-can-interact-with-a-particular-sketch-often-the-user-will-have-access-to-setting-variable-values-within-a-slider-range-enabling-or-disabling-sketch-conditions-or-changes-color-preferences-within-a-color-picker-interface">There are a variety of ways the user can interact with a particular sketch. Often, the user will have access to setting variable values within a slider range, enabling or disabling sketch conditions, or changes color preferences within a color-picker interface.</h5>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4 id="the-canvas-window">The Canvas Window</h4>
+            <h5 id="the-canvas-window-sits-in-the-center-of-the-page-and-renders-ideally-at-60-frames-per-second-it-is-the-only-part-of-the-sketch-page-that-is-interacted-with">The canvas window sits in the center of the page and renders (ideally) at 60 frames per second. It is the only part of the sketch page that is interacted with.</h5>
+
+            <ul>
+              <li>
+                <h4 id="mouse-interactions-with-the-canvas">Mouse Interactions With The Canvas</h4>
+                <h5 id="some-sketches-offer-the-option-to-influence-particle-behavior-by-clicking-or-dragging-the-mouse-within-the-canvas-window-if-the-mouse-is-outside-the-canvas-window-it-will-perform-normally-for-changing-gui-panel-values-and-navigating-the-site">Some sketches offer the option to influence particle behavior by clicking or dragging the mouse within the canvas window. If the mouse is outside the canvas window, it will perform normally for changing GUI panel values and navigating the site.</h5>
+              </li>
+              <li>
+                <h4 id="reloading-randomized-conditions">Reloading Randomized Conditions</h4>
+                <h5 id="many-of-the-sketch-environments-are-randomly-determined-when-the-sketch-is-loaded-if-you-would-like-to-randomize-the-sketch-environment-simply-reload-the-page-at-any-time-by-pressing-cmdr">Many of the sketch environments are randomly determined when the sketch is loaded. If you would like to randomize the sketch environment, simply reload the page at any time by pressing <code class="highlighter-rouge">CMD+R</code>.</h5>
+              </li>
+              <li>
+                <h4 id="capturing-the-canvas">Capturing The Canvas</h4>
+                <h5 id="still-image-screenshots-of-the-entire-canvas-window-can-be-taken-at-any-time-simply-press-p-and-a-screenshot-of-the-canvas-window-will-be-downloaded-to-your-computer">Still image screenshots of the entire canvas window can be taken at any time. Simply press <code class="highlighter-rouge">p</code> and a screenshot of the canvas window will be downloaded to your computer.</h5>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4 id="sketch-manipulation-suggestions">Sketch Manipulation Suggestions:</h4>
+            <h5 id="sketch-specific-suggestions-on-how-to-manipulate-gui-variables-and-interact-with-the-canvas-these-suggestions-merely-guide-the-viewer-towards-particular-experiences-with-the-sketch-and-are-only-a-fraction-of-possible-sketch-alterations">Sketch-specific suggestions on how to manipulate GUI variables and interact with the canvas. These suggestions merely guide the viewer towards particular experiences with the sketch, and are only a fraction of possible sketch alterations.</h5>
+          </li>
+          <li>
+            <h4 id="gui-variable-descriptions">GUI Variable Descriptions</h4>
+            <h5 id="a-listing-of-the-available-gui-controls-and-brief-descriptions-of-each-variables-effect-on-the-sketch">A listing of the available GUI controls and brief descriptions of each variables effect on the sketch.</h5>
+          </li>
+          <li>
+            <h4 id="sketches">Sketches</h4>
+            <h5 id="a-listing-of-available-sketches-identical-listing-to-the-content-links-in-the-sketch-gallery">A listing of available sketches. (Identical listing to the content-links in the <a href="/">Sketch Gallery</a>.)</h5>
+            <ul>
+              <li><a href="/projects/ray_casting/p5project.html">2D Ray-Casting</a>
+                <h5 id="a-light-and-shadow-simulation-utilizing-a-2d-ray-casting-technique">A light and shadow simulation utilizing a 2D ray-casting technique.</h5>
+              </li>
+              <li><a href="/projects/flow_field/p5project.html">Flowfield</a>
+                <h5 id="swarms-of-particles-are-propelled-across-a-field-of-vector-forces">Swarms of particles are propelled across a field of vector forces.</h5>
+              </li>
+              <li><a href="/projects/fireworks/p5project.html">Fireworks!</a>
+                <h5 id="a-simulation-of-fireworks-shooting-into-the-sky-under-the-effects-of-gravitational-and-wind-forces">A simulation of fireworks shooting into the sky under the effects of gravitational and wind forces.</h5>
+              </li>
+              <li><a href="/projects/the_blob/p5project.html">Perlin Noise Blob</a>
+                <h5 id="an-oozing-blob-is-drawn-using-perlin-noise-coordinates">An oozing blob is drawn using Perlin noise coordinates.</h5>
+              </li>
+              <li><a href="/projects/lissajous_curve_table/p5project.html">Lissajous Curve Table</a>
+                <h5 id="a-visualization-of-harmonic-resonance">A visualization of harmonic-resonance.</h5>
+              </li>
+              <li>With more to come!</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="back-end-services">Back End Services</h4>
+    <h5 id="this-project-made-use-of-a-number-of-cloud-services-including-content-hosting-on-amazon-web-services-s3-cloud-storage-working-within-a-linux-environment-running-an-apache-web-server-and-utilizing-github-for-basic-version-control">This project made use of a number of cloud services including: content hosting on Amazon Web Service’s S3 cloud storage, working within a Linux environment, running an Apache web server, and utilizing GitHub for basic version-control.</h5>
+    <ul>
+      <li>
+        <h4 id="amazon-web-services">Amazon Web Services</h4>
+        <ul>
+          <li>
+            <h4 id="s3-cloud-storage">S3 Cloud Storage</h4>
+            <h5 id="inexpensive-cloud-hosting-of-static-content-files">Inexpensive cloud hosting of static content files.</h5>
+          </li>
+          <li>
+            <h4 id="linux-environment">Linux Environment</h4>
+            <h5 id="open-source-and-widely-supported-as-the-predominant-server-side-os-platform">Open-source and widely supported as the predominant server-side OS platform.</h5>
+          </li>
+          <li>
+            <h4 id="apache-web-server">Apache Web Server</h4>
+            <h5 id="an-open-source-http-web-server">An open-source HTTP web server.</h5>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4 id="version-control">Version Control</h4>
+        <ul>
+          <li>
+            <h4 id="github">GitHub</h4>
+            <h5 id="basic-version-control">Basic version control.</h5>
+          </li>
+          <li>
+            <h4 id="github-pages-coming-soon">GitHub Pages (coming soon)</h4>
+            <h5 id="implementing-github-pages-will-allow-for-seamless-hosting-of-project-files-and-generation-of-a-live-website-on-a-single-platform">Implementing GitHub Pages will allow for seamless hosting of project files and generation of a live website on a single platform.</h5>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="#">return to top of page</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="/">view sketch gallery</a></td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">A portfolio for CODYRYANDESIGN P5JS examples</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">A portfolio for CODYRYANDESIGN P5JS examples</li><li><a class="u-email" href="mailto:codyryandesign@gmail.com">codyryandesign@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/codyryandrake"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">codyryandrake</span></a></li><li><a href="https://www.twitter.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">codyryandesign</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A website for deploying portfolio examples of P5JS (Processing) sketches on the web!
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
