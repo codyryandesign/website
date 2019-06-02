@@ -17,8 +17,8 @@ title: A portfolio for CODYRYANDESIGN P5JS examples
 email: codyryandesign@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A website for deploying portfolio examples of P5JS (Processing) sketches on the web!
-baseurl: "/website" # the subpath of your site, e.g. /blog
-url: "http://codyryandesign.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://codyryandesign.github.io/website" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: codyryandesign
 github_username: codyryandesign
 
