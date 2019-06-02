@@ -154,6 +154,7 @@ In order to address this issue, many tools have been created that allow for many
               <script type="text/javascript" src="sketch/sketch.js"></script>
             </div>
             ```
+            
         - minima Theme
         : ##### The [base theme](https://github.com/jekyll/minima) assets for building Jekyll's default site. This site utilizes an extension of the minima theme by [Benjamin Habert](https://github.com/BenjaminHabert/jekyll-p5-portfolio) to include support for P5JS sketches.
 

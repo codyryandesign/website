@@ -122,7 +122,7 @@
 					case "time":
 						json[title] = control.control.value;
 						break;
-					
+
 					case "number":
 					case "range":
 						json[title] = parseFloat(control.control.value);

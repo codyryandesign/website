@@ -16,22 +16,20 @@ class Curve {
 
   addPoint() {
     //Add a point to the draw shape 20% of the time
-    if(random(1) <= .2)
+    if(random(1) <= .5)
       this.path.push(this.current);
     //current = new PVector();
   }
 
   show() {
+    push();
     stroke(255,255,200,50);
-    strokeWeight(1);
-    //noFill();
-    //fill(0, 0, 255, 50);
     beginShape();
     for(let v of this.path) {
       vertex(v.x, v.y);
     }
     endShape();
-    strokeWeight(8);
+    pop();
     point(this.current.x, this.current.y);
     this.current = createVector();
   }

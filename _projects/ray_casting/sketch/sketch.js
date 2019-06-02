@@ -13,7 +13,7 @@ let mouseVector;
 var randomParticle;
 
 //GUI VARS
-
+var boundaryC = '#505050'
 //Background color and alpha GUI control
 var backgroundC = '#4d206e';
 var backgroundA = .083;
@@ -21,22 +21,22 @@ var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var rayC = '#d3f7ff';
-var rayS = 100;
-var raySMin = 0;
-var raySMax = 100;
-var raySStep = 1;
-var rayA = .027;
-var rayAMin = 0;
-var rayAMax = 1.0;
-var rayAStep = .001;
-//Fill color and alpha GUI control
-var fillC = '#f31a12';
-var fillA = .186;
-var fillAMin = 0;
-var fillAMax = 1.0;
-var fillAStep = .001;
-var boundaryC = '#505050'
+var rayHue = '#d3f7ff';
+
+var raySat = 100;
+var raySatMin = 0;
+var raySatMax = 100;
+var raySatStep = 1;
+
+var rayBright = 100;
+var rayBrightMin = 0;
+var rayBrightMax = 100;
+var rayBrightStep = 1;
+
+var rayAlpha = .027;
+var rayAlphaMin = 0;
+var rayAlphaMax = 1.0;
+var rayAlphaStep = .001;
 
 var numParticles = 2;
 var numParticlesMin = 1;
@@ -58,34 +58,40 @@ var angleValMin = 0;
 var angleValMax = 360;
 var angleValStep  = 1;
 
-var rayColorEnabled = false;
+var randomizeRayColors = true;
+var mouseFollowEnabled = true;
+var enablePageText = true;
 //END GUI VARS
-var gui;
+var gui1;
 var visible = true;
 
 
 function setup() {
-  canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
+  // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-holder');
   //default HSB vals: 360, 100, 100, 1
   colorMode(HSB);
   blendMode(HARD_LIGHT)
   // blendMode(LIGHTEST)
   background(0);
-  gui = createGui('Settings', 0, 0);
-	gui.addGlobals(
+  gui1 = createGui('Settings', 0, 0);
+	gui1.addGlobals(
+    'boundaryC',
 		'backgroundC',
     'backgroundA',
-		'rayC',
-    'rayS',
-    'rayA',
-    'boundaryC',
+    'randomizeRayColors',
+		'rayHue',
+    'raySat',
+    'rayBright',
+    'rayAlpha',
     'numParticles',
     'numRays',
     'rayIncrement',
-    // 'angleVal',
-    'rayColorEnabled',);
-  gui.hide();
+    'mouseFollowEnabled',
+    'enablePageText',
+);
+  gui1.hide();
 
   xoff = random(1000);
   yoff = random(1000);
@@ -116,6 +122,7 @@ function draw() {
   handleParticles();
   //monitor keys for User activity
   detectKeyPress();
+  renderPageText();
 
   let bColor = color(backgroundC);
   background(hue(bColor), saturation(bColor), brightness(bColor), backgroundA);
@@ -125,13 +132,14 @@ function draw() {
   }
 
   for(let i = 0; i < particles.length; i++) {
-    noiseVector = createVector((noise(xoff+(i*1000))*windowWidth/2), (noise(yoff+(i*1000))*windowHeight/2))
+    noiseVector = createVector((noise(xoff+(i*1000))*windowWidth), (noise(yoff+(i*1000))*windowHeight))
     particles[i].applyForce(noiseVector);
     if(mouseIsPressed &&
     mouseX < width &&
     mouseX > 0 &&
     mouseY < height &&
-    mouseY > 0) {
+    mouseY > 0 &&
+    mouseFollowEnabled) {
       noCursor();
       mouseVector = createVector(mouseX, mouseY);
       let mouseForce = mouseVector.sub(particles[randomParticle].force)
@@ -142,42 +150,11 @@ function draw() {
     }
     particles[i].look(boundaries)
     particles[i].handleRays();
+    // particles[i].getHeading();
     xoff += random(0.01);
     yoff += random(0.01);
 
   }
-
-
-
-
-
-}
-
-function windowResized() {
-  resizeCanvas(window.innerWidth/2, window.innerHeight/2);
-}
-
-function detectKeyPress() {
-  if(key == 'p') {
-    save('ray_casting.png');
-    //nullify key value to prevent multiple downloads on subsequent loops
-    key = null;
-  }
-  if(key == 's') {
-    if(visible) {
-      gui.show();
-    }
-    else {
-      gui.hide();
-    }
-    visible = !visible;
-    key = null;
-  }
-}
-
-
-function mouseIsPressedInWindow() {
-  //TODO
 }
 
 function handleParticles() {

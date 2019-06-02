@@ -8,8 +8,18 @@ dependencies:
     - p5.dom
     - quicksettings
     - p5.gui
+    - helpers
 ---
-### This sketch example is in-progress and not all features have yet been implemented. 
+
+<div id="sketch-holder">
+    <script type="text/javascript" src="sketch/sketch.js"></script>
+</div>
+
+
+<!-- Include markdown="1" to allow markdown conversion within a div element. -->
+<div id="pageText" markdown="1">
+
+### This sketch example is in-progress and not all features have yet been implemented.
 
 ##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
 
@@ -26,9 +36,6 @@ dependencies:
 </div>
 {% endhighlight %} -->
 
-This particle system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk):
-
-
-<div id="sketch-holder">
-    <script type="text/javascript" src="sketch/sketch.js"></script>
 </div>
+
+This particle system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk):

@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Flow Field</title>
-  <meta name="description" content="Try pressing ’s’ on your keyboard to bring up sketch manipulation options.">
+  <meta name="description" content="">
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/projects/flow_field/p5project.html">
   <link rel="alternate" type="application/rss+xml" title="A portfolio for CODYRYANDESIGN P5JS examples" href="/feed.xml">
   <!-- dependencies -->
   
+    
+
     
 
     
@@ -32,6 +34,8 @@
   <!-- dev-dependencies -->
   
     
+    
+
     
 
     
@@ -69,6 +73,8 @@
 
     
 
+    
+
 
   
     
@@ -88,23 +94,6 @@
 
     
 
-
-  
-    
-    
-
-    
-
-    
-
-    
-        <script type="text/javascript" src="/quicksettings.js"></script>
-    
-
-    
-
-    
-
     
 
 
@@ -117,9 +106,53 @@
     
 
     
+        <script type="text/javascript" src="/assets/quicksettings.js"></script>
+    
 
     
-        <script type="text/javascript" src="/p5.gui.js"></script>
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/assets/p5.gui.js"></script>
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/assets/helpers.js"></script>
     
 
     
@@ -158,88 +191,88 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h5 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <strong><em>’s’</em></strong> on your keyboard to bring up sketch manipulation options.</h5>
-
-<h5 id="take-a-snapshot-of-the-canvas-at-any-time-by-pressing-p">Take a snapshot of the canvas at any time by pressing <strong><em>‘p’</em></strong>.</h5>
-
-<h5 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press ‘CMD+R’.</h5>
-
-<!-- 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sketch-holder"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"sketch/sketch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
- -->
-
-<div id="sketch-holder">
+    <div id="sketch-holder">
     <script type="text/javascript" src="sketch/sketch.js"></script>
     <script type="text/javascript" src="sketch/particle.js"></script>
 </div>
 
-<p>A gathering of particle objects traverse the canvas. They are propelled by vector forces directly beneath their position. Try disabling ‘enableFlowField’ in the GUI options to see how the particles move without flow field forces.</p>
+<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
-<h1 id="sketch-manipulation-descriptions">Sketch Manipulation Descriptions:</h1>
+<div id="pageText">
 
-<p><strong>Press</strong> <em>s</em> <strong>to bring up sketch manipulation options.</strong></p>
+  <h5 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <strong><em>’s’</em></strong> on your keyboard to bring up sketch manipulation options.</h5>
 
-<ul>
-  <li>backgroundC:
-    <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
-  </li>
-  <li>backgroundA:
-    <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
-  </li>
-  <li>strokeC:
-    <h5 id="set-the-color-for-the-stroke-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the stroke to be rendered by using a simple color-picker interface.</h5>
-  </li>
-  <li>strokeA:
-    <h5 id="adjust-the-alpha-transparency-of-the-stroke-color">Adjust the Alpha transparency of the stroke color.</h5>
-  </li>
-  <li>fillC:
-    <h5 id="set-the-color-for-the-casted-rays-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the casted rays to be rendered by using a simple color-picker interface.</h5>
+  <h5 id="take-a-snapshot-of-the-canvas-at-any-time-by-pressing-p">Take a snapshot of the canvas at any time by pressing <strong><em>‘p’</em></strong>.</h5>
 
-    <ul>
-      <li>
-        <h5 id="note-fill-only-renders-when-using-shapes-not-lines">Note, fill only renders when using shapes, not lines.</h5>
-      </li>
-    </ul>
-  </li>
-  <li>fillA:
-    <h5 id="adjust-the-alpha-transparency-of-the-rays">Adjust the Alpha transparency of the rays.</h5>
+  <h5 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press ‘CMD+R’.</h5>
 
-    <ul>
-      <li>
-        <h5 id="note-fill-only-renders-when-using-shapes-not-lines-1">Note, fill only renders when using shapes, not lines.</h5>
-      </li>
-    </ul>
-  </li>
-  <li>minSpeed:
-    <h5 id="the-minimum-random-speed-value-a-particle-can-pick-when-it-re-enters-the-scene">The minimum random speed value a particle can pick when it re-enters the scene.</h5>
-  </li>
-  <li>maxSpeed:
-    <h5 id="the-maximum-random-speed-value-a-particle-can-pick-when-it-re-enters-the-scene">The maximum random speed value a particle can pick when it re-enters the scene.</h5>
-  </li>
-  <li>angleVal:
-    <h5 id="the-angle-of-rotation-multiplied-by-the-random-noise-values-try-setting-this-value-to-0-to-flatten-the-flow-field-vector-angles">The angle of rotation multiplied by the random noise values. Try setting this value to ‘0’ to flatten the flow field vector angles.</h5>
-  </li>
-  <li>angleMult:
-    <h5 id="multiple-the-angleval-by-a-factor-of-this-value">Multiple the ‘angleVal’ by a factor of this value.</h5>
-  </li>
-  <li>targetMagnitude:
-    <h5 id="tune-the-strength-of-the-mouse-force-applied-to-the-particles-when-the-screen-is-clicked">Tune the strength of the mouse force applied to the particles when the screen is clicked.</h5>
-  </li>
-  <li>zoffAdjust:
-    <h5 id="adjust-the-rate-of-noise-change-in-the-z-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the z-axis. The greater the rate of change, the more erratic the particles will be.</h5>
-  </li>
-  <li>incAdjust:
-    <h5 id="adjust-the-rate-of-noise-change-in-the-x-and-y-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the x and y-axis. The greater the rate of change, the more erratic the particles will be.</h5>
-  </li>
-  <li>showFlowField:
-    <h5 id="render-the-flow-field-on-the-canvas-with-each-vector-in-the-field-rendered-as-a-line-pointing-towards-its-angle-of-rotation">Render the flow field on the canvas, with each vector in the field rendered as a line pointing towards its angle of rotation.</h5>
-  </li>
-  <li>enableFlowField:
-    <h5 id="enable-or-disable-flow-field-vector-forces">Enable or disable flow field vector forces.</h5>
-  </li>
-</ul>
+  <p>A gathering of particle objects traverse the canvas. They are propelled by vector forces directly beneath their position. Try disabling ‘enableFlowField’ in the GUI options to see how the particles move without flow field forces.</p>
+
+  <h1 id="sketch-manipulation-descriptions">Sketch Manipulation Descriptions:</h1>
+
+  <p><strong>Press</strong> <em>s</em> <strong>to bring up sketch manipulation options.</strong></p>
+
+  <ul>
+    <li>backgroundC:
+      <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
+    </li>
+    <li>backgroundA:
+      <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
+    </li>
+    <li>strokeC:
+      <h5 id="set-the-color-for-the-stroke-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the stroke to be rendered by using a simple color-picker interface.</h5>
+    </li>
+    <li>strokeA:
+      <h5 id="adjust-the-alpha-transparency-of-the-stroke-color">Adjust the Alpha transparency of the stroke color.</h5>
+    </li>
+    <li>fillC:
+      <h5 id="set-the-color-for-the-casted-rays-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the casted rays to be rendered by using a simple color-picker interface.</h5>
+
+      <ul>
+        <li>
+          <h5 id="note-fill-only-renders-when-using-shapes-not-lines">Note, fill only renders when using shapes, not lines.</h5>
+        </li>
+      </ul>
+    </li>
+    <li>fillA:
+      <h5 id="adjust-the-alpha-transparency-of-the-rays">Adjust the Alpha transparency of the rays.</h5>
+
+      <ul>
+        <li>
+          <h5 id="note-fill-only-renders-when-using-shapes-not-lines-1">Note, fill only renders when using shapes, not lines.</h5>
+        </li>
+      </ul>
+    </li>
+    <li>minSpeed:
+      <h5 id="the-minimum-random-speed-value-a-particle-can-pick-when-it-re-enters-the-scene">The minimum random speed value a particle can pick when it re-enters the scene.</h5>
+    </li>
+    <li>maxSpeed:
+      <h5 id="the-maximum-random-speed-value-a-particle-can-pick-when-it-re-enters-the-scene">The maximum random speed value a particle can pick when it re-enters the scene.</h5>
+    </li>
+    <li>angleVal:
+      <h5 id="the-angle-of-rotation-multiplied-by-the-random-noise-values-try-setting-this-value-to-0-to-flatten-the-flow-field-vector-angles">The angle of rotation multiplied by the random noise values. Try setting this value to ‘0’ to flatten the flow field vector angles.</h5>
+    </li>
+    <li>angleMult:
+      <h5 id="multiple-the-angleval-by-a-factor-of-this-value">Multiple the ‘angleVal’ by a factor of this value.</h5>
+    </li>
+    <li>targetMagnitude:
+      <h5 id="tune-the-strength-of-the-mouse-force-applied-to-the-particles-when-the-screen-is-clicked">Tune the strength of the mouse force applied to the particles when the screen is clicked.</h5>
+    </li>
+    <li>zoffAdjust:
+      <h5 id="adjust-the-rate-of-noise-change-in-the-z-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the z-axis. The greater the rate of change, the more erratic the particles will be.</h5>
+    </li>
+    <li>incAdjust:
+      <h5 id="adjust-the-rate-of-noise-change-in-the-x-and-y-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the x and y-axis. The greater the rate of change, the more erratic the particles will be.</h5>
+    </li>
+    <li>showFlowField:
+      <h5 id="render-the-flow-field-on-the-canvas-with-each-vector-in-the-field-rendered-as-a-line-pointing-towards-its-angle-of-rotation">Render the flow field on the canvas, with each vector in the field rendered as a line pointing towards its angle of rotation.</h5>
+    </li>
+    <li>enableFlowField:
+      <h5 id="enable-or-disable-flow-field-vector-forces">Enable or disable flow field vector forces.</h5>
+    </li>
+  </ul>
+
+</div>
 
 <p>This flow field system is <a href="https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html">based on an example from The Coding Train</a>.</p>
 
@@ -272,7 +305,7 @@
           <li class="p-name">A portfolio for CODYRYANDESIGN P5JS examples</li><li><a class="u-email" href="mailto:codyryandesign@gmail.com">codyryandesign@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/codyryandrake"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">codyryandrake</span></a></li><li><a href="https://www.twitter.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">codyryandesign</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">codyryandesign</span></a></li><li><a href="https://www.twitter.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">codyryandesign</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">

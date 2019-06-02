@@ -8,24 +8,23 @@ dependencies:
     - p5.dom
     - quicksettings
     - p5.gui
+    - helpers
 ---
+
+<div id="sketch-holder">
+    <script type="text/javascript" src="sketch/sketch.js"></script>
+    <script type="text/javascript" src="sketch/particle.js"></script>
+</div>
+
+<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
+
+<div id="pageText" markdown="1">
 
 ##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
 
 ##### Take a snapshot of the canvas at any time by pressing ***'p'***.
 
 ##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
-
-<!-- {%highlight html %}
-<div id="sketch-holder">
-  <script type="text/javascript" src="sketch/sketch.js"></script>
-</div>
-{% endhighlight %} -->
-
-<div id="sketch-holder">
-    <script type="text/javascript" src="sketch/sketch.js"></script>
-    <script type="text/javascript" src="sketch/particle.js"></script>
-</div>
 
 A gathering of particle objects traverse the canvas. They are propelled by vector forces directly beneath their position. Try disabling 'enableFlowField' in the GUI options to see how the particles move without flow field forces.
 
@@ -82,6 +81,7 @@ A gathering of particle objects traverse the canvas. They are propelled by vecto
 - enableFlowField:
 ##### Enable or disable flow field vector forces.
 
+</div>
 
 This flow field system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html).
 

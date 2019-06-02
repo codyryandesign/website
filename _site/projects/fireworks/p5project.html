@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Fireworks!</title>
-  <meta name="description" content="Try pressing ’s’ on your keyboard to bring up sketch manipulation options.">
+  <meta name="description" content="">
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/projects/fireworks/p5project.html">
   <link rel="alternate" type="application/rss+xml" title="A portfolio for CODYRYANDESIGN P5JS examples" href="/feed.xml">
   <!-- dependencies -->
   
+    
+
     
 
     
@@ -32,6 +34,8 @@
   <!-- dev-dependencies -->
   
     
+    
+
     
 
     
@@ -69,23 +73,6 @@
 
     
 
-
-  
-    
-    
-
-    
-
-    
-
-    
-        <script type="text/javascript" src="/quicksettings.js"></script>
-    
-
-    
-
-    
-
     
 
 
@@ -98,9 +85,53 @@
     
 
     
+        <script type="text/javascript" src="/assets/quicksettings.js"></script>
+    
 
     
-        <script type="text/javascript" src="/p5.gui.js"></script>
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/assets/p5.gui.js"></script>
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/assets/helpers.js"></script>
     
 
     
@@ -139,87 +170,93 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h5 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <strong><em>’s’</em></strong> on your keyboard to bring up sketch manipulation options.</h5>
-
-<h5 id="take-a-snapshot-of-the-canvas-at-any-time-by-pressing-p">Take a snapshot of the canvas at any time by pressing <strong><em>‘p’</em></strong>.</h5>
-
-<h5 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press ‘CMD+R’.</h5>
-
-<!-- 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sketch-holder"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"sketch/sketch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
- -->
-
-<div id="sketch-holder">
+    <div id="sketch-holder">
     <script type="text/javascript" src="sketch/sketch.js"></script>
     <script type="text/javascript" src="sketch/firework.js"></script>
     <script type="text/javascript" src="sketch/particle.js"></script>
 </div>
 
-<p>Rockets soar into the sky, exploding when their velocity is equal to the gravitational force. When each rocket explodes, an array of particles is generated at the rocket’s position, and shoot off in every direction before fading away. When all particles have faded completely they are destroyed.</p>
+<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
-<p>Sketch Manipulation Descriptions:</p>
-<ul>
-  <li>backgroundC:
-    <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
-  </li>
-  <li>backgroundA:
-    <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
-  </li>
-  <li>rocketSpawnChance:
-    <h5 id="sets-the-probability-value-for-how-often-a-rocket-object-will-be-spawned-higher-values-result-in-more-rockets">Sets the probability value for how often a rocket object will be spawned. Higher values result in more rockets.</h5>
-    <ul>
-      <li>
-        <h5 id="frame-rate-will-decrease-as-more-rockets-explode">Frame rate will decrease as more rockets explode.</h5>
-      </li>
-    </ul>
-  </li>
-  <li>rocketSize:
-    <h5 id="adjust-the-size-of-the-rocket-objects">Adjust the size of the rocket objects.</h5>
-  </li>
-  <li>explosionSize:
-    <h5 id="adjust-the-size-of-each-rockets-maximum-explosion-area">Adjust the size of each rocket’s maximum explosion area.</h5>
-  </li>
-  <li>particleDecay:
-    <h5 id="adjust-how-quickly-the-explosion-particles-fade-away">Adjust how quickly the explosion particles fade away.</h5>
-    <ul>
-      <li>
-        <h5 id="when-particles-have-faded-below-background-alpha-values-the-particles-are-destroyed">When particles have faded below background Alpha values, the particles are destroyed.</h5>
-      </li>
-    </ul>
-  </li>
-  <li>gravityAmount:
-    <h5 id="adjust-the-force-of-gravity-on-the-rocket-particles">Adjust the force of gravity on the rocket particles.</h5>
-  </li>
-  <li>windAmount:
-    <h5 id="adjust-the-force-and-direction-of-wind-on-the-rocket-particles-and-explosion-particles">Adjust the force and direction of wind on the rocket particles and explosion particles.</h5>
-  </li>
-  <li>particleVeloctiy:
-    <h5 id="adjust-how-much-velocity-the-explosion-particles-have-when-they-detonate">Adjust how much velocity the explosion particles have when they detonate.</h5>
-  </li>
-  <li>angleMult:
-    <h5 id="multiple-the-angleval-by-a-factor-of-this-value">Multiple the ‘angleVal’ by a factor of this value.</h5>
-  </li>
-  <li>targetMagnitude:
-    <h5 id="tune-the-strength-of-the-mouse-force-applied-to-the-particles-when-the-screen-is-clicked">Tune the strength of the mouse force applied to the particles when the screen is clicked.</h5>
-  </li>
-  <li>zoffAdjust:
-    <h5 id="adjust-the-rate-of-noise-change-in-the-z-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the z-axis. The greater the rate of change, the more erratic the particles will be.</h5>
-  </li>
-  <li>incAdjust:
-    <h5 id="adjust-the-rate-of-noise-change-in-the-x-and-y-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the x and y-axis. The greater the rate of change, the more erratic the particles will be.</h5>
-  </li>
-  <li>showFlowField:
-    <h5 id="render-the-flow-field-on-the-canvas-with-each-vector-in-the-field-rendered-as-a-line-pointing-towards-its-angle-of-rotation">Render the flow field on the canvas, with each vector in the field rendered as a line pointing towards its angle of rotation.</h5>
-  </li>
-  <li>enableFlowField:
-    <h5 id="enable-or-disable-the-flow-field-vector-forces-color-preferences">Enable or disable the flow field vector forces color preferences.</h5>
-  </li>
-  <li>mouseFollowEnabled:
-    <h5 id="enable-or-disable-the-mouse-position-as-a-vector-force-applied-to-the-particles">Enable or disable the mouse position as a vector force applied to the particles.</h5>
-  </li>
-</ul>
+<div id="pageText">
+
+  <h6 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <code class="highlighter-rouge">s</code> on your keyboard to bring up sketch manipulation options.</h6>
+
+  <h6 id="take-a-snapshot-of-the-canvas-at-any-time-by-pressing-p">Take a snapshot of the canvas at any time by pressing <code class="highlighter-rouge">p</code>.</h6>
+
+  <h6 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press <code class="highlighter-rouge">CMD+R</code>.</h6>
+
+  <!-- 
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sketch-holder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"sketch/sketch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+ -->
+
+  <p>Rockets soar into the sky, exploding when their velocity is equal to the gravitational force. When each rocket explodes, an array of particles is generated at the rocket’s position, and shoot off in every direction before fading away. When all particles have faded completely they are destroyed.</p>
+
+  <p>Sketch Manipulation Descriptions:</p>
+  <ul>
+    <li>backgroundC:
+      <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
+    </li>
+    <li>backgroundA:
+      <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
+    </li>
+    <li>rocketSpawnChance:
+      <h5 id="sets-the-probability-value-for-how-often-a-rocket-object-will-be-spawned-higher-values-result-in-more-rockets">Sets the probability value for how often a rocket object will be spawned. Higher values result in more rockets.</h5>
+      <ul>
+        <li>
+          <h5 id="frame-rate-will-decrease-as-more-rockets-explode">Frame rate will decrease as more rockets explode.</h5>
+        </li>
+      </ul>
+    </li>
+    <li>rocketSize:
+      <h5 id="adjust-the-size-of-the-rocket-objects">Adjust the size of the rocket objects.</h5>
+    </li>
+    <li>explosionSize:
+      <h5 id="adjust-the-size-of-each-rockets-maximum-explosion-area">Adjust the size of each rocket’s maximum explosion area.</h5>
+    </li>
+    <li>particleDecay:
+      <h5 id="adjust-how-quickly-the-explosion-particles-fade-away">Adjust how quickly the explosion particles fade away.</h5>
+      <ul>
+        <li>
+          <h5 id="when-particles-have-faded-below-background-alpha-values-the-particles-are-destroyed">When particles have faded below background Alpha values, the particles are destroyed.</h5>
+        </li>
+      </ul>
+    </li>
+    <li>gravityAmount:
+      <h5 id="adjust-the-force-of-gravity-on-the-rocket-particles">Adjust the force of gravity on the rocket particles.</h5>
+    </li>
+    <li>windAmount:
+      <h5 id="adjust-the-force-and-direction-of-wind-on-the-rocket-particles-and-explosion-particles">Adjust the force and direction of wind on the rocket particles and explosion particles.</h5>
+    </li>
+    <li>particleVeloctiy:
+      <h5 id="adjust-how-much-velocity-the-explosion-particles-have-when-they-detonate">Adjust how much velocity the explosion particles have when they detonate.</h5>
+    </li>
+    <li>angleMult:
+      <h5 id="multiple-the-angleval-by-a-factor-of-this-value">Multiple the ‘angleVal’ by a factor of this value.</h5>
+    </li>
+    <li>targetMagnitude:
+      <h5 id="tune-the-strength-of-the-mouse-force-applied-to-the-particles-when-the-screen-is-clicked">Tune the strength of the mouse force applied to the particles when the screen is clicked.</h5>
+    </li>
+    <li>zoffAdjust:
+      <h5 id="adjust-the-rate-of-noise-change-in-the-z-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the z-axis. The greater the rate of change, the more erratic the particles will be.</h5>
+    </li>
+    <li>incAdjust:
+      <h5 id="adjust-the-rate-of-noise-change-in-the-x-and-y-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the x and y-axis. The greater the rate of change, the more erratic the particles will be.</h5>
+    </li>
+    <li>showFlowField:
+      <h5 id="render-the-flow-field-on-the-canvas-with-each-vector-in-the-field-rendered-as-a-line-pointing-towards-its-angle-of-rotation">Render the flow field on the canvas, with each vector in the field rendered as a line pointing towards its angle of rotation.</h5>
+    </li>
+    <li>enableFlowField:
+      <h5 id="enable-or-disable-the-flow-field-vector-forces-color-preferences">Enable or disable the flow field vector forces color preferences.</h5>
+    </li>
+    <li>mouseFollowEnabled:
+      <h5 id="enable-or-disable-the-mouse-position-as-a-vector-force-applied-to-the-particles">Enable or disable the mouse position as a vector force applied to the particles.</h5>
+    </li>
+  </ul>
+
+</div>
 
 <p>This particle system is <a href="https://thecodingtrain.com/CodingChallenges/027-fireworks.html">based on an example from The Coding Train</a>.</p>
 
@@ -240,7 +277,7 @@
           <li class="p-name">A portfolio for CODYRYANDESIGN P5JS examples</li><li><a class="u-email" href="mailto:codyryandesign@gmail.com">codyryandesign@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/codyryandrake"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">codyryandrake</span></a></li><li><a href="https://www.twitter.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">codyryandesign</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">codyryandesign</span></a></li><li><a href="https://www.twitter.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">codyryandesign</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">

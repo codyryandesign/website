@@ -7,14 +7,8 @@ dependencies:
     - p5
     - quicksettings
     - p5.gui
+    - helpers
 ---
-
-
-##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
-
-##### Take a snapshot of the canvas at any time by pressing ***'p'***.
-
-##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
 
 <div id="sketch-holder">
     <script type="text/javascript" src="sketch/sketch.js"></script>
@@ -23,14 +17,23 @@ dependencies:
     <script type="text/javascript" src="sketch/ray.js"></script>
 </div>
 
+<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
+
+<!-- Include markdown="1" to allow markdown conversion within a div element. -->
+<div id="pageText" markdown="1">
+
+###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
+
+###### Take a snapshot of the canvas at any time by pressing ```p```.
+
+###### Reload the page at any time to generate a new landscape. Just press ```CMD+R```.
+
 Particle objects cast rays out as they dance around a randomized landscape, creating dynamic play with light and shadow as they move. If a particle object passes through a wall, there is a chance for it to change color.
 
 ## GUI Variable Descriptions
 
-<!-- variable|definition
-    rayA| Adjust the alpha transparency of the rays.
-    boundaryC| Set the **color** for the boundaries to be rendered by using a simple color-picker interface.
-    numRays| Change the number of **ray objects** each particle sends out. Default is 360. -->
+- boundaryC:
+##### Set the **color** for the boundaries to be rendered by using a simple color-picker interface.
 
 - backgroundC:
 ##### Set the color for the background the to be rendered by using a simple color-picker interface.
@@ -38,29 +41,40 @@ Particle objects cast rays out as they dance around a randomized landscape, crea
 - backgroundA:
 ##### Adjust the Alpha transparency of the background.
 
-- rayC:
-##### Set the ***color*** for the casted rays to be rendered by using a simple color-picker interface.
+- randomizeRayColors:
+##### If **randomizeRayColors** is enabled, the particles have a chance of picking random HSB values between their minimum values and 100. For example, adjusting **raySat** to 20 with **randomizeRayColors** enabled will allow the particles to randomly pick saturation values between 20 and 100 whenever they pass through a boundary.
 
-- rayS:
-##### Set the **saturation** for the casted rays to be rendered by using a simple color-picker interface. If **rayColorEnabled** is true, the particles have a chance of picking a random saturation level between **rayS** and 100 as seen below.
-{%highlight js %}
-random(rayS, 100);
-{% endhighlight %}
+- rayHue:
+##### Set the **hue** for the casted rays via the color picker. This setting is overridden when **randomizeRayColors** is enabled.
 
-- rayA:
-##### Adjust the Alpha transparency of the rays.
+- raySat:
+##### Set the **saturation** for the casted rays. This setting is overridden when **randomizeRayColors** is disabled and saturation can be adjusted through the color-picker.
+``` js
+random(raySat, 100);
+```
 
-- boundaryC:
-##### Set the **color** for the boundaries to be rendered by using a simple color-picker interface.
+- rayBright:
+##### Set the **brightness** for the casted rays. This setting is overridden when **randomizeRayColors** is disabled and brightness can be adjusted through the color-picker.  
+``` js
+random(rayBright, 100);
+```
+
+- rayAlpha:
+##### Set the **alpha transparency** for the casted rays.
+
+- numParticles:
+##### Increase or decrease the number of active particle-objects in the scene. Increasing this value will decrease FPS.
 
 - numRays:
-##### Change the number of **ray objects** each particle sends out. Default is 360.
+##### Change the number of rays each particle sends out. Default is 360.
 
-- rayColorEnabled:
-##### Enable or disable 'rayC' **color** preferences.
+- rayIncrement:
+##### **THIS FEATURE IS CURRENTLY DISABLED.** Increase or decrease the distance between casted rays.
 
 - mouseFollowEnabled:
-##### If enabled, one of the particles will follow the mouse around the scene.
+##### If enabled, one of the particles will follow the mouse around the scene when the mouse is pressed.
+
+</div>
 
 This 2D ray cast system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk).
 

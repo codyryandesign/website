@@ -7,7 +7,7 @@ var fireworks = [];
 //Declare global GUI vars
 //These vars can be referenced
 //anywhere in the sketch
-var backgroundC = '#090017';
+var backgroundC = '#000000';
 var backgroundA = 0.06;
 var backgroundAMin = 0;
 var backgroundAMax = 1;
@@ -23,7 +23,7 @@ var rocketSizeMin = 0.1;
 var rocketSizeMax = 5;
 var rocketSizeStep = .01;
 
-var particleSize = 3;
+var particleSize = 4;
 var particleSizeMin = 0;
 var particleSizeMax = 20;
 var particleSizeStep = .1;
@@ -35,7 +35,7 @@ var explosionSizeStep = 1;
 
 var particleDecay = .013;
 var particleDecayMin = 0.001;
-var particleDecayMax = .03;
+var particleDecayMax = 1;
 var particleDecayStep = .001;
 
 var gravityAmount = 0.19;
@@ -54,16 +54,26 @@ var particleVelocityMax = 2;
 var particleVelocityStep = .01;
 
 //Create the gui panel
-var gui;
+var gui1;
 //and toggle it's visibility
 var visible = true;
+
+var enablePageText = true;
+
+
+//To use an image, we have to preload it before setup()
+// let img;
+// function preload() {
+//   img = loadImage('moose.png')
+// }
 
 //The setup function is only run once
 function setup() {
   //Create a canvas object whose
   //dimensions are based off the browser
   //window size
-  canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
+  // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-holder');
   // colorMode(HSB, 360, 100, 100, 1)
   //Draw all colors using
@@ -71,9 +81,9 @@ function setup() {
   colorMode(HSB);
 
   //Title the GUI panel
-  gui = createGui('HSV GUI');
+  gui1 = createGui('HSV GUI');
   //and add in all global GUI vars
-  gui.addGlobals(
+  gui1.addGlobals(
     'backgroundC',
     'backgroundA',
     'rocketSpawnChance',
@@ -83,9 +93,10 @@ function setup() {
     'particleDecay',
     'gravityAmount',
     'windAmount',
-    'particleVelocity');
+    'particleVelocity',
+    'enablePageText',);
   //Initially hide the GUI from view
-  gui.hide();
+  gui1.hide();
 }
 
 //The draw loop attempts to execute
@@ -124,29 +135,6 @@ function draw() {
   }
   //Listen for user key presses
   detectKeyPress();
+  renderPageText();
 
-}
-
-//Handle user key presses
-function detectKeyPress() {
-  //If the user presses the 'p' key
-  if(key == 'p') {
-    //Take a snapshot of the canvas
-    save('fireworks.png');
-    //nullify key value to prevent multiple downloads on subsequent loops
-    key = null;
-  }
-    //If the user presses the 's' key
-  if(key == 's') {
-    //Toggle the visibility of GUI panel(s)
-    if(visible) {
-      gui.show();
-    }
-    else {
-      gui.hide();
-    }
-    visible = !visible;
-    //nullify key value to prevent multiple downloads on subsequent loops
-    key = null;
-  }
 }

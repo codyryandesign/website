@@ -7,13 +7,24 @@ dependencies:
     - p5
     - quicksettings
     - p5.gui
+    - helpers
 ---
 
-##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
+<div id="sketch-holder">
+    <script type="text/javascript" src="sketch/sketch.js"></script>
+    <script type="text/javascript" src="sketch/firework.js"></script>
+    <script type="text/javascript" src="sketch/particle.js"></script>
+</div>
 
-##### Take a snapshot of the canvas at any time by pressing ***'p'***.
+<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
-##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
+<div id="pageText" markdown="1">
+
+###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
+
+###### Take a snapshot of the canvas at any time by pressing ```p```.
+
+###### Reload the page at any time to generate a new landscape. Just press ```CMD+R```.
 
 <!-- {%highlight html %}
 <div id="sketch-holder">
@@ -22,11 +33,9 @@ dependencies:
 {% endhighlight %} -->
 
 
-<div id="sketch-holder">
-    <script type="text/javascript" src="sketch/sketch.js"></script>
-    <script type="text/javascript" src="sketch/firework.js"></script>
-    <script type="text/javascript" src="sketch/particle.js"></script>
-</div>
+
+
+
 
 Rockets soar into the sky, exploding when their velocity is equal to the gravitational force. When each rocket explodes, an array of particles is generated at the rocket's position, and shoot off in every direction before fading away. When all particles have faded completely they are destroyed.
 
@@ -80,5 +89,7 @@ Sketch Manipulation Descriptions:
 
 - mouseFollowEnabled:
 ##### Enable or disable the mouse position as a vector force applied to the particles.
+
+</div>
 
 This particle system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/027-fireworks.html).

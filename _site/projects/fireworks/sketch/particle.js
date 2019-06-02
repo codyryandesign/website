@@ -5,6 +5,8 @@ function Particle(x,y, velocity) {
 //Initialize the particle object with
 //an x,y position
   this.pos = createVector(x,y);
+  //Create a placeholder of msot recent position
+  this.prevPos;
   //and optional velocity
   this.vel = velocity || createVector(0,0);
   //Also give the object an acceleration vector
@@ -13,6 +15,9 @@ function Particle(x,y, velocity) {
   this.lifespan;
   //Keeps track of the size of the particle object
   this.size;
+  //Store this color of the particle
+  this.color;
+  //this.img = img;
 
 //A function for handling forces that act on the object
   this.applyForce = function(force) {
@@ -23,6 +28,7 @@ function Particle(x,y, velocity) {
 
 //Update particle object properties during every loop
   this.update = function() {
+    this.prevPos = this.pos.copy();
     //Add the acceleration to the velocity
     this.vel.add(this.acc);
     //Add the velocity to the object's position

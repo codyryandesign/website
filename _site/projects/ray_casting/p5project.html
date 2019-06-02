@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>2D Ray Casting</title>
-  <meta name="description" content="Try pressing ’s’ on your keyboard to bring up sketch manipulation options.">
+  <meta name="description" content="">
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/projects/ray_casting/p5project.html">
   <link rel="alternate" type="application/rss+xml" title="A portfolio for CODYRYANDESIGN P5JS examples" href="/feed.xml">
   <!-- dependencies -->
   
+    
+
     
 
     
@@ -32,6 +34,8 @@
   <!-- dev-dependencies -->
   
     
+    
+
     
 
     
@@ -69,23 +73,6 @@
 
     
 
-
-  
-    
-    
-
-    
-
-    
-
-    
-        <script type="text/javascript" src="/quicksettings.js"></script>
-    
-
-    
-
-    
-
     
 
 
@@ -98,9 +85,53 @@
     
 
     
+        <script type="text/javascript" src="/assets/quicksettings.js"></script>
+    
 
     
-        <script type="text/javascript" src="/p5.gui.js"></script>
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/assets/p5.gui.js"></script>
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/assets/helpers.js"></script>
     
 
     
@@ -139,62 +170,74 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h5 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <strong><em>’s’</em></strong> on your keyboard to bring up sketch manipulation options.</h5>
-
-<h5 id="take-a-snapshot-of-the-canvas-at-any-time-by-pressing-p">Take a snapshot of the canvas at any time by pressing <strong><em>‘p’</em></strong>.</h5>
-
-<h5 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press ‘CMD+R’.</h5>
-
-<div id="sketch-holder">
+    <div id="sketch-holder">
     <script type="text/javascript" src="sketch/sketch.js"></script>
     <script type="text/javascript" src="sketch/boundary.js"></script>
     <script type="text/javascript" src="sketch/particle.js"></script>
     <script type="text/javascript" src="sketch/ray.js"></script>
 </div>
 
-<p>Particle objects cast rays out as they dance around a randomized landscape, creating dynamic play with light and shadow as they move. If a particle object passes through a wall, there is a chance for it to change color.</p>
+<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
-<h2 id="gui-variable-descriptions">GUI Variable Descriptions</h2>
+<!-- Include markdown="1" to allow markdown conversion within a div element. -->
+<div id="pageText">
 
-<!-- variable|definition
-    rayA| Adjust the alpha transparency of the rays.
-    boundaryC| Set the **color** for the boundaries to be rendered by using a simple color-picker interface.
-    numRays| Change the number of **ray objects** each particle sends out. Default is 360. -->
+  <h6 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <code class="highlighter-rouge">s</code> on your keyboard to bring up sketch manipulation options.</h6>
 
-<ul>
-  <li>backgroundC:
-    <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
-  </li>
-  <li>backgroundA:
-    <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
-  </li>
-  <li>rayC:
-    <h5 id="set-the-color-for-the-casted-rays-to-be-rendered-by-using-a-simple-color-picker-interface">Set the <strong><em>color</em></strong> for the casted rays to be rendered by using a simple color-picker interface.</h5>
-  </li>
-  <li>rayS:
-    <h5 id="set-the-saturation-for-the-casted-rays-to-be-rendered-by-using-a-simple-color-picker-interface-if-raycolorenabled-is-true-the-particles-have-a-chance-of-picking-a-random-saturation-level-between-rays-and-100-as-seen-below">Set the <strong>saturation</strong> for the casted rays to be rendered by using a simple color-picker interface. If <strong>rayColorEnabled</strong> is true, the particles have a chance of picking a random saturation level between <strong>rayS</strong> and 100 as seen below.</h5>
-  </li>
-</ul>
+  <h6 id="take-a-snapshot-of-the-canvas-at-any-time-by-pressing-p">Take a snapshot of the canvas at any time by pressing <code class="highlighter-rouge">p</code>.</h6>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">random</span><span class="p">(</span><span class="nx">rayS</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span></code></pre></figure>
+  <h6 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press <code class="highlighter-rouge">CMD+R</code>.</h6>
 
-<ul>
-  <li>rayA:
-    <h5 id="adjust-the-alpha-transparency-of-the-rays">Adjust the Alpha transparency of the rays.</h5>
-  </li>
-  <li>boundaryC:
-    <h5 id="set-the-color-for-the-boundaries-to-be-rendered-by-using-a-simple-color-picker-interface">Set the <strong>color</strong> for the boundaries to be rendered by using a simple color-picker interface.</h5>
-  </li>
-  <li>numRays:
-    <h5 id="change-the-number-of-ray-objects-each-particle-sends-out-default-is-360">Change the number of <strong>ray objects</strong> each particle sends out. Default is 360.</h5>
-  </li>
-  <li>rayColorEnabled:
-    <h5 id="enable-or-disable-rayc-color-preferences">Enable or disable ‘rayC’ <strong>color</strong> preferences.</h5>
-  </li>
-  <li>mouseFollowEnabled:
-    <h5 id="if-enabled-one-of-the-particles-will-follow-the-mouse-around-the-scene">If enabled, one of the particles will follow the mouse around the scene.</h5>
-  </li>
-</ul>
+  <p>Particle objects cast rays out as they dance around a randomized landscape, creating dynamic play with light and shadow as they move. If a particle object passes through a wall, there is a chance for it to change color.</p>
+
+  <h2 id="gui-variable-descriptions">GUI Variable Descriptions</h2>
+
+  <ul>
+    <li>boundaryC:
+      <h5 id="set-the-color-for-the-boundaries-to-be-rendered-by-using-a-simple-color-picker-interface">Set the <strong>color</strong> for the boundaries to be rendered by using a simple color-picker interface.</h5>
+    </li>
+    <li>backgroundC:
+      <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
+    </li>
+    <li>backgroundA:
+      <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
+    </li>
+    <li>randomizeRayColors:
+      <h5 id="if-randomizeraycolors-is-enabled-the-particles-have-a-chance-of-picking-random-hsb-values-between-their-minimum-values-and-100-for-example-adjusting-raysat-to-20-with-randomizeraycolors-enabled-will-allow-the-particles-to-randomly-pick-saturation-values-between-20-and-100-whenever-they-pass-through-a-boundary">If <strong>randomizeRayColors</strong> is enabled, the particles have a chance of picking random HSB values between their minimum values and 100. For example, adjusting <strong>raySat</strong> to 20 with <strong>randomizeRayColors</strong> enabled will allow the particles to randomly pick saturation values between 20 and 100 whenever they pass through a boundary.</h5>
+    </li>
+    <li>rayHue:
+      <h5 id="set-the-hue-for-the-casted-rays-via-the-color-picker-this-setting-is-overridden-when-randomizeraycolors-is-enabled">Set the <strong>hue</strong> for the casted rays via the color picker. This setting is overridden when <strong>randomizeRayColors</strong> is enabled.</h5>
+    </li>
+    <li>raySat:
+      <h5 id="set-the-saturation-for-the-casted-rays-this-setting-is-overridden-when-randomizeraycolors-is-disabled-and-saturation-can-be-adjusted-through-the-color-picker">Set the <strong>saturation</strong> for the casted rays. This setting is overridden when <strong>randomizeRayColors</strong> is disabled and saturation can be adjusted through the color-picker.</h5>
+      <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">random</span><span class="p">(</span><span class="nx">raySat</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</code></pre>
+      </div>
+    </li>
+    <li>rayBright:
+      <h5 id="set-the-brightness-for-the-casted-rays-this-setting-is-overridden-when-randomizeraycolors-is-disabled-and-brightness-can-be-adjusted-through-the-color-picker">Set the <strong>brightness</strong> for the casted rays. This setting is overridden when <strong>randomizeRayColors</strong> is disabled and brightness can be adjusted through the color-picker.</h5>
+      <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">random</span><span class="p">(</span><span class="nx">rayBright</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</code></pre>
+      </div>
+    </li>
+    <li>rayAlpha:
+      <h5 id="set-the-alpha-transparency-for-the-casted-rays">Set the <strong>alpha transparency</strong> for the casted rays.</h5>
+    </li>
+    <li>numParticles:
+      <h5 id="increase-or-decrease-the-number-of-active-particle-objects-in-the-scene-increasing-this-value-will-decrease-fps">Increase or decrease the number of active particle-objects in the scene. Increasing this value will decrease FPS.</h5>
+    </li>
+    <li>numRays:
+      <h5 id="change-the-number-of-rays-each-particle-sends-out-default-is-360">Change the number of rays each particle sends out. Default is 360.</h5>
+    </li>
+    <li>rayIncrement:
+      <h5 id="this-feature-is-currently-disabled-increase-or-decrease-the-distance-between-casted-rays"><strong>THIS FEATURE IS CURRENTLY DISABLED.</strong> Increase or decrease the distance between casted rays.</h5>
+    </li>
+    <li>mouseFollowEnabled:
+      <h5 id="if-enabled-one-of-the-particles-will-follow-the-mouse-around-the-scene-when-the-mouse-is-pressed">If enabled, one of the particles will follow the mouse around the scene when the mouse is pressed.</h5>
+    </li>
+  </ul>
+
+</div>
 
 <p>This 2D ray cast system is <a href="https://www.youtube.com/watch?v=-6iIc6-Y-kk">based on an example by The Coding Train</a>.</p>
 
@@ -226,7 +269,7 @@
           <li class="p-name">A portfolio for CODYRYANDESIGN P5JS examples</li><li><a class="u-email" href="mailto:codyryandesign@gmail.com">codyryandesign@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/codyryandrake"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">codyryandrake</span></a></li><li><a href="https://www.twitter.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">codyryandesign</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">codyryandesign</span></a></li><li><a href="https://www.twitter.com/codyryandesign"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">codyryandesign</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">

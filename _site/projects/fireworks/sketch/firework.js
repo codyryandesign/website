@@ -17,12 +17,14 @@ function Firework() {
   //Create an empty particle array for holding
   //explosion particles
   this.particles = [];
+  this.prevPos;
 
   //Update firework properties every frame,
   //keeping track of applied vector forces,
   //and explosion conditions
   this.update = function() {
     if(!this.exploded) {
+      this.prevPos = this.firework.pos.copy();
       //Only apply gravity to the rocket if
       //it hasn't yet exploded
       this.firework.applyForce(gravity);
@@ -69,7 +71,7 @@ function Firework() {
   this.explode = function() {
     //Determine how many child-particles
     //the rocket will have
-    var numParticles = random(50, 300);
+    var numParticles = random(100, 300);
     //For every child-particle
     for(let i = 0; i < numParticles; i++) {
       //Assign the child-particle a random
@@ -77,7 +79,7 @@ function Firework() {
       //the rocket's explosion
       var p = new Particle(this.firework.pos.x, this.firework.pos.y, p5.Vector.random2D());
       //Give the child-particle a lifespan of 1
-      p.lifespan = 1;
+      p.lifespan = random(.1, 1);
       //Randomly assign the size of the child-particle
       p.size = random(particleSize);
       //Calculate the velocity of a child-particle
@@ -96,11 +98,12 @@ function Firework() {
   this.show = function() {
     if(!this.exploded) {
       //As long as it hasn't yet exploded
-      stroke(this.color, 100, 100, 1);
-      strokeWeight(rocketSize * this.firework.vel.mag()/2);
+      stroke(this.color, 100, 100, random(.5, 1));
+      strokeWeight(rocketSize * this.firework.vel.y);
       //Render the rocket as a point at it's
       //current position
-      point(this.firework.pos.x, this.firework.pos.y);
+      //point(this.firework.pos.x, this.firework.pos.y);
+      line(this.firework.pos.x, this.firework.pos.y, this.prevPos.x, this.prevPos.y)
     }
     else
       //Otherwise, draw the child-particles instead
@@ -108,11 +111,21 @@ function Firework() {
         //Add an additional fall amount to particles after they explode
         this.particles[i].vel.mult(particleVelocity);
         //Color the particles based off the initial firework color, with a bit of randomness
-        this.particles[i].color = this.firework.color + random(-30, 30);
-        stroke(this.color + random(-20, 20), 100, 100, this.particles[i].lifespan);
+        //this.particles[i].color = random(360);
+        // this.particles[i].color = this.fireworks.color
+        //this.particles[i].color = this.color
+        this.particles[i].color = this.color + random(30)
+
+        stroke(this.particles[i].color, 100, 100, this.particles[i].lifespan);
         strokeWeight(this.particles[i].size*this.particles[i].lifespan);
         //Render the child-particle as a point
-        point(this.particles[i].pos.x, this.particles[i].pos.y);
+        //point(this.particles[i].pos.x, this.particles[i].pos.y);
+        line(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].prevPos.x, this.particles[i].prevPos.y,)
+        // push();
+        // translate(this.particles[i].pos.x, this.particles[i].pos.y)
+        // rotate(i/TWO_PI)
+        // image(img, 0, 0);
+        // pop();
       }
   }
 
