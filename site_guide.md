@@ -5,7 +5,7 @@ permalink: /site-guide/
 ---
 # Hello and thank you for visiting CODYRYANDESIGN's website portfolio for showcasing interactive graphical sketches, written in P5JS, on the web! Below is a guide detailing the contents of this website and how to interact with it. Future expansions to this project will feature addition sketches, broader theme integration, and addition details on the vector-based physics system. For now, enjoy the site!
 
-![Ray_Casting](/assets/ray_casting.png)
+![Ray_Casting](/website/assets/ray_casting.png)
 
 ## Introduction To This Site
 
@@ -89,7 +89,7 @@ In addition to the challenge of incorporating interactive javascript content int
       - [GitHub](#github)
       - [GitHub Pages](#github-pages-coming-soon)
 
-![Perlin Noise Blob](/assets/perlin_noise_blob.png)
+![Perlin Noise Blob](/website/assets/perlin_noise_blob.png)
 
 ## System Overview:
 
@@ -154,7 +154,7 @@ In order to address this issue, many tools have been created that allow for many
               <script type="text/javascript" src="sketch/sketch.js"></script>
             </div>
             ```
-            
+
         - minima Theme
         : ##### The [base theme](https://github.com/jekyll/minima) assets for building Jekyll's default site. This site utilizes an extension of the minima theme by [Benjamin Habert](https://github.com/BenjaminHabert/jekyll-p5-portfolio) to include support for P5JS sketches.
 
@@ -589,7 +589,7 @@ In order to address this issue, many tools have been created that allow for many
     - #### GitHub
     ##### Basic version control.
     - #### GitHub Pages (coming soon)
-    ##### Implementing GitHub Pages will allow for seamless hosting of project files and generation of a live website on a single platform.
+    ##### Implementing GitHub Pages will allow for seamless hosting of project files and generation of a live website on a single platform. A preview of this implementation is available at [codyryandesign.github.io/website/](https://codyryandesign.github.io/website/).
 
 
 
