@@ -3,7 +3,7 @@ layout: page
 title: Site Guide
 permalink: /site-guide/
 ---
-# Hello and thank you for visiting CODYRYANDESIGN's website portfolio for showcasing interactive graphical sketches, written in P5JS, on the web! Below is a guide detailing the contents of this website and how to interact with it. Future expansions to this project will feature addition sketches, broader theme integration, and addition details on the vector-based physics system. For now, enjoy the site!
+# Hello and thank you for visiting CODYRYANDESIGN's website portfolio for showcasing interactive graphical sketches, written in P5JS, on the web! Below is a guide detailing the contents of this website and how to interact with it. Future expansions to this project will feature addition sketches, broader theme integration, and additional details on the vector-based physics system. For now, enjoy the site!
 
 ![Ray_Casting](/website/assets/ray_casting.png)
 
@@ -193,6 +193,9 @@ In order to address this issue, many tools have been created that allow for many
         ##### A Ruby file containing a list of gems needed for the project to execute properly.
         - #### gemfile.lock  
         ##### A container for housing all gems specified in the Gemfile.
+
+![Ray_Casting](/website/assets/flow_field_2.png)
+
 - ### Processing's P5JS:
 
   - #### P5JS Main Libraries and Extensions
