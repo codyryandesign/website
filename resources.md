@@ -33,7 +33,7 @@ A robust assortment of graphical rendering tools made with artists and creative 
   A static site generator, written in [Ruby](https://www.ruby-lang.org/en/), that quickly builds and serves all website assets.
     - __Not sure what a static site generator is?__ Check out [this handy presentation](http://nilclass.com/courses/what-is-a-static-website/) describing the key differences between dynamic and static sites.
 
-  ![Static Site Generation](/website/assets/static_site_generation.png)
+  ![Static Site Generation](/assets/static_site_generation.png)
 
     - ### Jekyll Toolset
 
