@@ -5,7 +5,7 @@ permalink: /site-guide/
 ---
 # Hello and thank you for visiting CODYRYANDESIGN's website portfolio for showcasing interactive graphical sketches, written in P5JS, on the web! Below is a guide detailing the contents of this website and how to interact with it. Future expansions to this project will feature addition sketches, broader theme integration, and addition details on the vector-based physics system. For now, enjoy the site!
 
-![Ray_Casting](/website/assets/ray_casting.png)
+![Ray_Casting](/assets/ray_casting.png)
 
 ## Introduction To This Site
 
@@ -89,7 +89,7 @@ In addition to the challenge of incorporating interactive javascript content int
       - [GitHub](#github)
       - [GitHub Pages](#github-pages-coming-soon)
 
-![Perlin Noise Blob](/website/assets/perlin_noise_blob.png)
+![Perlin Noise Blob](/assets/perlin_noise_blob.png)
 
 ## System Overview:
 
@@ -596,4 +596,4 @@ In order to address this issue, many tools have been created that allow for many
 
 |[return to top of page](#)|
 |:------------------------:|
-| [view sketch gallery](/website) |
+| [view sketch gallery](/) |

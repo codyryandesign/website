@@ -10,7 +10,7 @@ permalink: /resources/
 
 #### Many of the tutorials freely available through [Dan Shiffman's work](https://shiffman.net/) and The Coding Train website serve as the foundation and inspiration for the [examples](/) on this website.
 
-![Flow Field Snapshot](/website/assets/flow_field.png "Flow Field Snapshot")
+![Flow Field Snapshot](/assets/flow_field.png "Flow Field Snapshot")
 
 - # Processing Tools:
 A robust assortment of graphical rendering tools made with artists and creative coders in mind, Processing is supported in multiple languages, but example sketches for this project were written in [P5JS](https://p5js.org/), a [Javascript](https://www.javascript.com/) varient based off the original, [Java](https://www.java.com/)-based [Processing](https://processing.org/).
