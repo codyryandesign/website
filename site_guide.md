@@ -596,4 +596,4 @@ In order to address this issue, many tools have been created that allow for many
 
 |[return to top of page](#)|
 |:------------------------:|
-| [view sketch gallery](/) |
+| [view sketch gallery](/website) |
