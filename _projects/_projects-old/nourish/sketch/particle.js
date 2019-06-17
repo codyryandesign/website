@@ -5,7 +5,6 @@ function Particle() {
 	this.acc = createVector(0,0);
 	this.force = createVector(0,0);
 	this.maxSpeed = random(minSpeed, maxSpeed)
-	//this.maxSpeed = map(micLevel, 0.0, 1.0, .1, 5);
 	this.hueSpeed;
 	this.h = 0;
 	this.size;
@@ -19,11 +18,6 @@ function Particle() {
 	this.update = function() {
 		this.updatePrev();
 		// this.maxSpeed = random(minSpeed, maxSpeed);
-		// if(enableMic) {
-		// 	tempVector = createVector(map(micLevel, 0.0, 1.0, -1, 1), map(micLevel, 0.0, 1.0, -1, 1));
-		// 	tempVector.mult(.1);
-		// 	this.acc.sub(tempVector, this.pos);
-		// }
 		// this.maxSpeed = maxSpeed;
 		this.vel.add(this.acc);
 		this.vel.limit(this.maxSpeed);
@@ -54,7 +48,7 @@ function Particle() {
 	this.show = function() {
 		let sColor = color(strokeC);
 		let fColor = color(fillC);
-		if(rainbowTrails && !enableMic) {
+		if(rainbowTrails) {
 			// this.hueSpeed = map(this.vel.mag(), 0, 3, .1, 2);
 			this.hueSpeed = map(this.vel.mag(), minSpeed, maxSpeed, .01, 1);
 			this.h = (this.h + this.hueSpeed) % 360;
@@ -62,18 +56,12 @@ function Particle() {
 			stroke(this.h, rainbowSaturation, 100, strokeA);
 			//Fill will not render for lines, only shapes
 			fill(this.h, rainbowSaturation, 100, strokeA);
-		} else if (true){
+		} else {
 			// stroke(hue(sColor), saturation(sColor), brightness(sColor), this.strokeA);
 			stroke(this.color, saturation(sColor), brightness(sColor), strokeA);
 			//Fill will not render for lines, only shapes
 			fill(hue(fColor), saturation(fColor), brightness(fColor), strokeA);
-		} //else {
-		// 	this.color = (this.color + map(micLevel, 0, .001, -.01, .01))%360;
-		// 	// stroke(hue(sColor), saturation(sColor), brightness(sColor), this.strokeA);
-		// 	stroke(this.color, saturation(sColor), brightness(sColor), strokeA);
-		// 	//Fill will not render for lines, only shapes
-		// 	fill(hue(fColor), saturation(fColor), brightness(fColor), strokeA);
-		// }
+		}
 
 		strokeWeight(this.size);
 
@@ -87,28 +75,24 @@ function Particle() {
 			this.pos.x = 0;
 			this.size = random(.1, particleSize)
 			this.size = particleSize;
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}
 		if (this.pos.x < 0) {
 			this.pos.x = width;
 			this.size = random(.1, particleSize)
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}
 		if (this.pos.y > height) {
 			this.pos.y = 0;
 			this.size = random(.1, particleSize)
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}
 		if (this.pos.y < 0) {
 			this.pos.y = height;
 			this.size = random(.1, particleSize)
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}

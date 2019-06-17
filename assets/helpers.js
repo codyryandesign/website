@@ -1,7 +1,7 @@
 //A function for resizing the canvas if the window size is changed
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+// function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+// }
 
 //A function for detecting key-press activity by the User
 function detectKeyPress() {

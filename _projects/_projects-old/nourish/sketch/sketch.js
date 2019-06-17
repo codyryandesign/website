@@ -9,21 +9,18 @@ var flowField = [];
 
 //var notesArray = ["♩", "♪", "♫", "♬", "♭", "♮", "♯"];
 
-var mic;
-var micLevel;
-
 var fr;
 
 //GUI VARS
 
 //Background color and alpha GUI control
-var backgroundC = '#34106b';
+var backgroundC = '#ccd6cd';
 var backgroundA = .024;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var strokeC = '#e75037';
+var strokeC = '#a1e762';
 var strokeA = .073;
 var strokeAMin = 0;
 var strokeAMax = 1;
@@ -45,7 +42,7 @@ var maxSpeedMin = minSpeedMax;
 var maxSpeedMax = minSpeedMax+20;
 var maxSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = 0.0
+var angleVal = 0.424
 var angleValMin = -10;
 var angleValMax = 10;
 var angleValStep = .001;
@@ -75,7 +72,7 @@ var zoffAdjustMax = 1.0;
 var zoffAdjustStep = .001;
 //Allow particles to hue-shift over time
 var rainbowTrails = false;
-var rainbowSaturation = 70;
+var rainbowSaturation = 40;
 var rainbowSaturationMin = 0;
 var rainbowSaturationMax = 100;
 var rainbowSaturationStep = .1;
@@ -85,9 +82,8 @@ var showFlowField = false;
 var enableFlowField = true;
 //Enable or disable the mouseTarget forces
 var enableMouseTarget = false;
-var enableMic = false;
 //Enable or disable rendering of textual info
-var enablePageText = false;
+var enablePageText = true;
 
 var numParticles = 1000;
 var numParticlesMin = 0;
@@ -112,8 +108,6 @@ var flowFieldZoomStep = .1;
 
 //END GUI VARS
 
-
-
 //gui
 var gui1, gui2;
 var visible = true;
@@ -127,7 +121,7 @@ function setup() {
 	//blendMode(SOFT_LIGHT);
 
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, window.innerHeight*3);
   canvas.parent('sketch-holder');
 
 	gui1 = createGui('Background, Stroke, and Fill Color Manipulation', 0, 0);
@@ -153,7 +147,6 @@ function setup() {
 		'showFlowField',
 		'enableFlowField',
 		'enableMouseTarget',
-		// 'enableMic',
 		'enablePageText',
 		'particleSize',
 		'zoom',
@@ -162,12 +155,10 @@ function setup() {
 		gui2.hide();
 
 	// scl = floor((width + height) / numParticles);
-	scl = 60;
+	scl = 120;
 	cols = floor(windowWidth/scl);
-	rows = floor(windowHeight/scl);
+	rows = floor(window.innerHeight*3/scl);
 
-	// mic = new p5.AudioIn();
-	// mic.start();
 
 	fr = createP('');
 
@@ -180,7 +171,7 @@ function setup() {
 }
 
 function draw() {
-	// micLevel = mic.getLevel();
+
 	//Enable user-activated zoom level
 	scale(zoom);
 	//Draw the background to the screen
@@ -263,7 +254,7 @@ function draw() {
 
 	})
 	//Display the frame rate of the sketch in the bottom-left corner
-	fr.html(floor(frameRate()));
+	// fr.html(floor(frameRate()));
 	//If the user presses a key
 	detectKeyPress();
 	//Enable or disable the rendering of textual info

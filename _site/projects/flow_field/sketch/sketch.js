@@ -9,6 +9,9 @@ var flowField = [];
 
 //var notesArray = ["♩", "♪", "♫", "♬", "♭", "♮", "♯"];
 
+var mic;
+var micLevel;
+
 var fr;
 
 //GUI VARS
@@ -42,7 +45,7 @@ var maxSpeedMin = minSpeedMax;
 var maxSpeedMax = minSpeedMax+20;
 var maxSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = 0.424
+var angleVal = 0.0
 var angleValMin = -10;
 var angleValMax = 10;
 var angleValStep = .001;
@@ -77,13 +80,14 @@ var rainbowSaturationMin = 0;
 var rainbowSaturationMax = 100;
 var rainbowSaturationStep = .1;
 //Visualize the flow field vectors
-var showFlowField = true;
+var showFlowField = false;
 //Enable or disable the flow field forces
 var enableFlowField = true;
 //Enable or disable the mouseTarget forces
 var enableMouseTarget = false;
+var enableMic = false;
 //Enable or disable rendering of textual info
-var enablePageText = true;
+var enablePageText = false;
 
 var numParticles = 1000;
 var numParticlesMin = 0;
@@ -107,6 +111,8 @@ var flowFieldZoomMax = 2;
 var flowFieldZoomStep = .1;
 
 //END GUI VARS
+
+
 
 //gui
 var gui1, gui2;
@@ -147,6 +153,7 @@ function setup() {
 		'showFlowField',
 		'enableFlowField',
 		'enableMouseTarget',
+		// 'enableMic',
 		'enablePageText',
 		'particleSize',
 		'zoom',
@@ -159,6 +166,8 @@ function setup() {
 	cols = floor(windowWidth/scl);
 	rows = floor(windowHeight/scl);
 
+	// mic = new p5.AudioIn();
+	// mic.start();
 
 	fr = createP('');
 
@@ -171,7 +180,7 @@ function setup() {
 }
 
 function draw() {
-
+	// micLevel = mic.getLevel();
 	//Enable user-activated zoom level
 	scale(zoom);
 	//Draw the background to the screen

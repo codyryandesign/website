@@ -6,6 +6,7 @@ thumbnail: thumbnail.png
 dependencies:
     - p5
     - p5.dom
+    - p5.sound
     - quicksettings
     - p5.gui
     - helpers

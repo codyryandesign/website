@@ -126,8 +126,8 @@ function draw() {
 		// let r = 100 //radius
 		// let r = random(50,100) //radius
 		//Increment angle while keeping radius constant
-		let xoff = map(cos(mouseX/4*a), -1/4, 1/4, 0, noiseLevel)
-		let yoff = map(sin(mouseY/4*a), -1/4, 1/4, 0, noiseLevel)
+		let xoff = map(cos(a), -1/4, 1/4, 0, noiseLevel)
+		let yoff = map(sin(a), -1/4, 1/4, 0, noiseLevel)
 		let r = map(noise(xoff, yoff, zoff), 0, 1, width/6, noiseLevel)
 		let x = r * cos(a)
 		let y = r * sin(a)
