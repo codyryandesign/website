@@ -1,5 +1,9 @@
 //A flow field demonstration, based off The Coding Train's example,
 //with interactive controls, and code description.
+var credits = '@CODYRYANDESIGN			www.codyryandesign.com			Purchase a screenshot today for $1'
+var credits2 = 'Purchase a screenshot today for $1'
+var credits3 = 'Based on a generative code example by thecodingtrain.com'
+var creditsFColor;
 
 var scl;
 var cols, rows;
@@ -95,6 +99,8 @@ var enableMic = false;
 // var enablePageText = false;
 //Enable or disable fullscreen-mode
 // var toggleFullScreen = false;
+//Enable or disable displaying credits overlay
+var showCredits = true;
 
 var numParticles = 1000;
 var numParticlesMin = 0;
@@ -125,11 +131,17 @@ var flowFieldZoomStep = .1;
 var gui1, gui2;
 var visible = true;
 
+let myFont;
+function preload() {
+	myFont = loadFont('/website/assets/Antaro.ttf');
+}
+
 function setup() {
 	frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
 	ellipseMode(CORNER);
+	textAlign(RIGHT);
 	// blendMode(DIFFERENCE);
 	//blendMode(SOFT_LIGHT);
 
@@ -164,6 +176,7 @@ function setup() {
 		// 'enableMic',
 		// 'enablePageText',
 		// 'toggleFullScreen',
+		'showCredits',
 		'particleSize',
 		'zoom',
 		'flowFieldZoom',);
@@ -277,5 +290,15 @@ function draw() {
 	detectKeyPress();
 	//Enable or disable the rendering of textual info
 	// renderPageText();
+
+	if(showCredits) {
+		push();
+		textFont(myFont);
+		fill(0, 0, 100, .1);
+		noStroke();
+		text(credits, width-450, 20, 500, 10);
+		// text(credits2, width-200, height-20, 200, 80);
+		pop();
+	}
 
 }
