@@ -56,27 +56,27 @@ var angleValMax = 10;
 var angleValStep = .001;
 //How much does the flow field attract or repel the particles?
 var fieldMagnitude = 0.5;
-var fieldMagnitudeMin = -.5;
-var fieldMagnitudeMax = .5;
+var fieldMagnitudeMin = -5;
+var fieldMagnitudeMax = 5;
 var fieldMagnitudeStep = .0001;
 //How much does the target(mouse) attract or repel the particles?
 var targetMagnitude = 0.5;
-var targetMagnitudeMin = -.5;
-var targetMagnitudeMax = .5;
+var targetMagnitudeMin = -5;
+var targetMagnitudeMax = 5;
 var targetMagnitudeStep = .0001;
 //The amount of time that x and y noise values
 //are incremented by every loop
 var inc = .101;
 var incAdjust = 1;
-var incAdjustMin = -1.0;
+var incAdjustMin = -10;
 var incAdjustMax = 10;
 var incAdjustStep = .001;
 //The amount of time that the z noise value
 //is incremented by every loop
 var zoff = -0.025;
 var zoffAdjust = .01;
-var zoffAdjustMin = -1.0;
-var zoffAdjustMax = 1.0;
+var zoffAdjustMin = -10;
+var zoffAdjustMax = 10;
 var zoffAdjustStep = .001;
 //Allow particles to hue-shift over time
 var rainbowTrails = false;
@@ -92,7 +92,7 @@ var enableFlowField = true;
 var enableMouseTarget = false;
 var enableMic = false;
 //Enable or disable rendering of textual info
-var enablePageText = false;
+// var enablePageText = false;
 //Enable or disable fullscreen-mode
 // var toggleFullScreen = false;
 
@@ -162,7 +162,7 @@ function setup() {
 		'enableFlowField',
 		'enableMouseTarget',
 		// 'enableMic',
-		'enablePageText',
+		// 'enablePageText',
 		// 'toggleFullScreen',
 		'particleSize',
 		'zoom',
@@ -276,6 +276,6 @@ function draw() {
 	//If the user presses a key
 	detectKeyPress();
 	//Enable or disable the rendering of textual info
-	renderPageText();
+	// renderPageText();
 
 }

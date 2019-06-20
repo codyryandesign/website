@@ -151,5 +151,4 @@ function draw() {
 	zoff += .006
 
 	detectKeyPress();
-	renderPageText();
 }

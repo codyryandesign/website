@@ -135,6 +135,6 @@ function draw() {
   }
   //Listen for user key presses
   detectKeyPress();
-  renderPageText();
+
 
 }

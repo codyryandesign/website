@@ -40,23 +40,22 @@ function windowResized() {
 
 function renderPageText() {
   var x = document.getElementById("pageText");
-  if (enablePageText) {
-    x.style.opacity = '1';
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
   } else {
-    x.style.opacity = '0';
+    x.style.visibility = "hidden";
   }
 }
 
 function toggleFullScreen() {
   let fs = fullscreen();
   fullscreen(!fs);
-  var x = document.getElementById("fsbutton");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  resizeCanvas(windowWidth, windowHeight);
+  // var x = document.getElementById("fsbutton");
+  // if (x.style.display === "none") {
+  //   x.style.display = "block";
+  // } else {
+  //   x.style.display = "none";
+  // }
 }
 
 // function displayButton() {

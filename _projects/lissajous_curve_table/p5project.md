@@ -16,7 +16,7 @@ dependencies:
 </div>
 
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
-<div id="pageText" markdown="1">
+<div id="pageText" markdown="1" style="visibility:hidden">
 
 ### This sketch example is in-progress and not all features have yet been implemented.
 
@@ -30,6 +30,11 @@ The Lissajous curve table is a visual representation of harmonic complexity. At 
 
 See Worlfram Math World's description of Lissajous curves for further detail [here](http://mathworld.wolfram.com/LissajousCurve.html).
 
-</div>
+
 
 This particle system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk).
+
+</div>
+
+<button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>

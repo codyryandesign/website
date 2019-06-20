@@ -17,7 +17,7 @@ dependencies:
     <script type="text/javascript" src="sketch/particle.js"></script>
 </div>
 
-<div id="pageText" markdown="1">
+<div id="pageText" markdown="1" style="visibility:hidden">
 
 ##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
 
@@ -80,9 +80,6 @@ A gathering of particle objects traverse the canvas. They are propelled by vecto
 - enableFlowField:
 ##### Enable or disable flow field vector forces.
 
-</div>
-
-<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
 
 This flow field system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html).
 
@@ -97,3 +94,8 @@ This flow field system is [based on an example from The Coding Train](https://th
 ![Flow_Field_7](flow_field_captures/Flow_Fields7-resized.png)
 
 Project Resources can be found [here](/resources).
+
+</div>
+
+<button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>

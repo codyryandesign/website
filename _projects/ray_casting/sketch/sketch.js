@@ -122,7 +122,6 @@ function draw() {
   handleParticles();
   //monitor keys for User activity
   detectKeyPress();
-  renderPageText();
 
   let bColor = color(backgroundC);
   background(hue(bColor), saturation(bColor), brightness(bColor), backgroundA);

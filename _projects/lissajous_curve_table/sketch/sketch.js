@@ -32,7 +32,6 @@ function setup() {
 }
 
 function draw() {
-  renderPageText();
   detectKeyPress();
 
   background(0,100);

@@ -18,7 +18,7 @@ dependencies:
 
 <!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
-<div id="pageText" markdown="1">
+<div id="pageText" markdown="1" style="visibility:hidden">
 
 ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
@@ -90,6 +90,11 @@ Sketch Manipulation Descriptions:
 - mouseFollowEnabled:
 ##### Enable or disable the mouse position as a vector force applied to the particles.
 
-</div>
+
 
 This particle system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/027-fireworks.html).
+
+</div>
+
+<button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>

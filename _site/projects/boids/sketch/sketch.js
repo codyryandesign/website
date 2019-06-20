@@ -34,7 +34,6 @@ function setup() {
 
 function draw() {
   detectKeyPress();
-  renderPageText();
   background(0);
   flock.run();
 }

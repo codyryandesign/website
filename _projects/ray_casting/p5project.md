@@ -20,7 +20,7 @@ dependencies:
 <!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
-<div id="pageText" markdown="1">
+<div id="pageText" markdown="1" style="visibility:hidden">
 
 ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
@@ -74,7 +74,7 @@ random(rayBright, 100);
 - mouseFollowEnabled:
 ##### If enabled, one of the particles will follow the mouse around the scene when the mouse is pressed.
 
-</div>
+
 
 This 2D ray cast system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk).
 
@@ -88,3 +88,8 @@ A third tutorial on ray casting [by ncase is available here](https://ncase.me/si
 ![Ray_Casting_2](ray_casting_captures/Ray_Casting2-resized.png)
 ![Ray_Casting_3](ray_casting_captures/Ray_Casting3-resized.png)
 ![Ray_Casting_4](ray_casting_captures/Ray_Casting4-resized.png)
+
+</div>
+
+<button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>

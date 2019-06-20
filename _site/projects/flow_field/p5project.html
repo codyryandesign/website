@@ -217,7 +217,7 @@
     <script type="text/javascript" src="sketch/particle.js"></script>
 </div>
 
-<div id="pageText">
+<div id="pageText" style="visibility:hidden">
 
   <h5 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <strong><em>’s’</em></strong> on your keyboard to bring up sketch manipulation options.</h5>
 
@@ -291,15 +291,11 @@
     </li>
   </ul>
 
-</div>
+  <p>This flow field system is <a href="https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html">based on an example from The Coding Train</a>.</p>
 
-<p><button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button></p>
+  <h3 id="here-are-a-few-examples-of-stills-created-through-this-generator">Here are a few examples of stills created through this generator:</h3>
 
-<p>This flow field system is <a href="https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html">based on an example from The Coding Train</a>.</p>
-
-<h3 id="here-are-a-few-examples-of-stills-created-through-this-generator">Here are a few examples of stills created through this generator:</h3>
-
-<p><img src="flow_field_captures/Flow_Fields-resized.png" alt="Flow_Field_1" /><br />
+  <p><img src="flow_field_captures/Flow_Fields-resized.png" alt="Flow_Field_1" /><br />
 <img src="flow_field_captures/Flow_Fields2-resized.png" alt="Flow_Field_2" /><br />
 <img src="flow_field_captures/Flow_Fields3-resized.png" alt="Flow_Field_3" /><br />
 <img src="flow_field_captures/Flow_Fields4-resized.png" alt="Flow_Field_4" /><br />
@@ -307,7 +303,12 @@
 <img src="flow_field_captures/Flow_Fields6-resized.png" alt="Flow_Field_6" /><br />
 <img src="flow_field_captures/Flow_Fields7-resized.png" alt="Flow_Field_7" /></p>
 
-<p>Project Resources can be found <a href="/resources">here</a>.</p>
+  <p>Project Resources can be found <a href="/resources">here</a>.</p>
+
+</div>
+
+<p><button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button></p>
 
   </div><a class="u-url" href="/website/projects/flow_field/p5project.html" hidden></a>
 </article>
