@@ -34,18 +34,23 @@ var fillA = .186;
 var fillAMin = 0;
 var fillAMax = 1.0;
 var fillAStep = .001;
+// //Minimum speed at which particles can move
+// var minSpeed = .1;
+// var minSpeedMin = 0;
+// var minSpeedMax = 20;
+// var minSpeedStep = .01;
+// //Maximum speed at which particles can move
+// var maxSpeed = minSpeedMax;
+// var maxSpeedMin = minSpeedMax;
+// var maxSpeedMax = minSpeedMax+20;
+// var maxSpeedStep = .01;
 //Minimum speed at which particles can move
-var minSpeed = .1;
-var minSpeedMin = 0;
-var minSpeedMax = 5;
-var minSpeedStep = .01;
-//Maximum speed at which particles can move
-var maxSpeed = minSpeedMax;
-var maxSpeedMin = minSpeedMax;
-var maxSpeedMax = minSpeedMax+20;
-var maxSpeedStep = .01;
+var particleSpeed = 5;
+var particleSpeedMin = 0;
+var particleSpeedMax = 20;
+var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = 0.0
+var angleVal = .314
 var angleValMin = -10;
 var angleValMax = 10;
 var angleValStep = .001;
@@ -62,7 +67,7 @@ var targetMagnitudeStep = .0001;
 //The amount of time that x and y noise values
 //are incremented by every loop
 var inc = .101;
-var incAdjust = 10;
+var incAdjust = 1;
 var incAdjustMin = -1.0;
 var incAdjustMax = 10;
 var incAdjustStep = .001;
@@ -88,6 +93,8 @@ var enableMouseTarget = false;
 var enableMic = false;
 //Enable or disable rendering of textual info
 var enablePageText = false;
+//Enable or disable fullscreen-mode
+// var toggleFullScreen = false;
 
 var numParticles = 1000;
 var numParticlesMin = 0;
@@ -119,7 +126,7 @@ var gui1, gui2;
 var visible = true;
 
 function setup() {
-	//frameRate(60);
+	frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
 	ellipseMode(CORNER);
@@ -140,8 +147,9 @@ function setup() {
 		'fillC',
 		'fillA',);
 	gui2.addGlobals(
-		'minSpeed',
-		'maxSpeed',
+		// 'minSpeed',
+		// 'maxSpeed',
+		'particleSpeed',
 		'angleVal',
 		'angleMult',
 		'fieldMagnitude',
@@ -155,6 +163,7 @@ function setup() {
 		'enableMouseTarget',
 		// 'enableMic',
 		'enablePageText',
+		// 'toggleFullScreen',
 		'particleSize',
 		'zoom',
 		'flowFieldZoom',);

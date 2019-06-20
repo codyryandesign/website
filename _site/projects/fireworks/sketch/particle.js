@@ -35,6 +35,8 @@ function Particle(x,y, velocity) {
     this.pos.add(this.vel);
     //Reset acceleration information for the next frame
     this.acc.mult(0);
+
+    this.size = value_limit(this.size - random(this.lifespan), particleSize, 0);
   }
 
 }

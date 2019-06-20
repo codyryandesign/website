@@ -4,7 +4,7 @@ function Particle() {
 	this.vel = createVector(0,0);
 	this.acc = createVector(0,0);
 	this.force = createVector(0,0);
-	this.maxSpeed = random(minSpeed, maxSpeed)
+	this.maxSpeed = particleSpeed;
 	//this.maxSpeed = map(micLevel, 0.0, 1.0, .1, 5);
 	this.hueSpeed;
 	this.h = 0;
@@ -56,7 +56,7 @@ function Particle() {
 		let fColor = color(fillC);
 		if(rainbowTrails && !enableMic) {
 			// this.hueSpeed = map(this.vel.mag(), 0, 3, .1, 2);
-			this.hueSpeed = map(this.vel.mag(), minSpeed, maxSpeed, .01, 1);
+			this.hueSpeed = map(this.vel.mag(), 0, particleSpeed, .01, 1);
 			this.h = (this.h + this.hueSpeed) % 360;
 			//this.h = map(this.vel.mag(), minSpeed, maxSpeed, -360, 360)
 			stroke(this.h, rainbowSaturation, 100, strokeA);
@@ -86,29 +86,28 @@ function Particle() {
 		if (this.pos.x > width) {
 			this.pos.x = 0;
 			this.size = random(.1, particleSize)
-			this.size = particleSize;
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
+			this.maxSpeed = random(1, particleSpeed);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}
 		if (this.pos.x < 0) {
 			this.pos.x = width;
 			this.size = random(.1, particleSize)
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
+			this.maxSpeed = random(1, particleSpeed);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}
 		if (this.pos.y > height) {
 			this.pos.y = 0;
 			this.size = random(.1, particleSize)
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
+			this.maxSpeed = random(1, particleSpeed);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}
 		if (this.pos.y < 0) {
 			this.pos.y = height;
 			this.size = random(.1, particleSize)
-			//this.maxSpeed = map(micLevel, 0.0, 1.0, 1, 5);
+			this.maxSpeed = random(1, particleSpeed);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}

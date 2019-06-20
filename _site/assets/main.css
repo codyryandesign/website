@@ -507,7 +507,7 @@ table {
 /* quick reset and base styles */
 .site-header {
   position: relative;
-  display: block;
+  display: none;
   font-family: Trebuchet MS;
   background-color: silver;
   color: #777;
@@ -517,12 +517,14 @@ table {
   visibility: visible;
   opacity: 1; }
 
+.site-wrapper {
+  display: none; }
+
 canvas {
   position: absolute;
   top: 0;
   left: 0;
   margin: 0;
-  padding-top: 10%;
   width: 100%;
   height: 100%;
   overflow: hidden;

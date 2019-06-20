@@ -34,6 +34,9 @@ function detectKeyPress() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 function renderPageText() {
   var x = document.getElementById("pageText");
@@ -42,4 +45,37 @@ function renderPageText() {
   } else {
     x.style.opacity = '0';
   }
+}
+
+function toggleFullScreen() {
+  let fs = fullscreen();
+  fullscreen(!fs);
+  var x = document.getElementById("fsbutton");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+// function displayButton() {
+//   if(!fullscreen()) {
+//     var x = document.getElementById("fsbutton");
+//     x.style.display = "block";
+//   }
+// }
+
+//Example block-toggle function
+// function myFunction() {
+//   var x = document.getElementById("myDIV");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+
+function value_limit(val, min, max) {
+  return val < min ? min : (val > max ? max : val);
 }

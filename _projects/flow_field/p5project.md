@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Flow Field"
-<!-- date:   2019-05-06 -->
+date:   2019-05-06
 thumbnail: thumbnail.png
 dependencies:
     - p5
@@ -16,8 +16,6 @@ dependencies:
     <script type="text/javascript" src="sketch/sketch.js"></script>
     <script type="text/javascript" src="sketch/particle.js"></script>
 </div>
-
-<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
 <div id="pageText" markdown="1">
 
@@ -83,6 +81,8 @@ A gathering of particle objects traverse the canvas. They are propelled by vecto
 ##### Enable or disable flow field vector forces.
 
 </div>
+
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
 
 This flow field system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html).
 

@@ -58,7 +58,7 @@ var gui1;
 //and toggle it's visibility
 var visible = true;
 
-var enablePageText = true;
+var enablePageText = false;
 
 
 //To use an image, we have to preload it before setup()
@@ -107,7 +107,7 @@ function draw() {
   gravity = createVector(0, gravityAmount);
   //Create a gravitational force
   //vector based off the windAmount
-  wind = createVector(windAmount, 0);
+  wind = createVector(random(windAmount), 0);
   //Take in background color-picker
   //value as a color
   bColor = color(backgroundC)
