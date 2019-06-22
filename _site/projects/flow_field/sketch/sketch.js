@@ -278,13 +278,6 @@ function draw() {
 		else {
 			//noCursor();
 		}
-		if(key == '-'){
-			strokeC = hexToComplimentary(strokeC);
-			key = null;
-		} else if(key == '=') {
-			strokeC = hexToComplimentary(strokeC);
-			key = null;
-		}
 		// If the flow field is enabled in GUI
 		if(enableFlowField){
 		//the particles will follow the flow field

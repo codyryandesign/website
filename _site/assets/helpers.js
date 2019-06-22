@@ -32,6 +32,22 @@ function detectKeyPress() {
     //nullify key value to prevent multiple downloads on subsequent loops
     key = null;
   }
+  if(key == '-'){
+    if(backgroundC != null) {
+      backgroundC = hexToComplimentary(backgroundC);
+    }
+    if(strokeC != null) {
+      strokeC = hexToComplimentary(strokeC);
+    }
+    if(fillC != null) {
+      fillC = hexToComplimentary(fillC);
+    }
+    key = null;
+  }
+  if(key == '=') {
+    strokeC = hexToComplimentary(strokeC);
+    key = null;
+  }
 }
 
 function windowResized() {
