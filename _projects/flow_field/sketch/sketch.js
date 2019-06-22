@@ -1,9 +1,9 @@
 //A flow field demonstration, based off The Coding Train's example,
 //with interactive controls, and code description.
-var credits = '@CODYRYANDESIGN			www.codyryandesign.com			Purchase a screenshot today for $1'
-var credits2 = 'Purchase a screenshot today for $1'
+var credits = '@CODYRYANDESIGN			www.codyryandesign.com			Purchase a screenshot today for $2'
+var credits2 = 'Purchase a screenshot today for $2'
 var credits3 = 'Based on a generative code example by thecodingtrain.com'
-var creditsFColor;
+
 
 var scl;
 var cols, rows;
@@ -38,6 +38,12 @@ var fillA = .186;
 var fillAMin = 0;
 var fillAMax = 1.0;
 var fillAStep = .001;
+//Fill color and alpha GUI control
+var creditsFillC = '#fdfffd';
+var creditsFillA = 1.0;
+var creditsFillAMin = 0;
+var creditsFillAMax = 1.0;
+var creditsFillAStep = .001;
 // //Minimum speed at which particles can move
 // var minSpeed = .1;
 // var minSpeedMin = 0;
@@ -141,7 +147,7 @@ function setup() {
 	angleMode(DEGREES);
 	colorMode(HSB);
 	ellipseMode(CORNER);
-	textAlign(RIGHT);
+	textAlign(CENTER);
 	// blendMode(DIFFERENCE);
 	//blendMode(SOFT_LIGHT);
 
@@ -157,7 +163,9 @@ function setup() {
 		'strokeC',
 		'strokeA',
 		'fillC',
-		'fillA',);
+		'fillA',
+		'creditsFillC',
+		'creditsFillA',);
 	gui2.addGlobals(
 		// 'minSpeed',
 		// 'maxSpeed',
@@ -270,6 +278,13 @@ function draw() {
 		else {
 			//noCursor();
 		}
+		if(key == '-'){
+			strokeC = hexToComplimentary(strokeC);
+			key = null;
+		} else if(key == '=') {
+			strokeC = hexToComplimentary(strokeC);
+			key = null;
+		}
 		// If the flow field is enabled in GUI
 		if(enableFlowField){
 		//the particles will follow the flow field
@@ -291,14 +306,6 @@ function draw() {
 	//Enable or disable the rendering of textual info
 	// renderPageText();
 
-	if(showCredits) {
-		push();
-		textFont(myFont);
-		fill(0, 0, 100, .1);
-		noStroke();
-		text(credits, width-450, 20, 500, 10);
-		// text(credits2, width-200, height-20, 200, 80);
-		pop();
-	}
+	handleCredits();
 
 }
