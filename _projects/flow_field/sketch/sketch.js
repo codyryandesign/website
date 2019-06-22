@@ -147,7 +147,6 @@ function setup() {
 	angleMode(DEGREES);
 	colorMode(HSB);
 	ellipseMode(CORNER);
-	textAlign(CENTER);
 	// blendMode(DIFFERENCE);
 	//blendMode(SOFT_LIGHT);
 

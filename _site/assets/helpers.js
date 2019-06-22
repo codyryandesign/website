@@ -42,6 +42,9 @@ function detectKeyPress() {
     if(fillC != null) {
       fillC = hexToComplimentary(fillC);
     }
+    if(creditsFillC != null) {
+      creditsFillC = hexToComplimentary(creditsFillC);
+    }
     key = null;
   }
   if(key == '=') {
@@ -98,11 +101,14 @@ function value_limit(val, min, max) {
 function handleCredits(){
   if(showCredits != null && showCredits) {
     push();
+    translate(width/2, height/2);
+    scale(2);
     textFont(myFont);
     creditsColor = color(creditsFillC);
     fill(hue(creditsColor), saturation(creditsColor), brightness(creditsColor), creditsFillA);
     noStroke();
-    text(credits, width/2-250, 10, 500, 10);
+
+    text(credits, 0-250, 0, 500, 10);
     // text(credits2, width-200, height-20, 200, 80);
     pop();
   }
