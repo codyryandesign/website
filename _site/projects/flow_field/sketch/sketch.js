@@ -21,14 +21,14 @@ var fr;
 //GUI VARS
 
 //Background color and alpha GUI control
-var backgroundC = '#34106b';
-var backgroundA = .024;
+var backgroundC = '#82fc85';
+var backgroundA = .01;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var strokeC = '#e75037';
-var strokeA = .073;
+var strokeC = '#8d2ce7';
+var strokeA = .5;
 var strokeAMin = 0;
 var strokeAMax = 1;
 var strokeAStep = .001;
@@ -55,12 +55,12 @@ var creditsFillAStep = .001;
 // var maxSpeedMax = minSpeedMax+20;
 // var maxSpeedStep = .01;
 //Minimum speed at which particles can move
-var particleSpeed = 5;
+var particleSpeed = 1.0;
 var particleSpeedMin = 0;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = .314
+var angleVal = 22/7/4
 var angleValMin = -10;
 var angleValMax = 10;
 var angleValStep = .001;
@@ -76,8 +76,8 @@ var targetMagnitudeMax = 5;
 var targetMagnitudeStep = .0001;
 //The amount of time that x and y noise values
 //are incremented by every loop
-var inc = .101;
-var incAdjust = 1;
+var inc = -0.025;
+var incAdjust = 10;
 var incAdjustMin = -10;
 var incAdjustMax = 10;
 var incAdjustStep = .001;
@@ -89,7 +89,7 @@ var zoffAdjustMin = -10;
 var zoffAdjustMax = 10;
 var zoffAdjustStep = .001;
 //Allow particles to hue-shift over time
-var rainbowTrails = false;
+var rainbowTrails = true;
 var rainbowSaturation = 70;
 var rainbowSaturationMin = 0;
 var rainbowSaturationMax = 100;
@@ -106,7 +106,7 @@ var enableMic = false;
 //Enable or disable fullscreen-mode
 // var toggleFullScreen = false;
 //Enable or disable displaying credits overlay
-var showCredits = true;
+var showCredits = false;
 
 var numParticles = 1000;
 var numParticlesMin = 0;
@@ -114,7 +114,7 @@ var numParticlesMax = 1000;
 var numParticlesStep = 1;
 
 //How large should the particle sizes be?
-var particleSize = 19.27;
+var particleSize = 5;
 var particleSizetMin = 0.01;
 var particleSizeMax = 30;
 var particleSizeStep = 0.01;
@@ -143,7 +143,8 @@ function preload() {
 }
 
 function setup() {
-	frameRate(29);
+	// pixelDensity(16.0);
+	//frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
 	ellipseMode(CORNER);
@@ -204,6 +205,7 @@ function setup() {
 	// console.log(flowField.length)
 	for(var i = 0; i < numParticles; i++) {
 		particles[i] = new Particle();
+		particles[i].pos = createVector(random(width), random(height));
 	}
 
 }

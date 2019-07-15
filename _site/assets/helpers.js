@@ -11,7 +11,7 @@ function detectKeyPress() {
     save('sketch.png');
   }
 	//If the 's' key is pressed
-  if(key == 's') {
+  if(key == 's' || touchStarted()) {
 		//And the visible bool is true
     if(visible) {
 			//Show the GUI panels
@@ -193,4 +193,8 @@ function hexToComplimentary(hex){
     // Convert r b and g values to hex
     rgb = b | (g << 8) | (r << 16);
     return "#" + (0x1000000 | rgb).toString(16).substring(1);
+  }
+
+  function touchStarted() {
+    return;
   }

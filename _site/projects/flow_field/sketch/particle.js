@@ -1,5 +1,5 @@
 function Particle() {
-	this.pos = createVector(random(width), random(height));
+	this.pos = createVector(0,0);
 	this.prevPos = this.pos.copy();
 	this.vel = createVector(0,0);
 	this.acc = createVector(0,0);
@@ -54,6 +54,7 @@ function Particle() {
 	this.show = function() {
 		let sColor = color(strokeC);
 		let fColor = color(fillC);
+		// noFill();
 		if(rainbowTrails && !enableMic) {
 			// this.hueSpeed = map(this.vel.mag(), 0, 3, .1, 2);
 			this.hueSpeed = map(this.vel.mag(), 0, particleSpeed, .01, 1);
@@ -64,9 +65,11 @@ function Particle() {
 			fill(this.h, rainbowSaturation, 100, strokeA);
 		} else if (true){
 			// stroke(hue(sColor), saturation(sColor), brightness(sColor), this.strokeA);
+			// noStroke();
+			strokeWeight(.1/this.size);
 			stroke(this.color, saturation(sColor), brightness(sColor), strokeA);
 			//Fill will not render for lines, only shapes
-			fill(hue(fColor), saturation(fColor), brightness(fColor), strokeA);
+			fill(hue(fColor), saturation(fColor), brightness(fColor), fillA);
 		} //else {
 		// 	this.color = (this.color + map(micLevel, 0, .001, -.01, .01))%360;
 		// 	// stroke(hue(sColor), saturation(sColor), brightness(sColor), this.strokeA);
@@ -77,13 +80,13 @@ function Particle() {
 
 		strokeWeight(this.size);
 
-		line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
-		//ellipse(this.pos.x, this.pos.y, this.pos.x - this.prevPos.x, this.pos.y - this.prevPos.y);
+		//line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
+		ellipse(this.pos.x, this.pos.y, this.size, this.size);
 		//text(this.symbol, this.pos.x, this.pos.y);
 	}
 
 	this.edges = function() {
-		if (this.pos.x > width) {
+		if (this.pos.x > width+1) {
 			this.pos.x = 0;
 			this.size = random(.1, particleSize)
 			this.maxSpeed = random(1, particleSpeed);
@@ -91,13 +94,13 @@ function Particle() {
 			this.updatePrev();
 		}
 		if (this.pos.x < 0) {
-			this.pos.x = width;
+			this.pos.x = width + 1;
 			this.size = random(.1, particleSize)
 			this.maxSpeed = random(1, particleSpeed);
 			this.color = hue(color(strokeC)) + random(-30, 30);
 			this.updatePrev();
 		}
-		if (this.pos.y > height) {
+		if (this.pos.y > height + 1) {
 			this.pos.y = 0;
 			this.size = random(.1, particleSize)
 			this.maxSpeed = random(1, particleSpeed);
@@ -105,7 +108,7 @@ function Particle() {
 			this.updatePrev();
 		}
 		if (this.pos.y < 0) {
-			this.pos.y = height;
+			this.pos.y = height + 1;
 			this.size = random(.1, particleSize)
 			this.maxSpeed = random(1, particleSpeed);
 			this.color = hue(color(strokeC)) + random(-30, 30);
