@@ -143,7 +143,7 @@ function preload() {
 }
 
 function setup() {
-	// pixelDensity(16.0);
+	pixelDensity(2.0);
 	//frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
