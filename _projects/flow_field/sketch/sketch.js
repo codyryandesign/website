@@ -21,8 +21,8 @@ var fr;
 //GUI VARS
 
 //Background color and alpha GUI control
-var backgroundC = '#82fc85';
-var backgroundA = .01;
+var backgroundC = '#b7c1c8';
+var backgroundA = 1;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
@@ -55,7 +55,7 @@ var creditsFillAStep = .001;
 // var maxSpeedMax = minSpeedMax+20;
 // var maxSpeedStep = .01;
 //Minimum speed at which particles can move
-var particleSpeed = 1.0;
+var particleSpeed = 2.0;
 var particleSpeedMin = 0;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
