@@ -55,6 +55,7 @@ function Particle() {
 		let sColor = color(strokeC);
 		let fColor = color(fillC);
 		// noFill();
+
 		if(rainbowTrails && !enableMic) {
 			// this.hueSpeed = map(this.vel.mag(), 0, 3, .1, 2);
 			this.hueSpeed = map(this.vel.mag(), 0, particleSpeed, .01, 1);
@@ -77,11 +78,11 @@ function Particle() {
 		// 	//Fill will not render for lines, only shapes
 		// 	fill(hue(fColor), saturation(fColor), brightness(fColor), strokeA);
 		// }
-
 		strokeWeight(this.size);
+		line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
+		// ellipse(this.pos.x, this.pos.y, this.size*2, this.size);
 
-		//line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
-		ellipse(this.pos.x, this.pos.y, this.size, this.size);
+
 		//text(this.symbol, this.pos.x, this.pos.y);
 	}
 

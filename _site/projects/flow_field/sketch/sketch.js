@@ -1,6 +1,6 @@
 //A flow field demonstration, based off The Coding Train's example,
 //with interactive controls, and code description.
-var credits = '@CODYRYANDESIGN			www.codyryandesign.com			Purchase a screenshot today for $2'
+var credits = '@CODYRYANDESIGN	www.codyryandesign.com'
 var credits2 = 'Purchase a screenshot today for $2'
 var credits3 = 'Based on a generative code example by thecodingtrain.com'
 
@@ -60,9 +60,9 @@ var particleSpeedMin = 0;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = 22/7/4
-var angleValMin = -10;
-var angleValMax = 10;
+var angleVal = .005;
+var angleValMin = .00;
+var angleValMax = .03;
 var angleValStep = .001;
 //How much does the flow field attract or repel the particles?
 var fieldMagnitude = 0.5;
@@ -77,16 +77,16 @@ var targetMagnitudeStep = .0001;
 //The amount of time that x and y noise values
 //are incremented by every loop
 var inc = -0.025;
-var incAdjust = 10;
-var incAdjustMin = -10;
-var incAdjustMax = 10;
+var incAdjust = .1;
+var incAdjustMin = .005;
+var incAdjustMax = .03;
 var incAdjustStep = .001;
 //The amount of time that the z noise value
 //is incremented by every loop
 var zoff = -0.025;
 var zoffAdjust = .01;
-var zoffAdjustMin = -10;
-var zoffAdjustMax = 10;
+var zoffAdjustMin = .005;
+var zoffAdjustMax = .03;
 var zoffAdjustStep = .001;
 //Allow particles to hue-shift over time
 var rainbowTrails = true;
@@ -143,7 +143,8 @@ function preload() {
 }
 
 function setup() {
-	pixelDensity(2.0);
+	smooth();
+	// pixelDensity(2.0);
 	//frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
@@ -152,7 +153,7 @@ function setup() {
 	//blendMode(SOFT_LIGHT);
 
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth/2, windowHeight/2);
   canvas.parent('sketch-holder');
 
 	gui1 = createGui('Background, Stroke, and Fill Color Manipulation', 0, 0);
@@ -227,7 +228,8 @@ function draw() {
 		for(var x = 0; x < cols+2; x++) {
 			var index = (x + y * cols);
 			//angleMode(DEGREES);
-			var angle = ((noise(xoff, yoff, zoff) * angleVal))*TWO_PI;
+			var noiseMap = map(noise(xoff, yoff, zoff), 0.0, 1.0, 0, 360)
+			var angle = noiseMap*angleVal;
 			//var angle = atan2(mouseY-y, mouseX-x);
 			var v = p5.Vector.fromAngle(angle);
 			v.setMag(fieldMagnitude);
