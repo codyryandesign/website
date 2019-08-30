@@ -54,7 +54,7 @@ function detectKeyPress() {
 }
 
 function windowResized() {
-  resizeCanvas(displayWidth, displayHeight);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function renderPageText() {

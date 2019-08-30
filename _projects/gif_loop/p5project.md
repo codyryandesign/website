@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title:  "GIF Loops"
 date:   2019-05-06
@@ -10,12 +10,12 @@ dependencies:
     - quicksettings
     - p5.gui
     - helpers
----
+--- -->
 
 <div id="sketch-holder">
 <!-- PUT SCRIPTS HERE IN LOAD ORDER -->
-    <script type="text/javascript" src="sketch/sketch.js"></script>
     <script type="text/javascript" src="sketch/particle.js"></script>
+    <script type="text/javascript" src="sketch/sketch.js"></script>
 </div>
 
 <div id="pageText" markdown="1" style="visibility:hidden">

@@ -55,12 +55,12 @@ var creditsFillAStep = .001;
 // var maxSpeedMax = minSpeedMax+20;
 // var maxSpeedStep = .01;
 //Minimum speed at which particles can move
-var particleSpeed = 2.0;
+var particleSpeed = 1.0;
 var particleSpeedMin = 0;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = .005;
+var angleVal = .00;
 var angleValMin = .00;
 var angleValMax = .03;
 var angleValStep = .001;
@@ -164,8 +164,8 @@ function preload() {
 
 //===================================================
 // User-modifiable global variables.
-var myNickname = "tester-gif";
-var nFramesInLoop = 10;
+var myNickname = "codyryandesign-gif1";
+var nFramesInLoop = 240;
 var bEnableExport = true;
 
 // Other global variables you don't need to touch.
@@ -186,7 +186,7 @@ function setup() {
   //blendMode(SOFT_LIGHT);
 
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  theCanvas = createCanvas(windowWidth/2, windowHeight/2);
+  theCanvas = createCanvas(windowWidth/2, windowWidth/2);
   theCanvas.parent('sketch-holder');
 
   gui1 = createGui('Background, Stroke, and Fill Color Manipulation', 0, 0);
