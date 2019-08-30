@@ -153,7 +153,7 @@ function setup() {
 	//blendMode(SOFT_LIGHT);
 
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(windowWidth/2, windowHeight/2);
+  canvas = createCanvas(windowWidth/2, windowHeight);
   canvas.parent('sketch-holder');
 
 	gui1 = createGui('Background, Stroke, and Fill Color Manipulation', 0, 0);
