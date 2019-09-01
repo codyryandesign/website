@@ -10,7 +10,7 @@ var enablePageText = true;
 var gui1;
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
   canvas.parent('sketch-holder');
   gui1 = createGui('Settings');
   gui1.addGlobals('enablePageText');

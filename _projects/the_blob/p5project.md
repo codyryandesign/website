@@ -17,7 +17,7 @@ dependencies:
 
 
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
-<div id="pageText" markdown="1" style="visibility:hidden">
+<div id="pageText" markdown="1" style="visibility:visible">
 
 ### This sketch example is in-progress and not all features have yet been implemented.
 
@@ -26,41 +26,6 @@ dependencies:
 ##### Take a snapshot of the canvas at any time by pressing ***'p'***.
 
 ##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
-
-### This sketch example is in-progress and not all features have yet been implemented.
-
-##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
-
-##### Take a snapshot of the canvas at any time by pressing ***'p'***.
-
-##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
-
-### This sketch example is in-progress and not all features have yet been implemented.
-
-##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
-
-##### Take a snapshot of the canvas at any time by pressing ***'p'***.
-
-##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
-
-### This sketch example is in-progress and not all features have yet been implemented.
-
-##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
-
-##### Take a snapshot of the canvas at any time by pressing ***'p'***.
-
-##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
-
-### This sketch example is in-progress and not all features have yet been implemented.
-
-##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
-
-##### Take a snapshot of the canvas at any time by pressing ***'p'***.
-
-##### Reload the page at any time to generate a new landscape. Just press 'CMD+R'.
-
-
-
 
 This particle system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk):
 </div>

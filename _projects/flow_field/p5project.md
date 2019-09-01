@@ -17,7 +17,7 @@ dependencies:
     <script type="text/javascript" src="sketch/particle.js"></script>
 </div>
 
-<div id="pageText" markdown="1" style="visibility:hidden">
+<div id="pageText" markdown="1" style="visibility:visible">
 
 ##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
 

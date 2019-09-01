@@ -20,7 +20,7 @@ dependencies:
 <!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
-<div id="pageText" markdown="1" style="visibility:hidden">
+<div id="pageText" markdown="1" style="visibility:visible">
 
 ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 

@@ -41,7 +41,7 @@ var visible = true;
 
 
 function setup() {
-	canvas = createCanvas(windowWidth, windowHeight);
+	canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
   canvas.parent('sketch-holder');
 	//noCursor()
 	gui1 = createGui('Blob GUI');

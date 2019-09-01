@@ -1,7 +1,9 @@
-//A function for resizing the canvas if the window size is changed
-// function windowResized() {
-//   resizeCanvas(windowWidth, windowHeight);
-// }
+var GLOBAL_WIDTH = 600;
+var GLOBAL_HEIGHT = 600;
+
+function windowResized() {
+  resizeCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+}
 
 //A function for detecting key-press activity by the User
 function detectKeyPress() {
@@ -53,16 +55,12 @@ function detectKeyPress() {
   }
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 function renderPageText() {
   var x = document.getElementById("pageText");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
+  if (x.style.visibility === "visible") {
     x.style.visibility = "hidden";
+  } else {
+    x.style.visibility = "visible";
   }
 }
 

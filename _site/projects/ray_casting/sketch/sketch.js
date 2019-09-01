@@ -68,7 +68,7 @@ var visible = true;
 
 function setup() {
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
   canvas.parent('sketch-holder');
   //default HSB vals: 360, 100, 100, 1
   colorMode(HSB);
@@ -131,7 +131,7 @@ function draw() {
   }
 
   for(let i = 0; i < particles.length; i++) {
-    noiseVector = createVector((noise(xoff+(i*1000))*windowWidth), (noise(yoff+(i*1000))*windowHeight))
+    noiseVector = createVector((noise(xoff+(i*1000))*GLOBAL_WIDTH), (noise(yoff+(i*1000))*GLOBAL_HEIGHT))
     particles[i].applyForce(noiseVector);
     if(mouseIsPressed &&
     mouseX < width &&

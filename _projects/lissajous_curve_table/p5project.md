@@ -16,7 +16,7 @@ dependencies:
 </div>
 
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
-<div id="pageText" markdown="1" style="visibility:hidden">
+<div id="pageText" markdown="1" style="visibility:visble">
 
 ### This sketch example is in-progress and not all features have yet been implemented.
 
