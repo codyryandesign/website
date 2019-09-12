@@ -79,6 +79,7 @@ function setup() {
   colorMode(HSB);
   //blendMode(HARD_LIGHT)
   // blendMode(LIGHTEST)
+  frameRate(60)
 
 
   gui1 = createGui('Settings', 0, 0);
@@ -159,8 +160,8 @@ function draw() {
     particles[i].look(boundaries)
     particles[i].handleRays();
     // particles[i].getHeading();
-    xoff += random(0.01);
-    yoff += random(0.01);
+    xoff += random(0.001);
+    yoff += random(0.001);
 
     // image(pngGlassJar, 0, 0);
   }
