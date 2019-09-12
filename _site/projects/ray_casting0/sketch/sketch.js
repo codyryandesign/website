@@ -160,8 +160,8 @@ function draw() {
     particles[i].look(boundaries)
     particles[i].handleRays();
     // particles[i].getHeading();
-    xoff += random(0.001);
-    yoff += random(0.001);
+    xoff += 0.0001;
+    yoff += 0.0001;
 
     // image(pngGlassJar, 0, 0);
   }
