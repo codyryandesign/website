@@ -62,7 +62,7 @@ class Particle {
       if(closest) {
         push();
         let rColor = color(rayHue);
-        let rayAlphaFade = rayAlpha*sin(frameCount/15*this.order);
+        let rayAlphaFade = rayAlpha*sin(frameCount/50*this.order);
         if(!randomizeRayColors) {
           stroke(hue(rColor), saturation(rColor), brightness(rColor), rayAlphaFade);
         }
