@@ -140,7 +140,7 @@ function draw() {
   }
 
   for(let i = 0; i < particles.length; i++) {
-    noiseVector = createVector((noise(xoff+(i*1000))*GLOBAL_WIDTH), (noise(yoff+(i*1000))*GLOBAL_HEIGHT))
+    noiseVector = createVector((noise(xoff+(i*1000))*(GLOBAL_WIDTH/2)+GLOBAL_WIDTH/4), (noise(yoff+(i*1000))*(GLOBAL_HEIGHT/2)+GLOBAL_HEIGHT/2))
     particles[i].applyForce(noiseVector);
     particles[i].order = i+1;
     if(mouseIsPressed &&
