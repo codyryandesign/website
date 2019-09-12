@@ -21,14 +21,14 @@ var fr;
 //GUI VARS
 
 //Background color and alpha GUI control
-var backgroundC = '#b7c1c8';
-var backgroundA = 1;
+var backgroundC = '#ffffff';
+var backgroundA = .005;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
 var strokeC = '#8d2ce7';
-var strokeA = .5;
+var strokeA = 1.0;
 var strokeAMin = 0;
 var strokeAMax = 1;
 var strokeAStep = .001;
@@ -60,9 +60,9 @@ var particleSpeedMin = 0;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = .005;
+var angleVal = 3.14;
 var angleValMin = .00;
-var angleValMax = .03;
+var angleValMax = 10;
 var angleValStep = .001;
 //How much does the flow field attract or repel the particles?
 var fieldMagnitude = 0.5;
@@ -76,7 +76,7 @@ var targetMagnitudeMax = 5;
 var targetMagnitudeStep = .0001;
 //The amount of time that x and y noise values
 //are incremented by every loop
-var inc = -0.025;
+var inc = .1;
 var incAdjust = .1;
 var incAdjustMin = .005;
 var incAdjustMax = .03;
@@ -89,7 +89,7 @@ var zoffAdjustMin = .005;
 var zoffAdjustMax = .03;
 var zoffAdjustStep = .001;
 //Allow particles to hue-shift over time
-var rainbowTrails = true;
+var rainbowTrails = false;
 var rainbowSaturation = 70;
 var rainbowSaturationMin = 0;
 var rainbowSaturationMax = 100;
@@ -114,7 +114,7 @@ var numParticlesMax = 1000;
 var numParticlesStep = 1;
 
 //How large should the particle sizes be?
-var particleSize = 5;
+var particleSize = .5;
 var particleSizetMin = 0.01;
 var particleSizeMax = 30;
 var particleSizeStep = 0.01;
@@ -144,7 +144,7 @@ function preload() {
 
 function setup() {
 	smooth();
-	// pixelDensity(2.0);
+	pixelDensity(4.0);
 	//frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
@@ -220,8 +220,6 @@ function draw() {
 	//utilizing user preferences
 	let bColor = color(backgroundC);
 	background(hue(bColor), saturation(bColor), brightness(bColor), backgroundA);
-	//Set the x and y increments off GUI val
-	inc = incAdjust;
 	//Reset y-noise val
 	var yoff = 0;
 	for(var y = 0; y < rows+2; y++) {
@@ -230,12 +228,12 @@ function draw() {
 			var index = (x + y * cols);
 			//angleMode(DEGREES);
 			var noiseMap = map(noise(xoff, yoff, zoff), 0.0, 1.0, 0, 360)
-			var angle = noiseMap*angleVal;
-			//var angle = atan2(mouseY-y, mouseX-x);
+			var angle = noiseMap*angleVals;
+			// var angle = atan2(mouseY-y, mouseX-x);
 			var v = p5.Vector.fromAngle(angle);
 			v.setMag(fieldMagnitude);
 			flowField[index] = v;
-			xoff += inc;
+			xoff += incAdjust;
 
 
 			if(showFlowField) {
