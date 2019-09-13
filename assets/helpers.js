@@ -13,7 +13,7 @@ function detectKeyPress() {
     save('sketch.png');
   }
 	//If the 's' key is pressed
-  if(key == 's' || touchStarted()) {
+  if(key == 's' || mouseIsPressed) {
 		//And the visible bool is true
     if(visible) {
 			//Show the GUI panels

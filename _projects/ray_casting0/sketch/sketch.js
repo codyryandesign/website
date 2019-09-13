@@ -40,7 +40,7 @@ var rayAlphaStep = .001;
 
 var numParticles = 15;
 var numParticlesMin = 1;
-var numParticlesMax = 10;
+var numParticlesMax = 30;
 var numParticlesStep = 1;
 
 var numRays = 360;
@@ -143,7 +143,7 @@ function draw() {
     noiseVector = createVector((noise(xoff+(i*1000))*(GLOBAL_WIDTH/2)+GLOBAL_WIDTH/4), (noise(yoff+(i*1000))*(GLOBAL_HEIGHT/2)+GLOBAL_HEIGHT/3))
     particles[i].applyForce(noiseVector);
     particles[i].order = i+1;
-    if(mouseIsPressed &&
+    if(false &&
     mouseX < width &&
     mouseX > 0 &&
     mouseY < height &&
