@@ -23,7 +23,7 @@ var rocketSizeMin = 0.1;
 var rocketSizeMax = 5;
 var rocketSizeStep = .01;
 
-var particleSize = 4;
+var particleSize = 200;
 var particleSizeMin = 0;
 var particleSizeMax = 20;
 var particleSizeStep = .1;
@@ -73,7 +73,7 @@ function setup() {
   //dimensions are based off the browser
   //window size
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  canvas = createCanvas(600, 600);
   canvas.parent('sketch-holder');
   // colorMode(HSB, 360, 100, 100, 1)
   //Draw all colors using

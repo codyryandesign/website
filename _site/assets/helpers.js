@@ -1,9 +1,5 @@
-var GLOBAL_WIDTH = 600;
-var GLOBAL_HEIGHT = 600;
-var shaken = false;
-
 function windowResized() {
-  resizeCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  resizeCanvas(600, 600);
 }
 
 //A function for detecting key-press activity by the User
@@ -14,7 +10,7 @@ function detectKeyPress() {
     save('sketch.png');
   }
 	//If the 's' key is pressed
-  if(key == 's' || shaken) {
+  if(key == 's') {
 		//And the visible bool is true
     if(visible) {
 			//Show the GUI panels
@@ -22,7 +18,6 @@ function detectKeyPress() {
         gui1.show();
       if(typeof gui2 != 'undefined')
 			  gui2.show();
-      shaken = false;
     }
     else {
 			//Otherwise, hide the GUI panels
@@ -198,8 +193,3 @@ function hexToComplimentary(hex){
   function touchStarted() {
     return;
   }
-
-  function deviceShaken() {
-    shaken = true;
-    return shaken;
-}

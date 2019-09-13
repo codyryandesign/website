@@ -16,6 +16,12 @@
 - name: helpers
   element: <script type="text/javascript" src="/website/assets/helpers.js"></script>
 
+- name: screenconfig
+  element: <script type="text/javascript" src="/website/assets/screenconfig.js"></script>
+
+- name: scenemanager
+  element: <script type="text/javascript" src=/website/assets/scenemanager.js></script>
+
 - name: flexbox
   element: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" />
 

@@ -1,9 +1,5 @@
-var GLOBAL_WIDTH = 600;
-var GLOBAL_HEIGHT = 600;
-
-
 function windowResized() {
-  resizeCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  resizeCanvas(600, 600);
 }
 
 //A function for detecting key-press activity by the User
@@ -14,7 +10,7 @@ function detectKeyPress() {
     save('sketch.png');
   }
 	//If the 's' key is pressed
-  if(key == 's' || touches.length == 1) {
+  if(key == 's') {
 		//And the visible bool is true
     if(visible) {
 			//Show the GUI panels

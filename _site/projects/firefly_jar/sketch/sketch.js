@@ -38,9 +38,9 @@ var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;
 
-var numParticles = 15;
+var numParticles = 8;
 var numParticlesMin = 1;
-var numParticlesMax = 30;
+var numParticlesMax = 25;
 var numParticlesStep = 1;
 
 var numRays = 360;

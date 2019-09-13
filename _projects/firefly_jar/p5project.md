@@ -7,6 +7,7 @@ dependencies:
     - p5
     - quicksettings
     - p5.gui
+    - screenconfig
     - helpers
 ---
 
