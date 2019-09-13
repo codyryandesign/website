@@ -33,12 +33,12 @@ var rayBrightMin = 0;
 var rayBrightMax = 100;
 var rayBrightStep = 1;
 
-var rayAlpha = .09;
+var rayAlpha = .05;
 var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;
 
-var numParticles = 8;
+var numParticles = 10;
 var numParticlesMin = 1;
 var numParticlesMax = 10;
 var numParticlesStep = 1;
@@ -58,7 +58,7 @@ var angleValMin = 0;
 var angleValMax = 360;
 var angleValStep  = 1;
 
-var randomizeRayColors = false;
+var randomizeRayColors = true;
 var mouseFollowEnabled = true;
 var enablePageText = true;
 //END GUI VARS
@@ -103,11 +103,11 @@ function setup() {
   xoff = random(1000);
   yoff = random(1000);
 
-  // for (let i = 0; i < 7; i++) {
-  //   let x1 = random(width);
-  //   let y1 = random(height);
-  //   let x2 = random(width);
-  //   let y2 = random(height);
+  // for (let i = 0; i < 17; i++) {
+  //   let x1 = random(GLOBAL_WIDTH/4, GLOBAL_WIDTH-(GLOBAL_WIDTH/4));
+  //   let y1 = random(GLOBAL_HEIGHT/4, GLOBAL_HEIGHT-(GLOBAL_HEIGHT/4));
+  //   let x2 = random(GLOBAL_WIDTH/4, GLOBAL_WIDTH-(GLOBAL_WIDTH/4));
+  //   let y2 = random(GLOBAL_HEIGHT, GLOBAL_HEIGHT-(GLOBAL_HEIGHT/4));
   //   boundaries.push(new Boundary(x1, y1, x2, y2, 255));
   // }
   boundaries.push(new Boundary(0, 0, width, 0, 0));
@@ -140,7 +140,7 @@ function draw() {
   }
 
   for(let i = 0; i < particles.length; i++) {
-    noiseVector = createVector((noise(xoff+(i*1000))*(GLOBAL_WIDTH/2)+GLOBAL_WIDTH/4), (noise(yoff+(i*1000))*(GLOBAL_HEIGHT/2)+GLOBAL_HEIGHT/2))
+    noiseVector = createVector((noise(xoff+(i*1000))*(GLOBAL_WIDTH/2)+GLOBAL_WIDTH/4), (noise(yoff+(i*1000))*(GLOBAL_HEIGHT/2)+GLOBAL_HEIGHT/3))
     particles[i].applyForce(noiseVector);
     particles[i].order = i+1;
     if(mouseIsPressed &&
@@ -160,8 +160,8 @@ function draw() {
     particles[i].look(boundaries)
     particles[i].handleRays();
     // particles[i].getHeading();
-    xoff += 0.0001;
-    yoff += 0.0001;
+    xoff += 0.001;
+    yoff += 0.001;
 
     // image(pngGlassJar, 0, 0);
   }
