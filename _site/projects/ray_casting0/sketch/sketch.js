@@ -38,7 +38,7 @@ var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;
 
-var numParticles = 10;
+var numParticles = 15;
 var numParticlesMin = 1;
 var numParticlesMax = 10;
 var numParticlesStep = 1;
@@ -58,7 +58,7 @@ var angleValMin = 0;
 var angleValMax = 360;
 var angleValStep  = 1;
 
-var randomizeRayColors = true;
+var randomizeRayColors = false;
 var mouseFollowEnabled = true;
 var enablePageText = true;
 //END GUI VARS

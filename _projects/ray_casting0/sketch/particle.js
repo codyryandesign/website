@@ -60,9 +60,12 @@ class Particle {
         }
       }
       if(closest) {
+        let x = 0; //center-point
+        let y =  5 * this.order; //frequency
+        let z = rayAlpha; //amplitude
         push();
         let rColor = color(rayHue);
-        let rayAlphaFade = rayAlpha*sin(frameCount*.01*this.order)*2;
+        let rayAlphaFade = x+sin(frameCount/y)*z;
         if(!randomizeRayColors) {
           stroke(hue(rColor), saturation(rColor), brightness(rColor), rayAlphaFade);
         }
