@@ -4,11 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Fireworks!</title>
+  <title>Grid Lights</title>
   <meta name="description" content="">
   <link rel="icon" type="image/png" href="/website/assets/favicon.png" />
   <link rel="stylesheet" href="/website/assets/main.css">
-  <link rel="canonical" href="http://codyryandesign.github.io/website/projects/fireworks/p5project.html">
+  <link rel="canonical" href="http://codyryandesign.github.io/website/projects/grid_lights/p5project.html">
   <link rel="alternate" type="application/rss+xml" title="CODYRYANDESIGN Computer-Art Generators" href="/website/feed.xml">
   <!-- dependencies -->
   
@@ -151,6 +151,31 @@
     
 
     
+
+    
+        <script type="text/javascript" src="/website/assets/screenconfig.js"></script>
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
         <script type="text/javascript" src="/website/assets/helpers.js"></script>
     
 
@@ -187,7 +212,7 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <!-- <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Fireworks!</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Grid Lights</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2019-09-13T21:49:41-05:00" itemprop="datePublished">Sep 13, 2019
       </time></p>
@@ -196,13 +221,15 @@
   <div class="post-content e-content" itemprop="articleBody">
     <div id="sketch-holder">
     <script type="text/javascript" src="sketch/sketch.js"></script>
-    <script type="text/javascript" src="sketch/firework.js"></script>
+    <script type="text/javascript" src="sketch/boundary.js"></script>
     <script type="text/javascript" src="sketch/particle.js"></script>
+    <script type="text/javascript" src="sketch/ray.js"></script>
 </div>
 
 <!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
 
-<div id="pageText" style="visibility:hidden">
+<!-- Include markdown="1" to allow markdown conversion within a div element. -->
+<div id="pageText" style="visibility:visible">
 
   <h6 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <code class="highlighter-rouge">s</code> on your keyboard to bring up sketch manipulation options.</h6>
 
@@ -210,84 +237,67 @@
 
   <h6 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press <code class="highlighter-rouge">CMD+R</code>.</h6>
 
-  <!-- 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sketch-holder"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"sketch/sketch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
- -->
+  <p>Particle objects cast rays out as they dance around a randomized landscape, creating dynamic play with light and shadow as they move. If a particle object passes through a wall, there is a chance for it to change color.</p>
 
-  <p>Rockets soar into the sky, exploding when their velocity is equal to the gravitational force. When each rocket explodes, an array of particles is generated at the rocket’s position, and shoot off in every direction before fading away. When all particles have faded completely they are destroyed.</p>
+  <h2 id="gui-variable-descriptions">GUI Variable Descriptions</h2>
 
-  <p>Sketch Manipulation Descriptions:</p>
   <ul>
+    <li>boundaryC:
+      <h5 id="set-the-color-for-the-boundaries-to-be-rendered-by-using-a-simple-color-picker-interface">Set the <strong>color</strong> for the boundaries to be rendered by using a simple color-picker interface.</h5>
+    </li>
     <li>backgroundC:
       <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
     </li>
     <li>backgroundA:
       <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
     </li>
-    <li>rocketSpawnChance:
-      <h5 id="sets-the-probability-value-for-how-often-a-rocket-object-will-be-spawned-higher-values-result-in-more-rockets">Sets the probability value for how often a rocket object will be spawned. Higher values result in more rockets.</h5>
-      <ul>
-        <li>
-          <h5 id="frame-rate-will-decrease-as-more-rockets-explode">Frame rate will decrease as more rockets explode.</h5>
-        </li>
-      </ul>
+    <li>randomizeRayColors:
+      <h5 id="if-randomizeraycolors-is-enabled-the-particles-have-a-chance-of-picking-random-hsb-values-between-their-minimum-values-and-100-for-example-adjusting-raysat-to-20-with-randomizeraycolors-enabled-will-allow-the-particles-to-randomly-pick-saturation-values-between-20-and-100-whenever-they-pass-through-a-boundary">If <strong>randomizeRayColors</strong> is enabled, the particles have a chance of picking random HSB values between their minimum values and 100. For example, adjusting <strong>raySat</strong> to 20 with <strong>randomizeRayColors</strong> enabled will allow the particles to randomly pick saturation values between 20 and 100 whenever they pass through a boundary.</h5>
     </li>
-    <li>rocketSize:
-      <h5 id="adjust-the-size-of-the-rocket-objects">Adjust the size of the rocket objects.</h5>
+    <li>rayHue:
+      <h5 id="set-the-hue-for-the-casted-rays-via-the-color-picker-this-setting-is-overridden-when-randomizeraycolors-is-enabled">Set the <strong>hue</strong> for the casted rays via the color picker. This setting is overridden when <strong>randomizeRayColors</strong> is enabled.</h5>
     </li>
-    <li>explosionSize:
-      <h5 id="adjust-the-size-of-each-rockets-maximum-explosion-area">Adjust the size of each rocket’s maximum explosion area.</h5>
+    <li>raySat:
+      <h5 id="set-the-saturation-for-the-casted-rays-this-setting-is-overridden-when-randomizeraycolors-is-disabled-and-saturation-can-be-adjusted-through-the-color-picker">Set the <strong>saturation</strong> for the casted rays. This setting is overridden when <strong>randomizeRayColors</strong> is disabled and saturation can be adjusted through the color-picker.</h5>
+      <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">random</span><span class="p">(</span><span class="nx">raySat</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</code></pre></div>      </div>
     </li>
-    <li>particleDecay:
-      <h5 id="adjust-how-quickly-the-explosion-particles-fade-away">Adjust how quickly the explosion particles fade away.</h5>
-      <ul>
-        <li>
-          <h5 id="when-particles-have-faded-below-background-alpha-values-the-particles-are-destroyed">When particles have faded below background Alpha values, the particles are destroyed.</h5>
-        </li>
-      </ul>
+    <li>rayBright:
+      <h5 id="set-the-brightness-for-the-casted-rays-this-setting-is-overridden-when-randomizeraycolors-is-disabled-and-brightness-can-be-adjusted-through-the-color-picker">Set the <strong>brightness</strong> for the casted rays. This setting is overridden when <strong>randomizeRayColors</strong> is disabled and brightness can be adjusted through the color-picker.</h5>
+      <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">random</span><span class="p">(</span><span class="nx">rayBright</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</code></pre></div>      </div>
     </li>
-    <li>gravityAmount:
-      <h5 id="adjust-the-force-of-gravity-on-the-rocket-particles">Adjust the force of gravity on the rocket particles.</h5>
+    <li>rayAlpha:
+      <h5 id="set-the-alpha-transparency-for-the-casted-rays">Set the <strong>alpha transparency</strong> for the casted rays.</h5>
     </li>
-    <li>windAmount:
-      <h5 id="adjust-the-force-and-direction-of-wind-on-the-rocket-particles-and-explosion-particles">Adjust the force and direction of wind on the rocket particles and explosion particles.</h5>
+    <li>numParticles:
+      <h5 id="increase-or-decrease-the-number-of-active-particle-objects-in-the-scene-increasing-this-value-will-decrease-fps">Increase or decrease the number of active particle-objects in the scene. Increasing this value will decrease FPS.</h5>
     </li>
-    <li>particleVeloctiy:
-      <h5 id="adjust-how-much-velocity-the-explosion-particles-have-when-they-detonate">Adjust how much velocity the explosion particles have when they detonate.</h5>
+    <li>numRays:
+      <h5 id="change-the-number-of-rays-each-particle-sends-out-default-is-360">Change the number of rays each particle sends out. Default is 360.</h5>
     </li>
-    <li>angleMult:
-      <h5 id="multiple-the-angleval-by-a-factor-of-this-value">Multiple the ‘angleVal’ by a factor of this value.</h5>
-    </li>
-    <li>targetMagnitude:
-      <h5 id="tune-the-strength-of-the-mouse-force-applied-to-the-particles-when-the-screen-is-clicked">Tune the strength of the mouse force applied to the particles when the screen is clicked.</h5>
-    </li>
-    <li>zoffAdjust:
-      <h5 id="adjust-the-rate-of-noise-change-in-the-z-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the z-axis. The greater the rate of change, the more erratic the particles will be.</h5>
-    </li>
-    <li>incAdjust:
-      <h5 id="adjust-the-rate-of-noise-change-in-the-x-and-y-axis-the-greater-the-rate-of-change-the-more-erratic-the-particles-will-be">Adjust the rate of noise change in the x and y-axis. The greater the rate of change, the more erratic the particles will be.</h5>
-    </li>
-    <li>showFlowField:
-      <h5 id="render-the-flow-field-on-the-canvas-with-each-vector-in-the-field-rendered-as-a-line-pointing-towards-its-angle-of-rotation">Render the flow field on the canvas, with each vector in the field rendered as a line pointing towards its angle of rotation.</h5>
-    </li>
-    <li>enableFlowField:
-      <h5 id="enable-or-disable-the-flow-field-vector-forces-color-preferences">Enable or disable the flow field vector forces color preferences.</h5>
+    <li>rayIncrement:
+      <h5 id="this-feature-is-currently-disabled-increase-or-decrease-the-distance-between-casted-rays"><strong>THIS FEATURE IS CURRENTLY DISABLED.</strong> Increase or decrease the distance between casted rays.</h5>
     </li>
     <li>mouseFollowEnabled:
-      <h5 id="enable-or-disable-the-mouse-position-as-a-vector-force-applied-to-the-particles">Enable or disable the mouse position as a vector force applied to the particles.</h5>
+      <h5 id="if-enabled-one-of-the-particles-will-follow-the-mouse-around-the-scene-when-the-mouse-is-pressed">If enabled, one of the particles will follow the mouse around the scene when the mouse is pressed.</h5>
     </li>
   </ul>
 
-  <p>This particle system is <a href="https://thecodingtrain.com/CodingChallenges/027-fireworks.html">based on an example from The Coding Train</a>.</p>
+  <p>This 2D ray cast system is <a href="https://www.youtube.com/watch?v=-6iIc6-Y-kk">based on an example by The Coding Train</a>.</p>
+
+  <p>Another excellent tutorial on ray casting <a href="https://www.redblobgames.com/articles/visibility/">by Red Blob Games is available here</a>.</p>
+
+  <p>A third tutorial on ray casting <a href="https://ncase.me/sight-and-light/">by ncase is available here</a>.</p>
+
+  <!-- ### Here are a few examples of stills created through this generator: -->
 
 </div>
 
 <p><button onclick="renderPageText();">Toggle Page Text</button>
 <button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button></p>
 
-  </div><a class="u-url" href="/website/projects/fireworks/p5project.html" hidden></a>
+  </div><a class="u-url" href="/website/projects/grid_lights/p5project.html" hidden></a>
 </article>
 
       </div>
