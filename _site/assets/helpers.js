@@ -1,8 +1,8 @@
-const GLOBAL_WIDTH = 600;
-const GLOBAL_HEIGHT = 400;
+const GLOBAL_WIDTH = 1280;
+const GLOBAL_HEIGHT = 720;
 
 function windowResized() {
-  resizeCanvas(600, 400);
+  resizeCanvas(1280, 720);
 }
 
 //A function for detecting key-press activity by the User
