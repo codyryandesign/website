@@ -1,4 +1,4 @@
-const GLOBAL_WIDTH = 600;
+const GLOBAL_WIDTH = 300;
 const GLOBAL_HEIGHT = 600;
 
 function windowResized() {
