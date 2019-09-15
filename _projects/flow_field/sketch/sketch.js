@@ -143,17 +143,14 @@ function preload() {
 }
 
 function setup() {
-	// smooth();
-	// pixelDensity(4.0);
-	//frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
 	ellipseMode(CORNER);
 	// blendMode(DIFFERENCE);
 	//blendMode(SOFT_LIGHT);
-
-  // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  // canvas = createCanvas(windowWidth, windowHeight);
+	// smooth();
+	pixelDensity(4.0);
+	//frameRate(29);
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
 

@@ -2,7 +2,10 @@ var bubbles = [];
 
 
 function setup() {
-  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  // smooth();
+  pixelDensity(4.0);
+  //frameRate(29);
+  canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
   for (var i = 0; i < 14; i++) {
     bubbles[i] = new Bubble();

@@ -72,8 +72,10 @@ function setup() {
   //Create a canvas object whose
   //dimensions are based off the browser
   //window size
-  // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  // smooth();
+	pixelDensity(4.0);
+	//frameRate(29);
+  canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
   // colorMode(HSB, 360, 100, 100, 1)
   //Draw all colors using

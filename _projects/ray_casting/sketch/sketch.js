@@ -67,8 +67,10 @@ var visible = true;
 
 
 function setup() {
-  // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  // smooth();
+	pixelDensity(4.0);
+	//frameRate(29);
+  canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
   //default HSB vals: 360, 100, 100, 1
   colorMode(HSB);

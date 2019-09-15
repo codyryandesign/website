@@ -13,7 +13,10 @@ var enablePageText = true;
 var gui1;
 
 function setup() {
-  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  // smooth();
+  pixelDensity(4.0);
+  //frameRate(29);
+  canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
   createP("Drag the mouse to generate new boids.");
   document.getElementById("pageText").style.opacity = 0;
