@@ -143,8 +143,8 @@ function preload() {
 }
 
 function setup() {
-	smooth();
-	pixelDensity(4.0);
+	// smooth();
+	// pixelDensity(4.0);
 	//frameRate(29);
 	angleMode(DEGREES);
 	colorMode(HSB);
@@ -154,7 +154,7 @@ function setup() {
 
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
   // canvas = createCanvas(windowWidth, windowHeight);
-  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
 
 	gui1 = createGui('Background, Stroke, and Fill Color Manipulation', 0, 0);
