@@ -1,6 +1,12 @@
 const GLOBAL_WIDTH = 1024;
 const GLOBAL_HEIGHT = 576;
 
+function windowSetup() {
+  // smooth();
+  // pixelDensity(4.0);
+  // frameRate(30);
+}
+
 function windowResized() {
   resizeCanvas(1024, 576);
 }

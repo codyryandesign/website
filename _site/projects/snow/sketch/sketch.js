@@ -2,9 +2,7 @@
 let snowflakes = []; // array to hold snowflake objects
 
 function setup() {
-  // smooth();
-  pixelDensity(4.0);
-  //frameRate(29);
+	windowSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
 

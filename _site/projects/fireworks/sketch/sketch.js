@@ -72,9 +72,7 @@ function setup() {
   //Create a canvas object whose
   //dimensions are based off the browser
   //window size
-  // smooth();
-	pixelDensity(4.0);
-	//frameRate(29);
+	windowSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
   // colorMode(HSB, 360, 100, 100, 1)

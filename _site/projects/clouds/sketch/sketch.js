@@ -2,9 +2,7 @@ var bubbles = [];
 
 
 function setup() {
-  // smooth();
-  pixelDensity(4.0);
-  //frameRate(29);
+	windowSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
   for (var i = 0; i < 14; i++) {

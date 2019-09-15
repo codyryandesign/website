@@ -72,9 +72,7 @@ function preload() {
 
 
 function setup() {
-  // smooth();
-  pixelDensity(4.0);
-  //frameRate(29);
+	windowSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
   //default HSB vals: 360, 100, 100, 1

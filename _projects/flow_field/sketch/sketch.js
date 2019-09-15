@@ -148,9 +148,7 @@ function setup() {
 	ellipseMode(CORNER);
 	// blendMode(DIFFERENCE);
 	//blendMode(SOFT_LIGHT);
-	// smooth();
-	pixelDensity(4.0);
-	//frameRate(29);
+	windowSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
 
