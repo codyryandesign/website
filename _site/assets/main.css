@@ -517,37 +517,26 @@ table {
   visibility: hidden;
   opacity: 1; }
 
-.site-footer {
-  display: none; }
-
-.site-wrapper {
-  display: none; }
-
-canvas {
-  position: relative;
-  margin: 0px;
-  display: flex;
-  align: center;
-  width: 100%;
-  height: 100%;
-  visibility: visible;
-  opacity: 1;
-  z-index: -1; }
-
 body {
   position: relative;
-  display: flex;
-  margin-top: -15px;
-  margin-left: -15px;
+  margin: 0px;
   padding: 0px;
   font-family: Trebuchet MS;
   background-color: black;
   color: #777;
-  align: center;
+  align: left;
   width: 100%;
   height: 100%;
   visibility: visible;
-  opacity: 1; }
+  opacity: 1;
+  border-collapse: collapse; }
+
+.wrapper {
+  margin: 0px;
+  padding: 0px; }
+
+main.page-content {
+  padding: 0px; }
 
 /* relevant styles */
 .img__wrap {
