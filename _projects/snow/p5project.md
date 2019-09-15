@@ -32,3 +32,5 @@ Snow falls softly.
 
 
 Original project source viewable on the [P5JS website](https://p5js.org/examples/simulate-snowflakes.html).
+
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>

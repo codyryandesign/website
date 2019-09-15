@@ -15,7 +15,7 @@ var randomParticle;
 //GUI VARS
 var boundaryC = '#505050'
 //Background color and alpha GUI control
-var backgroundC = '#000000';
+var backgroundC = '#ffffff';
 var backgroundA = 1.0;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;

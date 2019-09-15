@@ -1,5 +1,5 @@
-const GLOBAL_WIDTH = 600;
-const GLOBAL_HEIGHT = 600;
+const GLOBAL_WIDTH = 1024;
+const GLOBAL_HEIGHT = 576;
 
 function windowResized() {
   resizeCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);

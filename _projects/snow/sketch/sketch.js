@@ -13,7 +13,7 @@ function draw() {
   let t = frameCount / 60; // update time
 
   // create a random number of snowflakes each frame
-  for (let i = 0; i < random(5); i++) {
+  for (let i = 0; i < random(3); i++) {
     snowflakes.push(new snowflake()); // append snowflake object
   }
 
