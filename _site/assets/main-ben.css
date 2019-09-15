@@ -505,49 +505,6 @@ table {
     color: #099; }
 
 /* quick reset and base styles */
-.site-header {
-  position: relative;
-  display: none;
-  font-family: Trebuchet MS;
-  background-color: silver;
-  color: #777;
-  align: center;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  opacity: 1; }
-
-.site-footer {
-  display: none; }
-
-.site-wrapper {
-  display: none; }
-
-canvas {
-  position: relative;
-  margin: 0px;
-  display: flex;
-  align: center;
-  width: 100%;
-  height: 100%;
-  visibility: visible;
-  opacity: 1;
-  z-index: -1; }
-
-body {
-  position: relative;
-  display: flex;
-  margin: -15px;
-  padding: 0px;
-  font-family: Trebuchet MS;
-  background-color: black;
-  color: #777;
-  align: center;
-  width: 100%;
-  height: 100%;
-  visibility: visible;
-  opacity: 1; }
-
 /* relevant styles */
 .img__wrap {
   position: relative;

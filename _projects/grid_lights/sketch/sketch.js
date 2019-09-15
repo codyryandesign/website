@@ -73,7 +73,7 @@ function preload() {
 
 function setup() {
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
+  canvas = createCanvas(document.body.clientWidth, document.body.clientHeight);
   canvas.parent('sketch-holder');
   //default HSB vals: 360, 100, 100, 1
   colorMode(HSB);

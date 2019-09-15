@@ -85,8 +85,8 @@ A third tutorial on ray casting [by ncase is available here](https://ncase.me/si
 
 <!-- ### Here are a few examples of stills created through this generator: -->
 
- -->
+
 </div>
 
-<button onclick="renderPageText();">Toggle Page Text</button>
+<!-- <button onclick="renderPageText();">Toggle Page Text</button> -->
 <button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
