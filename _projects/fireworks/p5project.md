@@ -20,7 +20,7 @@ dependencies:
 
 <div id="pageText" markdown="1" style="visibility:hidden">
 
-###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
+<!-- ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
 ###### Take a snapshot of the canvas at any time by pressing ```p```.
 
@@ -92,9 +92,9 @@ Sketch Manipulation Descriptions:
 
 
 
-This particle system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/027-fireworks.html).
+This particle system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/027-fireworks.html). -->
 
 </div>
 
-<button onclick="renderPageText();">Toggle Page Text</button>
-<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
+<!-- <button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button> -->

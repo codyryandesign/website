@@ -33,6 +33,6 @@ Lazy clouds drift through a clear blue sky, randomly picking a new position as t
 
 Original project source by seak [here](https://editor.p5js.org/seak/sketches/SJ8gHRzp-). -->
 <!-- <button onclick="renderPageText();">Toggle Page Text</button> -->
-<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
+<!-- <button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button> -->
 
 </div>

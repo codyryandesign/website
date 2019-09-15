@@ -18,7 +18,7 @@ dependencies:
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
 <div id="pageText" markdown="1" style="visibility:visble">
 
-### This sketch example is in-progress and not all features have yet been implemented.
+<!-- ### This sketch example is in-progress and not all features have yet been implemented.
 
 ##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
 
@@ -32,9 +32,9 @@ See Worlfram Math World's description of Lissajous curves for further detail [he
 
 
 
-This particle system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk).
+This particle system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk). -->
 
 </div>
 
-<button onclick="renderPageText();">Toggle Page Text</button>
-<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
+<!-- <button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button> -->

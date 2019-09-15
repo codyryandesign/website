@@ -19,7 +19,7 @@ dependencies:
 
 <div id="pageText" markdown="1">
 
-## This project is in-progress and not all features have yet been implemented.
+<!-- ## This project is in-progress and not all features have yet been implemented.
 
 ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
@@ -39,11 +39,11 @@ Flocking boids travel through a landscape adhering to three behaviors that defin
 # Sketch Manipulation Descriptions:
 
 - numBoids:
-##### Set the maximum number of allowed Boids in the scene.
+##### Set the maximum number of allowed Boids in the scene. -->
 
 </div>
 
-This flow field system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html).
+<!-- This flow field system is [based on an example from The Coding Train](https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html).
 
 ### Here are a few examples of stills created through this generator:
 
@@ -55,4 +55,4 @@ This flow field system is [based on an example from The Coding Train](https://th
 ![Flow_Field_6](flow_field_captures/Flow_Fields6-resized.png)  
 ![Flow_Field_7](flow_field_captures/Flow_Fields7-resized.png) -->
 
-Project Resources can be found [here](/resources).
+Project Resources can be found [here](/resources). -->

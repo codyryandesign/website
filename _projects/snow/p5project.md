@@ -19,7 +19,7 @@ dependencies:
 
 <div id="pageText" markdown="1">
 
-## This project is in-progress and not all features have yet been implemented.
+<!-- ## This project is in-progress and not all features have yet been implemented.
 
 ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
@@ -33,4 +33,5 @@ Snow falls softly.
 
 Original project source viewable on the [P5JS website](https://p5js.org/examples/simulate-snowflakes.html).
 
-<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button> -->
+</div>

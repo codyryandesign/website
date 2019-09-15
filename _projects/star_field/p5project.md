@@ -19,7 +19,7 @@ dependencies:
 
 <div id="pageText" markdown="1">
 
-## This project is in-progress and not all features have yet been implemented.
+<!-- ## This project is in-progress and not all features have yet been implemented.
 
 ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
@@ -31,4 +31,5 @@ Lazy clouds drift through a clear blue sky, randomly picking a new position as t
 
 
 
-Original project source by ozZzry [here](https://codepen.io/rndm/pen/ozZzry).
+Original project source by ozZzry [here](https://codepen.io/rndm/pen/ozZzry). -->
+</div>

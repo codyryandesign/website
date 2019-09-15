@@ -24,6 +24,7 @@ function setup() {
     'numBoids',
     'enablePageText',
   );
+	gui1.hide();
 
   flock = new Flock();
   // Add an initial set of boids into the system
