@@ -5,6 +5,8 @@ class Particle {
     this.rays = [];
     this.heading = 0;
     this.color = random(360);
+    this.blackestBlack = 0;
+    this.lerpColor;
     this.saturation = random(raySat, 100);
     this.force;
 
@@ -51,6 +53,7 @@ class Particle {
           const d = p5.Vector.dist(this.pos, pt);
           if(d < record) {
             record = d;
+            // let ptFract = point(pt.x/2, pt.y/2)
             closest = pt;
             if(closest < closestMax) {
               closestMax = closest;
@@ -61,6 +64,7 @@ class Particle {
       if(closest) {
         push();
         let rColor = color(rayHue);
+          // let lColor = lerpColor(color(this.color), color(0,0,0, .01), .5);
         if(!randomizeRayColors) {
           stroke(hue(rColor), saturation(rColor), brightness(rColor), rayAlpha);
         }
@@ -70,6 +74,7 @@ class Particle {
         // translate(this.pos.x, this.pos.y);
         // rotate(this.heading);
         line(this.pos.x, this.pos.y, closest.x, closest.y)
+        // ellipse(this.pos.x, this.pos.y, this.pos.x-this.closest.x, this.pos.y-this.closest.y)
         pop();
       }
       if (record < .5) {

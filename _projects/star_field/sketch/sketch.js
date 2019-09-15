@@ -11,7 +11,10 @@ function setup() {
 
     this.display = function() {
       noStroke();
-      fill(255);
+      let mapX = map(mouseX, 0, width, 0, 255);
+      let mapY = map(mouseY, 0, height, 0, 255);
+      let distFromOrigin = sqrt(pow(mapX-width, 2), pow(mapY-height, 2));
+      fill(255, 255, 255);
       let sx = map(this.x / this.z, 0, 1, 0, width);
       let sy = map(this.y / this.z, 0, 1, 0, height);
       let r = map(this.z, 0, width, 12, 0);
