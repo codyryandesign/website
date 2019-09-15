@@ -15,7 +15,7 @@ var randomParticle;
 //GUI VARS
 var boundaryC = '#505050'
 //Background color and alpha GUI control
-var backgroundC = '#ffffff';
+var backgroundC = '#000000';
 var backgroundA = 1.0;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
@@ -73,7 +73,7 @@ function preload() {
 
 function setup() {
   // canvas = createCanvas(window.innerWidth/2, window.innerHeight/2);
-  canvas = createCanvas(document.body.clientWidth, document.body.clientHeight);
+  canvas = createCanvas(GLOBAL_WIDTH, GLOBAL_HEIGHT);
   canvas.parent('sketch-holder');
   //default HSB vals: 360, 100, 100, 1
   colorMode(HSB);

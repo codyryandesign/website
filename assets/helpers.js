@@ -55,6 +55,11 @@ function detectKeyPress() {
   }
 }
 
+function doubleClicked() {
+  let fs = fullscreen();
+  fullscreen(!fs);
+}
+
 function renderPageText() {
   var x = document.getElementById("pageText");
   if (x.style.visibility === "visible") {
@@ -63,6 +68,8 @@ function renderPageText() {
     x.style.visibility = "visible";
   }
 }
+
+
 
 function toggleFullScreen() {
   let fs = fullscreen();

@@ -88,8 +88,6 @@ A third tutorial on ray casting [by ncase is available here](https://ncase.me/si
 ![Ray_Casting_2](ray_casting_captures/Ray_Casting2-resized.png)
 ![Ray_Casting_3](ray_casting_captures/Ray_Casting3-resized.png)
 ![Ray_Casting_4](ray_casting_captures/Ray_Casting4-resized.png) -->
-
+<!-- <button onclick="renderPageText();">Toggle Page Text</button>
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button> -->
 </div>
-
-<button onclick="renderPageText();">Toggle Page Text</button>
-<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
