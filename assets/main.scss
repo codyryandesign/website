@@ -18,7 +18,7 @@
 
 .site-header {
   position: relative;
-  display: block; //change back to block/none for visibility
+  display: none; //change back to block/none for visibility
   font-family: Trebuchet MS;
   background-color: silver;
   color: #777;
@@ -29,14 +29,19 @@
   opacity: 1;
 }
 
+.site-footer {
+  display: none
+}
+
 .site-wrapper {
   display: block;
 }
 
 
 canvas {
-  position: absolute;
-  display: flex;
+  position: block;
+  display: flex-grow;
+
   margin-left: auto;
   margin-right: auto;
   align: center;
@@ -45,7 +50,7 @@ canvas {
 	overflow: visible;
   visibility: visible;
   opacity: 1;
-	z-index: 1;
+	z-index: -1;
 }
 
 body {
@@ -116,6 +121,6 @@ body {
 
 .post-content p img {
     display: block;
-    margin: auto;
+    margin: none; //change to auto
 
 }

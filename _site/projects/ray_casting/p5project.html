@@ -8,8 +8,8 @@
   <meta name="description" content="">
   <link rel="icon" type="image/png" href="/website/assets/favicon.png" />
   <link rel="stylesheet" href="/website/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/website/projects/ray_casting/p5project.html">
-  <link rel="alternate" type="application/rss+xml" title="CODYRYANDESIGN Computer-Art Generators" href="/website/feed.xml">
+  <link rel="canonical" href="http://codyryandesign.github.io/website/projects/ray_casting/p5project.html">
+  <link rel="alternate" type="application/rss+xml" title="" href="/website/feed.xml">
   <!-- dependencies -->
   
     
@@ -169,7 +169,7 @@
 </head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/website/">CODYRYANDESIGN Computer-Art Generators</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/website/"></a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -189,7 +189,7 @@
   <!-- <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">2D Ray Casting</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2019-09-15T08:41:34-05:00" itemprop="datePublished">Sep 15, 2019
+      <time class="dt-published" datetime="2019-09-15T11:04:53-05:00" itemprop="datePublished">Sep 15, 2019
       </time></p>
   </header> -->
 
@@ -206,71 +206,72 @@
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
 <div id="pageText" style="visibility:visible">
 
-  <h6 id="try-pressing-s-on-your-keyboard-to-bring-up-sketch-manipulation-options">Try pressing <code class="highlighter-rouge">s</code> on your keyboard to bring up sketch manipulation options.</h6>
+  <!-- ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
-  <h6 id="take-a-snapshot-of-the-canvas-at-any-time-by-pressing-p">Take a snapshot of the canvas at any time by pressing <code class="highlighter-rouge">p</code>.</h6>
+###### Take a snapshot of the canvas at any time by pressing ```p```.
 
-  <h6 id="reload-the-page-at-any-time-to-generate-a-new-landscape-just-press-cmdr">Reload the page at any time to generate a new landscape. Just press <code class="highlighter-rouge">CMD+R</code>.</h6>
+###### Reload the page at any time to generate a new landscape. Just press ```CMD+R```.
 
-  <p>Particle objects cast rays out as they dance around a randomized landscape, creating dynamic play with light and shadow as they move. If a particle object passes through a wall, there is a chance for it to change color.</p>
+Particle objects cast rays out as they dance around a randomized landscape, creating dynamic play with light and shadow as they move. If a particle object passes through a wall, there is a chance for it to change color.
 
-  <h2 id="gui-variable-descriptions">GUI Variable Descriptions</h2>
+## GUI Variable Descriptions
 
-  <ul>
-    <li>boundaryC:
-      <h5 id="set-the-color-for-the-boundaries-to-be-rendered-by-using-a-simple-color-picker-interface">Set the <strong>color</strong> for the boundaries to be rendered by using a simple color-picker interface.</h5>
-    </li>
-    <li>backgroundC:
-      <h5 id="set-the-color-for-the-background-the-to-be-rendered-by-using-a-simple-color-picker-interface">Set the color for the background the to be rendered by using a simple color-picker interface.</h5>
-    </li>
-    <li>backgroundA:
-      <h5 id="adjust-the-alpha-transparency-of-the-background">Adjust the Alpha transparency of the background.</h5>
-    </li>
-    <li>randomizeRayColors:
-      <h5 id="if-randomizeraycolors-is-enabled-the-particles-have-a-chance-of-picking-random-hsb-values-between-their-minimum-values-and-100-for-example-adjusting-raysat-to-20-with-randomizeraycolors-enabled-will-allow-the-particles-to-randomly-pick-saturation-values-between-20-and-100-whenever-they-pass-through-a-boundary">If <strong>randomizeRayColors</strong> is enabled, the particles have a chance of picking random HSB values between their minimum values and 100. For example, adjusting <strong>raySat</strong> to 20 with <strong>randomizeRayColors</strong> enabled will allow the particles to randomly pick saturation values between 20 and 100 whenever they pass through a boundary.</h5>
-    </li>
-    <li>rayHue:
-      <h5 id="set-the-hue-for-the-casted-rays-via-the-color-picker-this-setting-is-overridden-when-randomizeraycolors-is-enabled">Set the <strong>hue</strong> for the casted rays via the color picker. This setting is overridden when <strong>randomizeRayColors</strong> is enabled.</h5>
-    </li>
-    <li>raySat:
-      <h5 id="set-the-saturation-for-the-casted-rays-this-setting-is-overridden-when-randomizeraycolors-is-disabled-and-saturation-can-be-adjusted-through-the-color-picker">Set the <strong>saturation</strong> for the casted rays. This setting is overridden when <strong>randomizeRayColors</strong> is disabled and saturation can be adjusted through the color-picker.</h5>
-      <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">random</span><span class="p">(</span><span class="nx">raySat</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-</code></pre></div>      </div>
-    </li>
-    <li>rayBright:
-      <h5 id="set-the-brightness-for-the-casted-rays-this-setting-is-overridden-when-randomizeraycolors-is-disabled-and-brightness-can-be-adjusted-through-the-color-picker">Set the <strong>brightness</strong> for the casted rays. This setting is overridden when <strong>randomizeRayColors</strong> is disabled and brightness can be adjusted through the color-picker.</h5>
-      <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">random</span><span class="p">(</span><span class="nx">rayBright</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-</code></pre></div>      </div>
-    </li>
-    <li>rayAlpha:
-      <h5 id="set-the-alpha-transparency-for-the-casted-rays">Set the <strong>alpha transparency</strong> for the casted rays.</h5>
-    </li>
-    <li>numParticles:
-      <h5 id="increase-or-decrease-the-number-of-active-particle-objects-in-the-scene-increasing-this-value-will-decrease-fps">Increase or decrease the number of active particle-objects in the scene. Increasing this value will decrease FPS.</h5>
-    </li>
-    <li>numRays:
-      <h5 id="change-the-number-of-rays-each-particle-sends-out-default-is-360">Change the number of rays each particle sends out. Default is 360.</h5>
-    </li>
-    <li>rayIncrement:
-      <h5 id="this-feature-is-currently-disabled-increase-or-decrease-the-distance-between-casted-rays"><strong>THIS FEATURE IS CURRENTLY DISABLED.</strong> Increase or decrease the distance between casted rays.</h5>
-    </li>
-    <li>mouseFollowEnabled:
-      <h5 id="if-enabled-one-of-the-particles-will-follow-the-mouse-around-the-scene-when-the-mouse-is-pressed">If enabled, one of the particles will follow the mouse around the scene when the mouse is pressed.</h5>
-    </li>
-  </ul>
+- boundaryC:
+##### Set the **color** for the boundaries to be rendered by using a simple color-picker interface.
 
-  <p>This 2D ray cast system is <a href="https://www.youtube.com/watch?v=-6iIc6-Y-kk">based on an example by The Coding Train</a>.</p>
+- backgroundC:
+##### Set the color for the background the to be rendered by using a simple color-picker interface.
 
-  <p>Another excellent tutorial on ray casting <a href="https://www.redblobgames.com/articles/visibility/">by Red Blob Games is available here</a>.</p>
+- backgroundA:
+##### Adjust the Alpha transparency of the background.
 
-  <p>A third tutorial on ray casting <a href="https://ncase.me/sight-and-light/">by ncase is available here</a>.</p>
+- randomizeRayColors:
+##### If **randomizeRayColors** is enabled, the particles have a chance of picking random HSB values between their minimum values and 100. For example, adjusting **raySat** to 20 with **randomizeRayColors** enabled will allow the particles to randomly pick saturation values between 20 and 100 whenever they pass through a boundary.
 
-  <h3 id="here-are-a-few-examples-of-stills-created-through-this-generator">Here are a few examples of stills created through this generator:</h3>
+- rayHue:
+##### Set the **hue** for the casted rays via the color picker. This setting is overridden when **randomizeRayColors** is enabled.
 
-  <p><img src="ray_casting_captures/Ray_Casting-resized.png" alt="Ray_Casting_1" /><br />
-<img src="ray_casting_captures/Ray_Casting2-resized.png" alt="Ray_Casting_2" />
-<img src="ray_casting_captures/Ray_Casting3-resized.png" alt="Ray_Casting_3" />
-<img src="ray_casting_captures/Ray_Casting4-resized.png" alt="Ray_Casting_4" /></p>
+- raySat:
+##### Set the **saturation** for the casted rays. This setting is overridden when **randomizeRayColors** is disabled and saturation can be adjusted through the color-picker.
+``` js
+random(raySat, 100);
+```
+
+- rayBright:
+##### Set the **brightness** for the casted rays. This setting is overridden when **randomizeRayColors** is disabled and brightness can be adjusted through the color-picker.  
+``` js
+random(rayBright, 100);
+```
+
+- rayAlpha:
+##### Set the **alpha transparency** for the casted rays.
+
+- numParticles:
+##### Increase or decrease the number of active particle-objects in the scene. Increasing this value will decrease FPS.
+
+- numRays:
+##### Change the number of rays each particle sends out. Default is 360.
+
+- rayIncrement:
+##### **THIS FEATURE IS CURRENTLY DISABLED.** Increase or decrease the distance between casted rays.
+
+- mouseFollowEnabled:
+##### If enabled, one of the particles will follow the mouse around the scene when the mouse is pressed.
+
+
+
+This 2D ray cast system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk).
+
+Another excellent tutorial on ray casting [by Red Blob Games is available here](https://www.redblobgames.com/articles/visibility/).
+
+A third tutorial on ray casting [by ncase is available here](https://ncase.me/sight-and-light/).
+
+### Here are a few examples of stills created through this generator:
+
+![Ray_Casting_1](ray_casting_captures/Ray_Casting-resized.png)  
+![Ray_Casting_2](ray_casting_captures/Ray_Casting2-resized.png)
+![Ray_Casting_3](ray_casting_captures/Ray_Casting3-resized.png)
+![Ray_Casting_4](ray_casting_captures/Ray_Casting4-resized.png) -->
 
 </div>
 
@@ -286,20 +287,19 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">CODYRYANDESIGN Computer-Art Generators</h2>
+    <h2 class="footer-heading"></h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">CODYRYANDESIGN Computer-Art Generators</li></ul>
+          <li class="p-name"></li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>A website for deploying portfolio examples of P5JS (Processing) sketches on the web!
-</p>
+        <p></p>
       </div>
     </div>
 

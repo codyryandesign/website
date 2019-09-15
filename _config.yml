@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: CODYRYANDESIGN Computer-Art Generators
+# title: CODYRYANDESIGN Computer-Art Generators
 # email: codyryandesign@gmail.com
 website: www.codyryandesign.com
-description: > # this means to ignore newlines until "baseurl:"
-  A website for deploying portfolio examples of P5JS (Processing) sketches on the web!
+# description: > # this means to ignore newlines until "baseurl:"
+  # A website for deploying portfolio examples of P5JS (Processing) sketches on the web!
 baseurl: "/website" # the subpath of your site, e.g. /blog
 url: "http://codyryandesign.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: codyryandesign
 # github_username: codyryandesign
-# google_analytics: 
+# google_analytics:
 
 # Build settings
 markdown: kramdown

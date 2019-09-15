@@ -23,7 +23,7 @@ dependencies:
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
 <div id="pageText" markdown="1" style="visibility:visible">
 
-###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
+<!-- ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
 ###### Take a snapshot of the canvas at any time by pressing ```p```.
 
@@ -85,7 +85,7 @@ A third tutorial on ray casting [by ncase is available here](https://ncase.me/si
 
 <!-- ### Here are a few examples of stills created through this generator: -->
 
-
+ -->
 </div>
 
 <button onclick="renderPageText();">Toggle Page Text</button>

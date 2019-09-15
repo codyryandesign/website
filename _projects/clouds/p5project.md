@@ -19,7 +19,7 @@ dependencies:
 
 <div id="pageText" markdown="1">
 
-## This project is in-progress and not all features have yet been implemented.
+<!-- ## This project is in-progress and not all features have yet been implemented.
 
 ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
@@ -31,4 +31,8 @@ Lazy clouds drift through a clear blue sky, randomly picking a new position as t
 
 
 
-Original project source by seak [here](https://editor.p5js.org/seak/sketches/SJ8gHRzp-).
+Original project source by seak [here](https://editor.p5js.org/seak/sketches/SJ8gHRzp-). -->
+<!-- <button onclick="renderPageText();">Toggle Page Text</button> -->
+<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
+
+</div>

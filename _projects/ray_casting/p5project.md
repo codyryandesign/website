@@ -22,7 +22,7 @@ dependencies:
 <!-- Include markdown="1" to allow markdown conversion within a div element. -->
 <div id="pageText" markdown="1" style="visibility:visible">
 
-###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
+<!-- ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
 
 ###### Take a snapshot of the canvas at any time by pressing ```p```.
 
@@ -87,7 +87,7 @@ A third tutorial on ray casting [by ncase is available here](https://ncase.me/si
 ![Ray_Casting_1](ray_casting_captures/Ray_Casting-resized.png)  
 ![Ray_Casting_2](ray_casting_captures/Ray_Casting2-resized.png)
 ![Ray_Casting_3](ray_casting_captures/Ray_Casting3-resized.png)
-![Ray_Casting_4](ray_casting_captures/Ray_Casting4-resized.png)
+![Ray_Casting_4](ray_casting_captures/Ray_Casting4-resized.png) -->
 
 </div>
 

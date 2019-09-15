@@ -507,7 +507,7 @@ table {
 /* quick reset and base styles */
 .site-header {
   position: relative;
-  display: block;
+  display: none;
   font-family: Trebuchet MS;
   background-color: silver;
   color: #777;
@@ -517,12 +517,15 @@ table {
   visibility: hidden;
   opacity: 1; }
 
+.site-footer {
+  display: none; }
+
 .site-wrapper {
   display: block; }
 
 canvas {
-  position: absolute;
-  display: flex;
+  position: block;
+  display: flex-grow;
   margin-left: auto;
   margin-right: auto;
   align: center;
@@ -531,7 +534,7 @@ canvas {
   overflow: visible;
   visibility: visible;
   opacity: 1;
-  z-index: 1; }
+  z-index: -1; }
 
 body {
   position: relative;
@@ -579,4 +582,4 @@ body {
 
 .post-content p img {
   display: block;
-  margin: auto; }
+  margin: none; }
