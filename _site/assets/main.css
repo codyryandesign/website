@@ -517,8 +517,21 @@ table {
   visibility: hidden;
   opacity: 1; }
 
+.site-footer {
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden; }
+
+div.footer-col-wrapper {
+  margin: 0px;
+  padding: 0px; }
+
+canvas#defaultCanvas0 {
+  margin: 0px;
+  padding: 0px; }
+
 body {
-  position: relative;
+  position: absolute;
   margin: 0px;
   padding: 0px;
   font-family: Trebuchet MS;
@@ -537,6 +550,14 @@ body {
 
 main.page-content {
   padding: 0px; }
+
+p {
+  margin: 0px;
+  padding: 0px; }
+
+sketch-holder {
+  width: 1024;
+  height: 576; }
 
 /* relevant styles */
 .img__wrap {

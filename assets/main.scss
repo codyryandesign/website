@@ -30,7 +30,14 @@
 }
 
 .site-footer {
-  // display: none
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+}
+
+div.footer-col-wrapper {
+  margin: 0px;
+  padding: 0px;
 }
 
 .site-wrapper {
@@ -42,22 +49,13 @@
 // }
 
 
-// canvas {
-//   position: relative;
-//   margin: 0px;
-//   // display: flex;
-//   align: center;
-// 	width: 100%;
-// 	height: 100%;
-//
-//   // outline-width: thin;
-//   visibility: visible;
-//   opacity: 1;
-// 	z-index: -1;
-// }
+canvas#defaultCanvas0 {
+  margin: 0px;
+  padding: 0px;
+}
 
 body {
-  position: relative;
+  position: absolute;
   // display: flex;
   margin: 0px;
   padding: 0px;
@@ -99,6 +97,15 @@ main.page-content {
   padding: 0px;
 }
 
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+sketch-holder {
+  width: 1024;
+  height: 576;
+}
 
 /* relevant styles */
 .img__wrap {

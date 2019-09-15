@@ -19,7 +19,7 @@ dependencies:
 
 <div id="pageText" markdown="1" style="visibility:visible">
 
-##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
+<!-- ##### Try pressing ***'s'*** on your keyboard to bring up sketch manipulation options.
 
 ##### Take a snapshot of the canvas at any time by pressing ***'p'***.
 
@@ -93,9 +93,9 @@ This flow field system is [based on an example from The Coding Train](https://th
 ![Flow_Field_6](flow_field_captures/Flow_Fields6-resized.png)  
 ![Flow_Field_7](flow_field_captures/Flow_Fields7-resized.png)
 
-Project Resources can be found [here](/resources).
+Project Resources can be found [here](/resources). -->
 
 </div>
 
-<button onclick="renderPageText();">Toggle Page Text</button>
-<button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button>
+<!-- <button onclick="renderPageText();">Toggle Page Text</button> -->
+<!-- <button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button> -->

@@ -295,7 +295,7 @@ function draw() {
 
 	})
 	//Display the frame rate of the sketch in the bottom-left corner
-	fr.html(floor(frameRate()));
+	// fr.html(floor(frameRate()));
 	//If the user presses a key
 	detectKeyPress();
 	//Enable or disable the rendering of textual info
