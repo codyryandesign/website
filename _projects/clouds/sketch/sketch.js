@@ -1,22 +1,30 @@
+
+
 var bubbles = [];
 
-
 function setup() {
-	windowSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
+	windowSetup();
+	colorSetup();
   for (var i = 0; i < 14; i++) {
     bubbles[i] = new Bubble();
   }
+	gui1 = createGui('Settings', 0, 0);
+	gui1.addGlobals(
+		'globalBrightness',
+);
+	gui1.hide();
 }
 
 function draw() {
-  detectKeyPress()
-  background(50, 180, 250, 200);
+  detectKeyPress();
+  background(200, 180, 250, 1);
   for (var i = 0; i < bubbles.length; i++) {
     bubbles[i].move();
     bubbles[i].display();
   }
+	adjustGlobalBrightness();
 }
 
 function Bubble() {
@@ -29,7 +37,7 @@ function Bubble() {
   this.display = function() {
     stroke(255);
     strokeWeight(1);
-    fill(255, 255 - (4 * sin(this.x)));
+    fill(0, 0, 100 - (2 * sin(this.x)), 1);
     randomMove = random(9, 10);
     ellipse(this.x, this.y, 24, 24);
     ellipse(this.x + 10, this.y + 10, this.randomWidth, this.randomHeight);

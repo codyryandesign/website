@@ -1,7 +1,7 @@
 
 
 let flock;
-let visible = false;
+visible = false;
 
 //GUI VARS
 var numBoids = 100;

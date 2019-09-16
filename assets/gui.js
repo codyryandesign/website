@@ -1,5 +1,5 @@
-const GLOBAL_WIDTH = 1024;
-const GLOBAL_HEIGHT = 576;
+// const GLOBAL_WIDTH = 1024;
+// const GLOBAL_HEIGHT = 576;
 
 function windowSetup() {
   // smooth();
@@ -13,9 +13,9 @@ function windowResized() {
 
 //Global brightness control
 var globalBrightness = 1.0;
-var globalBrightnessMin = 0.0;
+var globalBrightnessMin = 0.9;
 var globalBrightnessMax = 1.0;
-var globalBrightnessStep = .001;
+var globalBrightnessStep = .01;
 
 function adjustGlobalBrightness() {
   //draw a rect over the entire canvas area
@@ -28,23 +28,9 @@ function adjustGlobalBrightness() {
 	pop();
 }
 
-//background color picker
-var bColorPicker;
-//stroke color picker
-var sColorPicker;
-//fill color picker
-var fColorPicker;
-//global mask color picker
-var gColorPicker;
-function colorSetup() {
-  //colorMode([mode], [max1], [max2], [max3], [maxAlpha])
-  colorMode(HSB, 360, 100, 100, 1);
-  bColorPicker = createColorPicker(color('black'));
-  sColorPicker = createColorPicker(color('white'));
-  fColorPicker = createColorPicker(color('red'));
-  gColorPicker = createColorPicker(color('black'));
-}
 //GUI VARS
+
+
 
 //Background color and alpha GUI control
 var backgroundC = '#ffffff';
@@ -64,61 +50,6 @@ var fillA = .186;
 var fillAMin = 0;
 var fillAMax = 1.0;
 var fillAStep = .001;
-
-// FORCE-AFFECTING VARS
-//The amount of time that x and y noise values
-//are incremented by every loop
-var inc = .1;
-var incAdjust = .1;
-var incAdjustMin = .005;
-var incAdjustMax = .03;
-var incAdjustStep = .001;
-//The amount of time that the z noise value
-//is incremented by every loop
-var zoff = -0.025;
-var zoffAdjust = .01;
-var zoffAdjustMin = .005;
-var zoffAdjustMax = .03;
-var zoffAdjustStep = .001;
-//Adjust the force of gravity in the system
-var gravityAmount = 0.19;
-var gravityAmountMin = 0;
-var gravityAmountMax = .8;
-var gravityAmountStep = .01;
-//Adjust the force of wind in the system
-var windAmount = 0;
-var windAmountMin = -.1;
-var windAmountMax = .1;
-var windAmountStep = .001;
-/*PARTICLE-AFFECTING VARS*/
-//Add or remove particles from system
-var numParticles = 2;
-var numParticlesMin = 1;
-var numParticlesMax = 10;
-var numParticlesStep = 1;
-//Adjust particle render size
-var particleSize = 200;
-var particleSizeMin = 0;
-var particleSizeMax = 20;
-var particleSizeStep = .1;
-//Adjust particle life-span
-var particleDecay = .013;
-var particleDecayMin = 0.001;
-var particleDecayMax = 1;
-var particleDecayStep = .001;
-//Adjust particle velocity
-var particleVelocity = 0.85;
-var particleVelocityMin = 0;
-var particleVelocityMax = 2;
-var particleVelocityStep = .01;
-//control canvas magnification
-var zoom = 1.0;
-var zoomMin = 1.0;
-var zoomMax = 10;
-var zoomStep = 1;
-
-
-
 //Fill color and alpha GUI control
 var creditsFillC = '#fdfffd';
 var creditsFillA = 1.0;
@@ -155,7 +86,20 @@ var targetMagnitude = 0.5;
 var targetMagnitudeMin = -5;
 var targetMagnitudeMax = 5;
 var targetMagnitudeStep = .0001;
-
+//The amount of time that x and y noise values
+//are incremented by every loop
+var inc = .1;
+var incAdjust = .1;
+var incAdjustMin = .005;
+var incAdjustMax = .03;
+var incAdjustStep = .001;
+//The amount of time that the z noise value
+//is incremented by every loop
+var zoff = -0.025;
+var zoffAdjust = .01;
+var zoffAdjustMin = .005;
+var zoffAdjustMax = .03;
+var zoffAdjustStep = .001;
 //Allow particles to hue-shift over time
 var rainbowTrails = false;
 var rainbowSaturation = 70;
@@ -187,6 +131,10 @@ var particleSizetMin = 0.01;
 var particleSizeMax = 30;
 var particleSizeStep = 0.01;
 
+var zoom = 1.0;
+var zoomMin = 1.0;
+var zoomMax = 10;
+var zoomStep = 1;
 
 var flowFieldZoom = .7;
 var flowFieldZoomMin = .1;

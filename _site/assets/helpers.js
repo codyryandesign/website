@@ -8,8 +8,199 @@ function windowSetup() {
 }
 
 function windowResized() {
-  resizeCanvas(1024, 576);
+  resizeCanvas(window.innerWidth, window.innerHeight);
 }
+
+//Global brightness control
+var globalBrightness = 1.0;
+var globalBrightnessMin = 0.0;
+var globalBrightnessMax = 1.0;
+var globalBrightnessStep = .001;
+
+function adjustGlobalBrightness() {
+  //draw a rect over the entire canvas area
+  //but leave its alpha variable to allow
+  //for simple fading.
+	push();
+	noStroke();
+	fill(0,0,0,1-globalBrightness);
+	rect(0, 0, window.innerWidth, window.innerHeight);
+	pop();
+}
+
+//background color picker
+var bColorPicker;
+//stroke color picker
+var sColorPicker;
+//fill color picker
+var fColorPicker;
+//global mask color picker
+var gColorPicker;
+function colorSetup() {
+  //colorMode([mode], [max1], [max2], [max3], [maxAlpha])
+  colorMode(HSB, 360, 100, 100, 1);
+  bColorPicker = createColorPicker(color('black'));
+  sColorPicker = createColorPicker(color('white'));
+  fColorPicker = createColorPicker(color('red'));
+  gColorPicker = createColorPicker(color('black'));
+}
+//GUI VARS
+
+//Background color and alpha GUI control
+var backgroundC = '#ffffff';
+var backgroundA = .005;
+var backgroundAMin = 0;
+var backgroundAMax = 1.0;
+var backgroundAStep = .001;
+//Stroke color and alpha GUI control
+var strokeC = '#8d2ce7';
+var strokeA = 1.0;
+var strokeAMin = 0;
+var strokeAMax = 1;
+var strokeAStep = .001;
+//Fill color and alpha GUI control
+var fillC = '#f31a12';
+var fillA = .186;
+var fillAMin = 0;
+var fillAMax = 1.0;
+var fillAStep = .001;
+
+// FORCE-AFFECTING VARS
+//The amount of time that x and y noise values
+//are incremented by every loop
+var inc = .1;
+var incAdjust = .1;
+var incAdjustMin = .005;
+var incAdjustMax = .03;
+var incAdjustStep = .001;
+//The amount of time that the z noise value
+//is incremented by every loop
+var zoff = -0.025;
+var zoffAdjust = .01;
+var zoffAdjustMin = .005;
+var zoffAdjustMax = .03;
+var zoffAdjustStep = .001;
+//Adjust the force of gravity in the system
+var gravityAmount = 0.19;
+var gravityAmountMin = 0;
+var gravityAmountMax = .8;
+var gravityAmountStep = .01;
+//Adjust the force of wind in the system
+var windAmount = 0;
+var windAmountMin = -.1;
+var windAmountMax = .1;
+var windAmountStep = .001;
+/*PARTICLE-AFFECTING VARS*/
+//Add or remove particles from system
+var numParticles = 2;
+var numParticlesMin = 1;
+var numParticlesMax = 10;
+var numParticlesStep = 1;
+//Adjust particle render size
+var particleSize = 200;
+var particleSizeMin = 0;
+var particleSizeMax = 20;
+var particleSizeStep = .1;
+//Adjust particle life-span
+var particleDecay = .013;
+var particleDecayMin = 0.001;
+var particleDecayMax = 1;
+var particleDecayStep = .001;
+//Adjust particle velocity
+var particleVelocity = 0.85;
+var particleVelocityMin = 0;
+var particleVelocityMax = 2;
+var particleVelocityStep = .01;
+//control canvas magnification
+var zoom = 1.0;
+var zoomMin = 1.0;
+var zoomMax = 10;
+var zoomStep = 1;
+
+
+
+//Fill color and alpha GUI control
+var creditsFillC = '#fdfffd';
+var creditsFillA = 1.0;
+var creditsFillAMin = 0;
+var creditsFillAMax = 1.0;
+var creditsFillAStep = .001;
+// //Minimum speed at which particles can move
+// var minSpeed = .1;
+// var minSpeedMin = 0;
+// var minSpeedMax = 20;
+// var minSpeedStep = .01;
+// //Maximum speed at which particles can move
+// var maxSpeed = minSpeedMax;
+// var maxSpeedMin = minSpeedMax;
+// var maxSpeedMax = minSpeedMax+20;
+// var maxSpeedStep = .01;
+//Minimum speed at which particles can move
+var particleSpeed = 2.0;
+var particleSpeedMin = 0;
+var particleSpeedMax = 20;
+var particleSpeedStep = .01;
+//What angle should the noise values be multiplied by?
+var angleVal = 3.14;
+var angleValMin = .00;
+var angleValMax = 10;
+var angleValStep = .001;
+//How much does the flow field attract or repel the particles?
+var fieldMagnitude = 0.5;
+var fieldMagnitudeMin = -5;
+var fieldMagnitudeMax = 5;
+var fieldMagnitudeStep = .0001;
+//How much does the target(mouse) attract or repel the particles?
+var targetMagnitude = 0.5;
+var targetMagnitudeMin = -5;
+var targetMagnitudeMax = 5;
+var targetMagnitudeStep = .0001;
+
+//Allow particles to hue-shift over time
+var rainbowTrails = false;
+var rainbowSaturation = 70;
+var rainbowSaturationMin = 0;
+var rainbowSaturationMax = 100;
+var rainbowSaturationStep = .1;
+//Visualize the flow field vectors
+var showFlowField = false;
+//Enable or disable the flow field forces
+var enableFlowField = true;
+//Enable or disable the mouseTarget forces
+var enableMouseTarget = false;
+var enableMic = false;
+//Enable or disable rendering of textual info
+// var enablePageText = false;
+//Enable or disable fullscreen-mode
+// var toggleFullScreen = false;
+//Enable or disable displaying credits overlay
+var showCredits = false;
+
+var numParticles = 1000;
+var numParticlesMin = 0;
+var numParticlesMax = 1000;
+var numParticlesStep = 1;
+
+//How large should the particle sizes be?
+var particleSize = .5;
+var particleSizetMin = 0.01;
+var particleSizeMax = 30;
+var particleSizeStep = 0.01;
+
+
+var flowFieldZoom = .7;
+var flowFieldZoomMin = .1;
+var flowFieldZoomMax = 2;
+var flowFieldZoomStep = .1;
+
+//END GUI VARS
+
+
+
+//gui
+var gui1, gui2;
+var visible = true;
+
 
 //A function for detecting key-press activity by the User
 function detectKeyPress() {
