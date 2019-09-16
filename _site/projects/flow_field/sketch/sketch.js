@@ -74,8 +74,8 @@ function setup() {
 
 	// scl = floor((width + height) / numParticles);
 	scl = 60;
-	cols = floor(windowWidth/scl);
-	rows = floor(windowHeight/scl);
+	cols = floor(width/scl);
+	rows = floor(height/scl);
 
 	// mic = new p5.AudioIn();
 	// mic.start();
@@ -86,7 +86,6 @@ function setup() {
 	// console.log(flowField.length)
 	for(var i = 0; i < numParticles; i++) {
 		particles[i] = new Particle();
-		particles[i].pos = createVector(random(width), random(height));
 	}
 
 }

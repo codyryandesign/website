@@ -141,9 +141,9 @@ var particleSpeedMin = 0;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = 3.14;
-var angleValMin = .00;
-var angleValMax = 10;
+var angleVal = .314;
+var angleValMin = 0.0;
+var angleValMax = 1.0;
 var angleValStep = .001;
 //How much does the flow field attract or repel the particles?
 var fieldMagnitude = 0.5;

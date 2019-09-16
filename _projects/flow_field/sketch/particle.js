@@ -1,5 +1,5 @@
 function Particle() {
-	this.pos = createVector(0,0);
+	this.pos = createVector(random(width), random(height));
 	this.prevPos = this.pos.copy();
 	this.vel = createVector(0,0);
 	this.acc = createVector(0,0);
@@ -19,13 +19,6 @@ function Particle() {
 
 	this.update = function() {
 		this.updatePrev();
-		// this.maxSpeed = random(minSpeed, maxSpeed);
-		// if(enableMic) {
-		// 	tempVector = createVector(map(micLevel, 0.0, 1.0, -1, 1), map(micLevel, 0.0, 1.0, -1, 1));
-		// 	tempVector.mult(.1);
-		// 	this.acc.sub(tempVector, this.pos);
-		// }
-		// this.maxSpeed = maxSpeed;
 		this.vel.add(this.acc);
 		this.vel.limit(this.maxSpeed);
 		this.pos.add(this.vel);
