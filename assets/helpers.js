@@ -137,7 +137,7 @@ var creditsFillAStep = .001;
 // var maxSpeedStep = .01;
 //Minimum speed at which particles can move
 var particleSpeed = 2.0;
-var particleSpeedMin = 0;
+var particleSpeedMin = .01;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
