@@ -92,7 +92,7 @@ var windAmountMax = .1;
 var windAmountStep = .001;
 /*PARTICLE-AFFECTING VARS*/
 //Add or remove particles from system
-var numParticles = 2;
+var numParticles = 1;
 var numParticlesMin = 1;
 var numParticlesMax = 10;
 var numParticlesStep = 1;
