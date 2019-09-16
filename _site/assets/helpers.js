@@ -204,50 +204,50 @@ var visible = true;
 
 //A function for detecting key-press activity by the User
 function detectKeyPress() {
-	//If the 'p' key is pressed
-  if(key == 'p') {
-		//Save an image of the canvas
-    save('sketch.png');
-  }
-	//If the 's' key is pressed
-  if(key == 's') {
-		//And the visible bool is true
-    if(visible) {
-			//Show the GUI panels
-      if(typeof gui1 != 'undefined')
-        gui1.show();
-      if(typeof gui2 != 'undefined')
-			  gui2.show();
+  if(keyIsPressed === true) {
+  	//If the 'p' key is pressed
+    if(key == 'p') {
+  		//Save an image of the canvas
+      save('sketch.png');
     }
-    else {
-			//Otherwise, hide the GUI panels
-      if(typeof gui1 != 'undefined')
-        gui1.hide();
-      if(typeof gui2 != 'undefined')
-        gui2.hide();
+  	//If the 's' key is pressed
+    if(key == 's') {
+  		//And the visible bool is true
+      if(visible) {
+  			//Show the GUI panels
+        if(typeof gui1 != 'undefined')
+          gui1.show();
+        if(typeof gui2 != 'undefined')
+  			  gui2.show();
+      }
+      else {
+  			//Otherwise, hide the GUI panels
+        if(typeof gui1 != 'undefined')
+          gui1.hide();
+        if(typeof gui2 != 'undefined')
+          gui2.hide();
+      }
+  		//Toggle visible bool
+      visible = !visible;
+      //nullify key value to prevent multiple downloads on subsequent loops
     }
-		//Toggle visible bool
-    visible = !visible;
-    //nullify key value to prevent multiple downloads on subsequent loops
-    key = null;
-  }
-  if(key == '-'){
-    if(backgroundC != null) {
-      backgroundC = hexToComplimentary(backgroundC);
+    if(key == '-'){
+      if(backgroundC != null) {
+        backgroundC = hexToComplimentary(backgroundC);
+      }
+      if(strokeC != null) {
+        strokeC = hexToComplimentary(strokeC);
+      }
+      if(fillC != null) {
+        fillC = hexToComplimentary(fillC);
+      }
+      if(creditsFillC != null) {
+        creditsFillC = hexToComplimentary(creditsFillC);
+      }
     }
-    if(strokeC != null) {
+    if(key == '=') {
       strokeC = hexToComplimentary(strokeC);
     }
-    if(fillC != null) {
-      fillC = hexToComplimentary(fillC);
-    }
-    if(creditsFillC != null) {
-      creditsFillC = hexToComplimentary(creditsFillC);
-    }
-    key = null;
-  }
-  if(key == '=') {
-    strokeC = hexToComplimentary(strokeC);
     key = null;
   }
 }

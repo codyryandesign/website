@@ -67,7 +67,7 @@ var visible = true;
 
 let pngGlassJar;
 function preload() {
-  pngGlassJar = loadImage('ray_casting_captures/glass-jar.png');
+  pngGlassJar = loadImage('firefly-jar_captures/glass-jar.png');
 }
 
 

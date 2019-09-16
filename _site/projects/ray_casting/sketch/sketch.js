@@ -63,7 +63,7 @@ var mouseFollowEnabled = true;
 var enablePageText = true;
 //END GUI VARS
 var gui1;
-var visible = true;
+// var visible = true;
 
 
 function setup() {
