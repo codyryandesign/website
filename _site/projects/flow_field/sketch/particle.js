@@ -18,6 +18,7 @@ function Particle() {
 	}
 
 	this.update = function() {
+		this.hue = hue(strokeC) + random(-30,30);
 		this.updatePrev();
 		this.vel.add(this.acc);
 		this.vel.limit(this.maxSpeed);

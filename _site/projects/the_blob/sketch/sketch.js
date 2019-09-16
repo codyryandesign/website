@@ -1,6 +1,6 @@
 let pointArray = []
 let Palette = ['#73628A', '#313D5A']
-let zoff = 0;
+// let zoff = 0;
 let phase = 0;
 
 //GUI VARS
@@ -42,6 +42,7 @@ var visible = true;
 
 function setup() {
 	windowSetup();
+	colorSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
 	//noCursor()
@@ -61,23 +62,17 @@ function setup() {
 }
 
 function draw() {
-	// HSL color is also supported and can be specified
-// by value
-
-
+	translate(width/2, height/2);
+	scale(zoomVal);
+	strokeWeight(2);
 
 	let bColor = color(backgroundC);
 	background(hue(bColor), saturation(bColor), brightness(bColor), backgroundA);
-
-
-	translate(width/2, height/2)
-	scale(zoomVal);
 	// stroke(random(160, 200), random(0, 10), 60)
 	let sColor = color(strokeC);
 	stroke(hue(sColor), saturation(sColor), brightness(sColor), strokeA);
-	strokeWeight(2)
 	let fColor = color(fillC);
-	//fill(hue(fColor), saturation(fColor), brightness(fColor), fillA);
+	fill(hue(fColor), saturation(fColor), brightness(fColor), fillA);
 
 	beginShape();
 	//adjusting angle 'a' changes oscillation frequency
@@ -85,8 +80,8 @@ function draw() {
 		// let r = 100 //radius
 		// let r = random(50,100) //radius
 		//Increment angle while keeping radius constant
-		let xoff = map(cos(a), -1, 1, 0, noiseLevel)
-		let yoff = map(sin(a), -1, 1, 0, noiseLevel)
+		let xoff = map(cos(a*mouseY), -1, 1, 0, noiseLevel)
+		let yoff = map(sin(a*mouseY), -1, 1, 0, noiseLevel)
 		let r = map(noise(xoff, yoff, zoff), 0, 1, width/2, noiseLevel)
 		let x = r * cos(a)
 		let y = r * sin(a)
@@ -106,8 +101,8 @@ function draw() {
 		// let r = 100 //radius
 		// let r = random(50,100) //radius
 		//Increment angle while keeping radius constant
-		let xoff = map(cos(a), -1/2, 1/2, 0, noiseLevel)
-		let yoff = map(sin(a), -1/2, 1/2, 0, noiseLevel)
+		let xoff = map(cos(a*mouseX), -1/2, 1/2, 0, noiseLevel)
+		let yoff = map(sin(a*mouseX), -1/2, 1/2, 0, noiseLevel)
 		let r = map(noise(xoff, yoff, zoff), 0, 1, width/4, noiseLevel)
 		let x = r * cos(a)
 		let y = r * sin(a)
@@ -127,8 +122,8 @@ function draw() {
 		// let r = 100 //radius
 		// let r = random(50,100) //radius
 		//Increment angle while keeping radius constant
-		let xoff = map(cos(a), -1/4, 1/4, 0, noiseLevel)
-		let yoff = map(sin(a), -1/4, 1/4, 0, noiseLevel)
+		let xoff = map(cos(a*mouseY), -1/4, 1/4, 0, noiseLevel)
+		let yoff = map(sin(a*mouseY), -1/4, 1/4, 0, noiseLevel)
 		let r = map(noise(xoff, yoff, zoff), 0, 1, width/6, noiseLevel)
 		let x = r * cos(a)
 		let y = r * sin(a)

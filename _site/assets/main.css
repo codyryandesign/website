@@ -505,6 +505,10 @@ table {
     color: #099; }
 
 /* quick reset and base styles */
+* {
+  margin: 0;
+  padding: 0; }
+
 .site-header {
   position: relative;
   display: none;
@@ -520,18 +524,32 @@ table {
 .site-footer {
   margin: 0px;
   padding: 0px;
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
 
 div.footer-col-wrapper {
   margin: 0px;
+  padding: 0px;
+  display: none; }
+
+div.wrapper {
+  margin: 0px;
   padding: 0px; }
 
-canvas#defaultCanvas0 {
+.site-wrapper {
+  margin: 0px;
+  padding: 0px; }
+
+.site-post {
+  margin: 0px;
+  padding: 0px; }
+
+canvas {
   margin: 0px;
   padding: 0px; }
 
 body {
-  position: absolute;
+  position: relative;
   margin: 0px;
   padding: 0px;
   font-family: Trebuchet MS;
@@ -541,23 +559,24 @@ body {
   width: 100%;
   height: 100%;
   visibility: visible;
-  opacity: 1;
-  border-collapse: collapse; }
+  opacity: 1; }
+
+.site-post-content {
+  margin: 0px;
+  padding: 0px; }
 
 .wrapper {
   margin: 0px;
   padding: 0px; }
 
 main.page-content {
+  margin: 0;
   padding: 0px; }
 
 p {
   margin: 0px;
-  padding: 0px; }
-
-sketch-holder {
-  width: 1024;
-  height: 576; }
+  padding: 0px;
+  display: none; }
 
 /* relevant styles */
 .img__wrap {
