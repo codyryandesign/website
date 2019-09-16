@@ -18,7 +18,6 @@ function Particle() {
 	}
 
 	this.update = function() {
-		this.hue = hue(strokeC) + random(-30,30);
 		this.updatePrev();
 		this.vel.add(this.acc);
 		this.vel.limit(this.maxSpeed);
@@ -62,7 +61,7 @@ function Particle() {
 			fill(this.rainbowHue, rainbowSaturation, 100, strokeA);
 		}
 		else {
-			stroke(this.hue, saturation(sColor), brightness(sColor), strokeA);
+			stroke(hue(sColor), saturation(sColor), brightness(sColor), strokeA);
 			//Fill will not render for lines, only shapes
 			fill(hue(fColor), saturation(fColor), brightness(fColor), fillA);
 		}
