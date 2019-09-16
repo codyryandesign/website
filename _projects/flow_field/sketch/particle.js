@@ -6,10 +6,11 @@ function Particle() {
 	this.force = createVector(0,0);
 	this.maxSpeed = particleSpeed;
 	//this.maxSpeed = map(micLevel, 0.0, 1.0, .1, 5);
-	this.hueSpeed;
-	this.h = 0;
-	this.size;
-	this.color = hue(color(strokeC));
+	this.hue = hue(strokeC) + random(-30,30);
+	this.rainbowHue = 0;
+	this.hueSpeed = 0;
+	this.size = random(.1, particleSize);
+	// this.color = color(strokeC);
 	//this.symbol = notesArray[floor(random(notesArray.length))];
 
 	this.updatePrev = function() {
@@ -54,31 +55,23 @@ function Particle() {
 	this.show = function() {
 		let sColor = color(strokeC);
 		let fColor = color(fillC);
+		strokeWeight(this.size);
 		// noFill();
 
-		if(rainbowTrails && !enableMic) {
+		if(rainbowTrails) {
 			// this.hueSpeed = map(this.vel.mag(), 0, 3, .1, 2);
 			this.hueSpeed = map(this.vel.mag(), 0, particleSpeed, .01, 1);
-			this.h = (this.h + this.hueSpeed) % 360;
+			this.rainbowHue = (this.rainbowHue + this.hueSpeed) % 360;
 			//this.h = map(this.vel.mag(), minSpeed, maxSpeed, -360, 360)
-			stroke(this.h, rainbowSaturation, 100, strokeA);
+			stroke(this.rainbowHue, rainbowSaturation, 100, strokeA);
 			//Fill will not render for lines, only shapes
-			fill(this.h, rainbowSaturation, 100, strokeA);
-		} else if (true){
-			// stroke(hue(sColor), saturation(sColor), brightness(sColor), this.strokeA);
-			// noStroke();
-			strokeWeight(.1/this.size);
-			stroke(this.color, saturation(sColor), brightness(sColor), strokeA);
+			fill(this.rainbowHue, rainbowSaturation, 100, strokeA);
+		}
+		else {
+			stroke(this.hue, saturation(sColor), brightness(sColor), strokeA);
 			//Fill will not render for lines, only shapes
 			fill(hue(fColor), saturation(fColor), brightness(fColor), fillA);
-		} //else {
-		// 	this.color = (this.color + map(micLevel, 0, .001, -.01, .01))%360;
-		// 	// stroke(hue(sColor), saturation(sColor), brightness(sColor), this.strokeA);
-		// 	stroke(this.color, saturation(sColor), brightness(sColor), strokeA);
-		// 	//Fill will not render for lines, only shapes
-		// 	fill(hue(fColor), saturation(fColor), brightness(fColor), strokeA);
-		// }
-		strokeWeight(this.size);
+		}
 		line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
 		// ellipse(this.pos.x, this.pos.y, this.size*2, this.size);
 

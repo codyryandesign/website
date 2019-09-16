@@ -27,11 +27,11 @@ function preload() {
 
 function setup() {
 	angleMode(DEGREES);
-	colorMode(HSB);
 	ellipseMode(CORNER);
 	// blendMode(DIFFERENCE);
 	//blendMode(SOFT_LIGHT);
 	windowSetup();
+	colorSetup();
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.parent('sketch-holder');
 

@@ -39,10 +39,10 @@ var gColorPicker;
 function colorSetup() {
   //colorMode([mode], [max1], [max2], [max3], [maxAlpha])
   colorMode(HSB, 360, 100, 100, 1);
-  bColorPicker = createColorPicker(color('black'));
-  sColorPicker = createColorPicker(color('white'));
-  fColorPicker = createColorPicker(color('red'));
-  gColorPicker = createColorPicker(color('black'));
+  // bColorPicker = createColorPicker(color('black'));
+  // sColorPicker = createColorPicker(color('white'));
+  // fColorPicker = createColorPicker(color('red'));
+  // gColorPicker = createColorPicker(color('black'));
 }
 //GUI VARS
 
