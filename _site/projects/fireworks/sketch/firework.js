@@ -7,8 +7,9 @@ function Firework() {
   //determine the rocket's color by the mouse's
   //y coordinate
   // this.color = mouseIsPressed ? map(mouseY, 0, height, 0, 360) : random(360);
-  this.sColor = mouseIsPressed ? random(360) : color(strokeC);
-  this.fColor = mouseIsPressed ? random(360) : color(fillC);
+  this.rainbowColor = random(360);
+  this.sColor = color(strokeC);
+  this.fColor = color(fillC);
   //Keep track of whether the rocket has
   //exploded or not
   this.exploded = false;
@@ -100,8 +101,8 @@ function Firework() {
   this.show = function() {
     if(!this.exploded) {
       //As long as it hasn't yet exploded
-      stroke(this.sColor, 100, 100, random(.5, 1));
-      fill(this.fColor, 100, 100, random(.5, 1));
+      stroke(hue(this.sColor), 100, 100, random(.5, 1));
+      fill(hue(this.fColor), 100, 100, random(.5, 1));
       let mappedVelocity = map(this.firework.vel.y, 0, 10, 0, 1);
       strokeWeight(mappedVelocity);
       //Render the rocket as a point at it's
@@ -115,8 +116,15 @@ function Firework() {
         //Add an additional fall amount to particles after they explode
         this.particles[i].vel.mult(particleVelocity);
         //Color the particles based off the initial firework color, with a bit of randomness
-        stroke(hue(this.sColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
-        fill(hue(this.fColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
+        if(!mouseIsPressed) {
+          stroke(hue(this.sColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
+          fill(hue(this.fColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
+        }
+        else {
+
+          stroke(this.rainbowColor + random(-10,10), 100, 100, this.particles[i].lifespan);
+          // fill(hue(this.fColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
+        }
         strokeWeight(this.particles[i].size*this.particles[i].lifespan);
         //Render the child-particle as a point
         //point(this.particles[i].pos.x, this.particles[i].pos.y);
