@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Artwork</title>
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" href="/website/assets/favicon.png" />
+  <link rel="stylesheet" href="/website/assets/main.css">
+  <link rel="canonical" href="http://codyryandesign.github.io/website/projects/artwork/p5project.html">
+  <link rel="alternate" type="application/rss+xml" title="" href="/website/feed.xml">
+  <!-- dependencies -->
+  
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" />
+    
+
+    
+
+
+  <!-- dev-dependencies -->
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    
+
+
+  
+  <!-- custom page dependencies -->
+  
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/website/assets/quicksettings.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/website/assets/p5.gui.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/website/assets/screenconfig.js"></script>
+    
+
+    
+
+    
+
+    
+
+
+  
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <script type="text/javascript" src="/website/assets/helpers.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  
+  <!-- google analytics -->
+  <!--  -->
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/website/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/website/">Sketch Gallery</a><a class="page-link" href="/website/resources/">Project Resources</a><a class="page-link" href="/website/site-guide/">Site Guide</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Artwork</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-09-17T14:15:08-05:00" itemprop="datePublished">Sep 17, 2019
+      </time></p>
+  </header> -->
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div id="sketch-holder">
+    <script type="text/javascript" src="sketch/sketch.js"></script>
+</div>
+
+<!-- <button onclick="myFunction()">Toggle Text Visibility</button> -->
+
+<!-- Include markdown="1" to allow markdown conversion within a div element. -->
+<div id="pageText" style="visibility:visible">
+
+  <!-- ###### Try pressing ```s``` on your keyboard to bring up sketch manipulation options.
+
+###### Take a snapshot of the canvas at any time by pressing ```p```.
+
+###### Reload the page at any time to generate a new landscape. Just press ```CMD+R```.
+
+Particle objects cast rays out as they dance around a randomized landscape, creating dynamic play with light and shadow as they move. If a particle object passes through a wall, there is a chance for it to change color.
+
+## GUI Variable Descriptions
+
+- boundaryC:
+##### Set the **color** for the boundaries to be rendered by using a simple color-picker interface.
+
+- backgroundC:
+##### Set the color for the background the to be rendered by using a simple color-picker interface.
+
+- backgroundA:
+##### Adjust the Alpha transparency of the background.
+
+- randomizeRayColors:
+##### If **randomizeRayColors** is enabled, the particles have a chance of picking random HSB values between their minimum values and 100. For example, adjusting **raySat** to 20 with **randomizeRayColors** enabled will allow the particles to randomly pick saturation values between 20 and 100 whenever they pass through a boundary.
+
+- rayHue:
+##### Set the **hue** for the casted rays via the color picker. This setting is overridden when **randomizeRayColors** is enabled.
+
+- raySat:
+##### Set the **saturation** for the casted rays. This setting is overridden when **randomizeRayColors** is disabled and saturation can be adjusted through the color-picker.
+``` js
+random(raySat, 100);
+```
+
+- rayBright:
+##### Set the **brightness** for the casted rays. This setting is overridden when **randomizeRayColors** is disabled and brightness can be adjusted through the color-picker.  
+``` js
+random(rayBright, 100);
+```
+
+- rayAlpha:
+##### Set the **alpha transparency** for the casted rays.
+
+- numParticles:
+##### Increase or decrease the number of active particle-objects in the scene. Increasing this value will decrease FPS.
+
+- numRays:
+##### Change the number of rays each particle sends out. Default is 360.
+
+- rayIncrement:
+##### **THIS FEATURE IS CURRENTLY DISABLED.** Increase or decrease the distance between casted rays.
+
+- mouseFollowEnabled:
+##### If enabled, one of the particles will follow the mouse around the scene when the mouse is pressed.
+
+
+
+This 2D ray cast system is [based on an example by The Coding Train](https://www.youtube.com/watch?v=-6iIc6-Y-kk).
+
+Another excellent tutorial on ray casting [by Red Blob Games is available here](https://www.redblobgames.com/articles/visibility/).
+
+A third tutorial on ray casting [by ncase is available here](https://ncase.me/sight-and-light/).
+
+<!-- ### Here are a few examples of stills created through this generator: -->
+
+</div>
+
+<!-- <button onclick="renderPageText();">Toggle Page Text</button> -->
+<p><button id="fsbutton" onclick="toggleFullScreen();">Toggle Full Screen</button></p>
+
+  </div><a class="u-url" href="/website/projects/artwork/p5project.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/website/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

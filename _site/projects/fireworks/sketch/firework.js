@@ -6,7 +6,9 @@ function Firework() {
   //If the mouse is interacting with the sketch
   //determine the rocket's color by the mouse's
   //y coordinate
-  this.color = mouseIsPressed ? map(mouseY, 0, height, 0, 360) : random(360);
+  // this.color = mouseIsPressed ? map(mouseY, 0, height, 0, 360) : random(360);
+  this.sColor = mouseIsPressed ? random(360) : color(strokeC);
+  this.fColor = mouseIsPressed ? random(360) : color(fillC);
   //Keep track of whether the rocket has
   //exploded or not
   this.exploded = false;
@@ -98,12 +100,14 @@ function Firework() {
   this.show = function() {
     if(!this.exploded) {
       //As long as it hasn't yet exploded
-      stroke(this.color, 100, 100, random(.5, 1));
-      strokeWeight(rocketSize * this.firework.vel.y);
+      stroke(this.sColor, 100, 100, random(.5, 1));
+      fill(this.fColor, 100, 100, random(.5, 1));
+      let mappedVelocity = map(this.firework.vel.y, 0, 10, 0, 1);
+      strokeWeight(mappedVelocity);
       //Render the rocket as a point at it's
       //current position
-      //point(this.firework.pos.x, this.firework.pos.y);
-      line(this.firework.pos.x, this.firework.pos.y, this.prevPos.x, this.prevPos.y)
+      point(this.firework.pos.x, this.firework.pos.y);
+      // line(this.firework.pos.x, this.firework.pos.y, this.prevPos.x, this.prevPos.y)
     }
     else
       //Otherwise, draw the child-particles instead
@@ -114,9 +118,11 @@ function Firework() {
         //this.particles[i].color = random(360);
         // this.particles[i].color = this.fireworks.color
         //this.particles[i].color = this.color
-        this.particles[i].color = this.color + random(30)
+        this.particles[i].sColor = this.sColor + random(-30,30);
+        this.particles[i].fColor = this.fColor + random(-30,30);
 
-        stroke(this.particles[i].color, 100, 100, this.particles[i].lifespan);
+        stroke(this.particles[i].sColor, 100, 100, this.particles[i].lifespan);
+        fill(this.particles[i].fColor, 100, 100, this.particles[i].lifespan);
         strokeWeight(this.particles[i].size*this.particles[i].lifespan);
         //Render the child-particle as a point
         //point(this.particles[i].pos.x, this.particles[i].pos.y);

@@ -7,11 +7,23 @@ var fireworks = [];
 //Declare global GUI vars
 //These vars can be referenced
 //anywhere in the sketch
-var backgroundC = '#000000';
-var backgroundA = 0.06;
-var backgroundAMin = 0;
-var backgroundAMax = 1;
-var backgroundAStep = .01;
+backgroundC = '#000000';
+backgroundA = 0.06;
+backgroundAMin = 0;
+backgroundAMax = 1;
+backgroundAStep = .01;
+//Stroke color and alpha GUI control
+strokeC = '#8d2ce7';
+strokeA = 1.0;
+strokeAMin = 0;
+strokeAMax = 1;
+strokeAStep = .001;
+//Fill color and alpha GUI control
+fillC = '#f31a12';
+fillA = .186;
+fillAMin = 0;
+fillAMax = 1.0;
+fillAStep = .001;
 
 var rocketSpawnChance = .05;
 var rocketSpawnChanceMin = .01;
@@ -19,11 +31,11 @@ var rocketSpawnChanceMax = 1;
 var rocketSpawnChanceStep = .01;
 
 var rocketSize = 1;
-var rocketSizeMin = 0.1;
-var rocketSizeMax = 5;
+var rocketSizeMin = 0;
+var rocketSizeMax = 100;
 var rocketSizeStep = .01;
 
-var particleSize = 200;
+var particleSize = 50;
 var particleSizeMin = 0;
 var particleSizeMax = 20;
 var particleSizeStep = .1;
@@ -33,7 +45,7 @@ var explosionSizeMin = 1;
 var explosionSizeMax = 100;
 var explosionSizeStep = 1;
 
-var particleDecay = .013;
+var particleDecay = .1;
 var particleDecayMin = 0.001;
 var particleDecayMax = 1;
 var particleDecayStep = .001;
@@ -86,6 +98,8 @@ function setup() {
   gui1.addGlobals(
     'backgroundC',
     'backgroundA',
+		'strokeC',
+		'fillC',
     'rocketSpawnChance',
     'rocketSize',
     'particleSize',

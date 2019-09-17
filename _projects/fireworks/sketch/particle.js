@@ -16,7 +16,8 @@ function Particle(x,y, velocity) {
   //Keeps track of the size of the particle object
   this.size;
   //Store this color of the particle
-  this.color;
+  this.sColor;
+  this.fColor;
   //this.img = img;
 
 //A function for handling forces that act on the object

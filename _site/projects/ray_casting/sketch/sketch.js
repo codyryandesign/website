@@ -38,10 +38,16 @@ var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;
 
-var numParticles = 1;
-var numParticlesMin = 1;
-var numParticlesMax = 10;
-var numParticlesStep = 1;
+numParticles = 1;
+numParticlesMin = 1;
+numParticlesMax = 10;
+numParticlesStep = 1;
+
+//Minimum speed at which particles can move
+particleSpeed = .003;
+particleSpeedMin = 0;
+particleSpeedMax = 1.0;
+particleSpeedStep = .001;
 
 var numRays = 360;
 var numRaysMin = 1;
@@ -89,7 +95,7 @@ function setup() {
     'numRays',
     'rayIncrement',
     'mouseFollowEnabled',
-    'enablePageText',
+    'particleSpeed',
 );
   gui1.hide();
 
@@ -131,7 +137,7 @@ function draw() {
   }
 
   for(let i = 0; i < particles.length; i++) {
-    noiseVector = createVector((noise(xoff+(i*1000))*GLOBAL_WIDTH), (noise(yoff+(i*1000))*GLOBAL_HEIGHT))
+    noiseVector = createVector((noise(xoff+(i*1000))*width), (noise(yoff+(i*1000))*height))
     particles[i].applyForce(noiseVector);
     if(mouseIsPressed &&
     mouseX < width &&
@@ -150,8 +156,8 @@ function draw() {
     particles[i].look(boundaries)
     particles[i].handleRays();
     // particles[i].getHeading();
-    xoff += random(0.01);
-    yoff += random(0.01);
+    xoff += random(particleSpeed);
+    yoff += random(particleSpeed);
 
   }
 }
