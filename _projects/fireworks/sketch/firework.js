@@ -123,12 +123,13 @@ function Firework() {
         else {
 
           stroke(this.rainbowColor + random(-10,10), 100, 100, this.particles[i].lifespan);
-          // fill(hue(this.fColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
+          fill(this.rainbowColor + random(-10,10), 100, 100, this.particles[i].lifespan);
         }
         strokeWeight(this.particles[i].size*this.particles[i].lifespan);
-        //Render the child-particle as a point
-        //point(this.particles[i].pos.x, this.particles[i].pos.y);
-        line(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].prevPos.x, this.particles[i].prevPos.y,)
+        //Render the child-particle
+        ellipse(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].size*this.particles[i].lifespan,this.particles[i].size*this.particles[i].lifespan)
+        // point(this.particles[i].pos.x, this.particles[i].pos.y);
+        // line(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].prevPos.x, this.particles[i].prevPos.y,)
         // push();
         // translate(this.particles[i].pos.x, this.particles[i].pos.y)
         // rotate(i/TWO_PI)
