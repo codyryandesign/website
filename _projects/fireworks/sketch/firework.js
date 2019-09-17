@@ -115,14 +115,8 @@ function Firework() {
         //Add an additional fall amount to particles after they explode
         this.particles[i].vel.mult(particleVelocity);
         //Color the particles based off the initial firework color, with a bit of randomness
-        //this.particles[i].color = random(360);
-        // this.particles[i].color = this.fireworks.color
-        //this.particles[i].color = this.color
-        this.particles[i].sColor = this.sColor + random(-30,30);
-        this.particles[i].fColor = this.fColor + random(-30,30);
-
-        stroke(this.particles[i].sColor, 100, 100, this.particles[i].lifespan);
-        fill(this.particles[i].fColor, 100, 100, this.particles[i].lifespan);
+        stroke(hue(this.sColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
+        fill(hue(this.fColor) + random(-10,10), 100, 100, this.particles[i].lifespan);
         strokeWeight(this.particles[i].size*this.particles[i].lifespan);
         //Render the child-particle as a point
         //point(this.particles[i].pos.x, this.particles[i].pos.y);
