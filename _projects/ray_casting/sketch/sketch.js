@@ -21,7 +21,7 @@ var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var rayHue = '#d3f7ff';
+var rayHue = '#20ff38';
 
 var raySat = 100;
 var raySatMin = 0;
@@ -64,7 +64,7 @@ var angleValMin = 0;
 var angleValMax = 360;
 var angleValStep  = 1;
 
-var randomizeRayColors = true;
+var randomizeRayColors = false;
 var mouseFollowEnabled = true;
 var enablePageText = true;
 //END GUI VARS
