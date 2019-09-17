@@ -107,7 +107,11 @@ function draw() {
 			var index = (x + y * cols);
 			//angleMode(DEGREES);
 			var noiseMap = map(noise(xoff, yoff, zoff), 0.0, 1.0, 0, 360)
-			var angle = noiseMap*angleVal;
+			// var angle = noiseMap*angleVal;
+			var angle = angleVal;
+			// if(angle == 0) {
+			// 	angle = 100;
+			// }
 			// var angle = atan2(mouseY-y, mouseX-x);
 			var v = p5.Vector.fromAngle(angle);
 			v.setMag(fieldMagnitude);
