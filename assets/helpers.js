@@ -253,8 +253,8 @@ function detectKeyPress() {
 }
 
 function doubleClicked() {
-  let fs = fullscreen();
-  fullscreen(!fs);
+  // let fs = fullscreen();
+  // fullscreen(!fs);
 }
 
 function renderPageText() {
