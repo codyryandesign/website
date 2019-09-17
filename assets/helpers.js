@@ -7,9 +7,9 @@ function windowSetup() {
   // frameRate(30);
 }
 
-function windowResized() {
-  resizeCanvas(window.innerWidth, window.innerHeight);
-}
+// function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
 
 //Global brightness control
 var globalBrightness = 1.0;
