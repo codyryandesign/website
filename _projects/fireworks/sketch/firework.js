@@ -127,9 +127,9 @@ function Firework() {
         }
         strokeWeight(this.particles[i].size*this.particles[i].lifespan);
         //Render the child-particle
-        ellipse(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].size*this.particles[i].lifespan,this.particles[i].size*this.particles[i].lifespan)
+        // ellipse(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].size*this.particles[i].lifespan,this.particles[i].size*this.particles[i].lifespan)
         // point(this.particles[i].pos.x, this.particles[i].pos.y);
-        // line(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].prevPos.x, this.particles[i].prevPos.y,)
+        line(this.particles[i].pos.x, this.particles[i].pos.y, this.particles[i].prevPos.x, this.particles[i].prevPos.y,)
         // push();
         // translate(this.particles[i].pos.x, this.particles[i].pos.y)
         // rotate(i/TWO_PI)

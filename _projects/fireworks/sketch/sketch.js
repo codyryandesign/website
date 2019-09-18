@@ -7,7 +7,7 @@ var fireworks = [];
 //Declare global GUI vars
 //These vars can be referenced
 //anywhere in the sketch
-backgroundC = '#000000';
+backgroundC = '#1b0450';
 backgroundA = 0.06;
 backgroundAMin = 0;
 backgroundAMax = 1;
@@ -35,9 +35,9 @@ var rocketSizeMin = 0;
 var rocketSizeMax = 100;
 var rocketSizeStep = .01;
 
-var particleSize = 50;
+var particleSize = 200;
 var particleSizeMin = 0;
-var particleSizeMax = 20;
+var particleSizeMax = 200;
 var particleSizeStep = .1;
 
 var explosionSize = 30;

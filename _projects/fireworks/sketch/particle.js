@@ -4,7 +4,7 @@
 function Particle(x,y, velocity) {
 //Initialize the particle object with
 //an x,y position
-  this.pos = createVector(width/2,height/2);
+  this.pos = createVector(x,y);
   //Create a placeholder of msot recent position
   this.prevPos;
   //and optional velocity
