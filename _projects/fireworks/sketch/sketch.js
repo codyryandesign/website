@@ -7,13 +7,13 @@ var fireworks = [];
 //Declare global GUI vars
 //These vars can be referenced
 //anywhere in the sketch
-backgroundC = '#1b0450';
-backgroundA = 0.06;
+backgroundC = '#43486e';
+backgroundA = 0.094;
 backgroundAMin = 0;
 backgroundAMax = 1;
 backgroundAStep = .01;
 //Stroke color and alpha GUI control
-strokeC = '#8d2ce7';
+strokeC = '#306ef1';
 strokeA = 1.0;
 strokeAMin = 0;
 strokeAMax = 1;

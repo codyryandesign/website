@@ -13,15 +13,15 @@ let mouseVector;
 var randomParticle;
 
 //GUI VARS
-var boundaryC = '#505050'
+var boundaryC = '#43486e';
 //Background color and alpha GUI control
 var backgroundC = '#4d206e';
-var backgroundA = .083;
+var backgroundA = 0.094;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var rayHue = '#20ff38';
+var rayHue = '#306ef1';
 
 var raySat = 100;
 var raySatMin = 0;
