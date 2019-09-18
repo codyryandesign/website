@@ -176,7 +176,7 @@ var enableMic = false;
 //Enable or disable displaying credits overlay
 var showCredits = false;
 
-var numParticles = 100;
+var numParticles = 1000;
 var numParticlesMin = 0;
 var numParticlesMax = 1000;
 var numParticlesStep = 1;
