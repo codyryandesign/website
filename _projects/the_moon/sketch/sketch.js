@@ -5,25 +5,25 @@ let phase = 0;
 
 //GUI VARS
 //Background color and alpha GUI control
-var backgroundC = '#cfb716';
+var backgroundC = '#b38bcf';
 var backgroundA = .007;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var strokeC = '#a2315c';
+var strokeC = '#9fa2a1';
 var strokeA = .024;
 var strokeAMin = 0;
 var strokeAMax = 1.0;
 var strokeAStep = .001;
 //Fill color and alpha GUI control
-var fillC = '#f386ec';
+var fillC = '#8ad8f3';
 var fillA = .021;
 var fillAMin = 0;
 var fillAMax = 1.0;
 var fillAStep = .001;
 
-var noiseLevel = 1;
+var noiseLevel = .06;
 var noiseLevelMin = 0;
 var noiseLevelMax = 10;
 var noiseLevelStep = .01;

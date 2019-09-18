@@ -5,7 +5,7 @@ let phase = 0;
 
 //GUI VARS
 //Background color and alpha GUI control
-var backgroundC = '#3d5ab6';
+var backgroundC = '#cfb716';
 var backgroundA = .007;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
