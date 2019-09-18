@@ -38,7 +38,7 @@ var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;
 
-numParticles = 2;
+numParticles = 1;
 numParticlesMin = 1;
 numParticlesMax = 10;
 numParticlesStep = 1;
