@@ -15,13 +15,13 @@ var randomParticle;
 //GUI VARS
 var boundaryC = '#43486e';
 //Background color and alpha GUI control
-var backgroundC = '#4d206e';
+var backgroundC = '#ffffff';
 var backgroundA = 0.094;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var rayHue = '#306ef1';
+var rayHue = '#000000';
 
 var raySat = 100;
 var raySatMin = 0;
@@ -33,7 +33,7 @@ var rayBrightMin = 0;
 var rayBrightMax = 100;
 var rayBrightStep = 1;
 
-var rayAlpha = .027;
+var rayAlpha = .67;
 var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;

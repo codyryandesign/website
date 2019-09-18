@@ -42,7 +42,7 @@ function setup() {
 function draw() {
   detectKeyPress()
   translate(width/2, height/2);
-  speed = map(mouseX, 0, width, 2,10);
+  speed = map(mouseX, 0, width, -50,10);
   background(0, speed+100);
   for(let i = 0; i < stars.length; i += 1) {
     stars[i].display();
