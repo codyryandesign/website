@@ -82,6 +82,7 @@ function setup() {
   // blendMode(LIGHTEST)
   background(0);
   gui1 = createGui('Settings', 0, 0);
+  gui2 = createGui('Settings', width-(width/3), 0);
 	gui1.addGlobals(
     'boundaryC',
 		'backgroundC',
@@ -91,16 +92,23 @@ function setup() {
     'raySat',
     'rayBright',
     'rayAlpha',
-    'numParticles',
-    'numRays',
-    'rayIncrement',
-    'mouseFollowEnabled',
-    'particleSpeed',
 );
+	gui2.addGlobals(
+		'numParticles',
+		'numRays',
+		'rayIncrement',
+		'mouseFollowEnabled',
+		'particleSpeed',
+		'mEasing',
+		'nEasing',
+	)
   gui1.hide();
-
-  xoff = random(1000);
-  yoff = random(1000);
+	gui2.hide();
+	// push();
+	// translate(mouseX, mouseY);
+  xoff = random(mouseX, width);
+  yoff = random(mouseY, height);
+	// pop();
 
   for (let i = 0; i < 7; i++) {
     let x1 = random(width);
@@ -123,7 +131,6 @@ function setup() {
 }
 
 function draw() {
-
   //Custom function for adding and removing particles
   handleParticles();
   //monitor keys for User activity
@@ -137,27 +144,37 @@ function draw() {
   }
 
   for(let i = 0; i < particles.length; i++) {
-    noiseVector = createVector((noise(xoff+(i*1000))*width), (noise(yoff+(i*1000))*height))
-    particles[i].applyForce(noiseVector);
-    if(mouseIsPressed &&
-    mouseX < width &&
+		// push();
+		// translate(mouseX, mouseY);
+		noiseVector = createVector(noise(xoff+(i*width)), noise(yoff+(i*height)));
+    if(mouseIsPressed && mouseX < width &&
     mouseX > 0 &&
     mouseY < height &&
     mouseY > 0 &&
     mouseFollowEnabled) {
       noCursor();
-      mouseVector = createVector(mouseX, mouseY);
-      let mouseForce = mouseVector.sub(particles[randomParticle].force)
-      particles[randomParticle].applyForce(mouseForce);
+      mouseVector = mouseFollow();
+
+      // let mouseForce = mouseVector.sub(particles[randomParticle].force)
+			let noisePlusMouseVector = noiseVector.copy();
+			noisePlusMouseVector.add(mouseVector);
+	    // particles[i].applyForce(noisePlusMouseVector);
+      particles[randomParticle].applyForce(mouseVector);
+
     }
     else {
+	    // particles[i].applyForce(noiseVector);
+			particles[i].pos.set(mouseVector)
       cursor();
     }
+		// pop();
+		// particles[i].update();
     particles[i].look(boundaries)
     particles[i].handleRays();
     // particles[i].getHeading();
     xoff += random(particleSpeed);
     yoff += random(particleSpeed);
+
 
   }
 }

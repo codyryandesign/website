@@ -28,6 +28,46 @@ function adjustGlobalBrightness() {
 	pop();
 }
 
+var mx = 1;
+var my = 1;
+var mEasing = 0.05;
+var mEasingMin = 0.001;
+var mEasingMax = 1.0;
+var mEasingStep = 0.001;
+function mouseFollow() {
+	let targetX = mouseX;
+	let dx = targetX - mx;
+	mx += dx * mEasing;
+
+	let targetY = mouseY;
+	let dy = targetY - my;
+	my += dy * mEasing;
+
+	let mouseVector = createVector(mx,my);
+	return mouseVector;
+
+}
+
+var nx = 1;
+var ny = 1;
+var nEasing = 0.5;
+var nEasingMin = 0.001;
+var nEasingMax = 1.0;
+var nEasingStep = 0.001;
+function noiseFollow(noiseVector) {
+	let targetX = noiseVector.x;
+	let dx = targetX - nx;
+	nx += dx * nEasing;
+
+	let targetY = noiseVector.y;
+	let dy = targetY - ny;
+	ny += dy * nEasing;
+
+	let mouseVector = createVector(nx,ny);
+	return mouseVector;
+
+}
+
 //background color picker
 var bColorPicker;
 //stroke color picker

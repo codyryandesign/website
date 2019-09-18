@@ -1,7 +1,13 @@
 class Particle {
   constructor() {
     this.pos = p5.Vector.random2D();
-    this.posPrev;
+    this.posPrev
+
+    // this.position = p5.Vector.random2D();
+    // this.positionPrev;
+    // this.velocity = createVector(0, 0);
+    // this.acceleration = createVector(0, 0);
+
     this.rays = [];
     this.heading = 0;
     this.color = random(360);
@@ -23,6 +29,21 @@ class Particle {
     }
   }
 
+  // applyForce(force) {
+  //   let f = createVector(force);
+  //   this.acceleration.add(f);
+  // }
+  //
+  // update() {
+  //   this.positionPrev = this.position.copy();
+  //   // Velocity changes according to acceleration
+  //   this.velocity.add(this.acceleration);
+  //   // position changes by velocity
+  //   this.position.add(this.velocity);
+  //   // We must clear acceleration each frame
+  //   this.acceleration.mult(0);
+  // }
+
   applyForce(force) {
     this.posPrev = this.pos.copy();
     this.pos.set(force);
@@ -34,13 +55,13 @@ class Particle {
   //   // console.log(heading);
   // }
 
-  seek(target) {
-  this.force = target.sub(this.pos);
-  //Reduce the magnitude of the target force
-  this.force.setMag(.6)
-  this.force.limit(this.maxSpeed);
-  this.applyForce(this.force);
-  }
+  // seek(target) {
+  // this.force = target.sub(this.pos);
+  // //Reduce the magnitude of the target force
+  // this.force.setMag(.6)
+  // this.force.limit(this.maxSpeed);
+  // this.applyForce(this.force);
+  // }
 
   look(boundaries) {
     let closestMax = Infinity;
@@ -62,7 +83,7 @@ class Particle {
         }
       }
       if(closest) {
-        push();
+        // push();
         let rColor = color(rayHue);
           // let lColor = lerpColor(color(this.color), color(0,0,0, .01), .5);
         if(!randomizeRayColors) {
@@ -75,7 +96,7 @@ class Particle {
         // rotate(this.heading);
         line(this.pos.x, this.pos.y, closest.x, closest.y)
         // ellipse(this.pos.x, this.pos.y, this.pos.x-this.closest.x, this.pos.y-this.closest.y)
-        pop();
+        // pop();
       }
       if (record < .5) {
         this.color = random(360);
