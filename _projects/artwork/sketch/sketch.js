@@ -34,6 +34,8 @@ function setup() {
     let randY = random(50, height-50);
     translate(randX, randY)
     console.log(randX, randY)
+    let randRotate = random(-.33, .33)
+    console.log(randRotate)
     rotate(random(-.33, .33))
     scale(.1);
     image(img[i], 0, 0, img[i].width, img[i].height);
