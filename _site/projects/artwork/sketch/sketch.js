@@ -83,60 +83,60 @@ function setup() {
       scale(.1);
       image(img[8], 0, 0, img[8].width, img[8].height);
     pop();
-    push();
-      translate(328, 333)
-      rotate(-.23)
-      scale(.1);
-      image(img[9], 0, 0, img[9].width, img[9].height);
-    pop();
-    push();
-      translate(950, 218)
-      rotate(-.21)
-      scale(.1);
-      image(img[10], 0, 0, img[10].width, img[10].height);
-    pop();
-    push();
-      translate(1002, 103)
-      rotate(.16)
-      scale(.1);
-      image(img[11], 0, 0, img[11].width, img[11].height);
-    pop();
-    push();
-      translate(625, 190)
-      rotate(-.27)
-      scale(.1);
-      image(img[12], 0, 0, img[12].width, img[12].height);
-    pop();
-    push();
-      translate(1777, 610)
-      rotate(-.25)
-      scale(.1);
-      image(img[13], 0, 0, img[13].width, img[13].height);
-    pop();
-    push();
-      translate(1457, 412)
-      rotate(.001)
-      scale(.1);
-      image(img[14], 0, 0, img[14].width, img[14].height);
-    pop();
-    push();
-      translate(1167, 532)
-      rotate(.2)
-      scale(.1);
-      image(img[15], 0, 0, img[15].width, img[15].height);
-    pop();
-    push();
-      translate(1868, 282)
-      rotate(.13)
-      scale(.1);
-      image(img[16], 0, 0, img[16].width, img[16].height);
-    pop();
-    push();
-      translate(176, 229)
-      rotate(-.2)
-      scale(.1);
-      image(img[17], 0, 0, img[17].width, img[17].height);
-    pop();
+    // push();
+    //   translate(328, 333)
+    //   rotate(-.23)
+    //   scale(.1);
+    //   image(img[9], 0, 0, img[9].width, img[9].height);
+    // pop();
+    // push();
+    //   translate(950, 218)
+    //   rotate(-.21)
+    //   scale(.1);
+    //   image(img[10], 0, 0, img[10].width, img[10].height);
+    // pop();
+    // push();
+    //   translate(1002, 103)
+    //   rotate(.16)
+    //   scale(.1);
+    //   image(img[11], 0, 0, img[11].width, img[11].height);
+    // pop();
+    // push();
+    //   translate(625, 190)
+    //   rotate(-.27)
+    //   scale(.1);
+    //   image(img[12], 0, 0, img[12].width, img[12].height);
+    // pop();
+    // push();
+    //   translate(1777, 610)
+    //   rotate(-.25)
+    //   scale(.1);
+    //   image(img[13], 0, 0, img[13].width, img[13].height);
+    // pop();
+    // push();
+    //   translate(1457, 412)
+    //   rotate(.001)
+    //   scale(.1);
+    //   image(img[14], 0, 0, img[14].width, img[14].height);
+    // pop();
+    // push();
+    //   translate(1167, 532)
+    //   rotate(.2)
+    //   scale(.1);
+    //   image(img[15], 0, 0, img[15].width, img[15].height);
+    // pop();
+    // push();
+    //   translate(1868, 282)
+    //   rotate(.13)
+    //   scale(.1);
+    //   image(img[16], 0, 0, img[16].width, img[16].height);
+    // pop();
+    // push();
+    //   translate(176, 229)
+    //   rotate(-.2)
+    //   scale(.1);
+    //   image(img[17], 0, 0, img[17].width, img[17].height);
+    // pop();
     // push();
     //   translate(1736, 440)
     //   rotate(-.31)
