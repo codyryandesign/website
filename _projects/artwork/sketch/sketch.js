@@ -35,36 +35,36 @@ function setup() {
       scale(.1);
       image(img[1], 0, 0, img[1].width, img[1].height);
     pop();
-    push();
-      translate(589, 363)
-      rotate(.11)
-      scale(.1);
-      image(img[2], 0, 0, img[2].width, img[2].height);
-    pop();
-    push();
-      translate(398, 661)
-      rotate(.16)
-      scale(-.1);
-      image(img[3], 0, 0, img[3].width, img[3].height);
-    pop();
-    push();
-      translate(619, 711)
-      rotate(.02)
-      scale(.1);
-      image(img[4], 0, 0, img[4].width, img[4].height);
-    pop();
-    push();
-      translate(224, 369)
-      rotate(.08)
-      scale(-.1);
-      image(img[5], 0, 0, img[5].width, img[5].height);
-    pop();
-    push();
-      translate(1166, 220)
-      rotate(-.02)
-      scale(.1);
-      image(img[6], 0, 0, img[6].width, img[6].height);
-    pop();
+    // push();
+    //   translate(589, 363)
+    //   rotate(.11)
+    //   scale(.1);
+    //   image(img[2], 0, 0, img[2].width, img[2].height);
+    // pop();
+    // push();
+    //   translate(398, 661)
+    //   rotate(.16)
+    //   scale(-.1);
+    //   image(img[3], 0, 0, img[3].width, img[3].height);
+    // pop();
+    // push();
+    //   translate(619, 711)
+    //   rotate(.02)
+    //   scale(.1);
+    //   image(img[4], 0, 0, img[4].width, img[4].height);
+    // pop();
+    // push();
+    //   translate(224, 369)
+    //   rotate(.08)
+    //   scale(-.1);
+    //   image(img[5], 0, 0, img[5].width, img[5].height);
+    // pop();
+    // push();
+    //   translate(1166, 220)
+    //   rotate(-.02)
+    //   scale(.1);
+    //   image(img[6], 0, 0, img[6].width, img[6].height);
+    // pop();
     // push();
     //   translate(601, 653)
     //   rotate(-.22)
