@@ -65,7 +65,7 @@ var angleValMax = 360;
 var angleValStep  = 1;
 
 var randomizeRayColors = false;
-var mouseFollowEnabled = false;
+var mouseFollowEnabled = true;
 var enablePageText = true;
 //END GUI VARS
 var gui1;
