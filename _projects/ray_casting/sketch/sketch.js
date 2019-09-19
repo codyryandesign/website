@@ -13,15 +13,15 @@ let mouseVector;
 var randomParticle;
 
 //GUI VARS
-var boundaryC = '#43486e';
+var boundaryC = '#000000';
 //Background color and alpha GUI control
-var backgroundC = '#ffffff';
-var backgroundA = 0.094;
+var backgroundC = '#000000';
+var backgroundA = 0.036;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
 //Stroke color and alpha GUI control
-var rayHue = '#000000';
+var rayHue = '#603fff';
 
 var raySat = 100;
 var raySatMin = 0;
@@ -33,7 +33,7 @@ var rayBrightMin = 0;
 var rayBrightMax = 100;
 var rayBrightStep = 1;
 
-var rayAlpha = .67;
+var rayAlpha = .067;
 var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;
@@ -65,7 +65,7 @@ var angleValMax = 360;
 var angleValStep  = 1;
 
 var randomizeRayColors = false;
-var mouseFollowEnabled = true;
+var mouseFollowEnabled = false;
 var enablePageText = true;
 //END GUI VARS
 var gui1;
@@ -78,7 +78,7 @@ function setup() {
   canvas.parent('sketch-holder');
   //default HSB vals: 360, 100, 100, 1
   colorMode(HSB);
-  blendMode(HARD_LIGHT)
+  // blendMode(HARD_LIGHT)
   // blendMode(LIGHTEST)
   background(0);
   gui1 = createGui('Settings', 0, 0);
@@ -104,11 +104,11 @@ function setup() {
 	)
   gui1.hide();
 	gui2.hide();
-	// push();
-	// translate(mouseX, mouseY);
-  xoff = random(mouseX, width);
-  yoff = random(mouseY, height);
-	// pop();
+	push();
+	translate(mouseX, mouseY);
+  xoff = width;
+  yoff = height;
+	pop();
 
   for (let i = 0; i < 7; i++) {
     let x1 = random(width);
@@ -146,7 +146,8 @@ function draw() {
   for(let i = 0; i < particles.length; i++) {
 		// push();
 		// translate(mouseX, mouseY);
-		noiseVector = createVector(noise(xoff+(i*width)), noise(yoff+(i*height)));
+		noiseVector = createVector((noise(xoff+(i*1000))*(width)), (noise(yoff+(i*1000))*(height)));
+		// noiseVector = createVector(noise(xoff, yoff));
     if(mouseIsPressed && mouseX < width &&
     mouseX > 0 &&
     mouseY < height &&
@@ -154,17 +155,20 @@ function draw() {
     mouseFollowEnabled) {
       noCursor();
       mouseVector = mouseFollow();
+			// mouseVector.normalize();
+			// mouseVector.setMag(100);
 
       // let mouseForce = mouseVector.sub(particles[randomParticle].force)
 			let noisePlusMouseVector = noiseVector.copy();
-			noisePlusMouseVector.add(mouseVector);
-	    // particles[i].applyForce(noisePlusMouseVector);
-      particles[randomParticle].applyForce(mouseVector);
+			// noisePlusMouseVector.setMag(100);
+			// noisePlusMouseVector.add(mouseVector);
+	    particles[i].applyForce(mouseVector);
+      // particles[randomParticle].applyForce(mouseVector);
 
     }
     else {
-	    // particles[i].applyForce(noiseVector);
-			particles[i].pos.set(mouseVector)
+	    particles[i].applyForce(noiseVector);
+			// particles[i].pos.set(mouseVector)
       cursor();
     }
 		// pop();
@@ -172,8 +176,8 @@ function draw() {
     particles[i].look(boundaries)
     particles[i].handleRays();
     // particles[i].getHeading();
-    xoff += random(particleSpeed);
-    yoff += random(particleSpeed);
+    xoff += random(.01);
+    yoff += random(.01);
 
 
   }
