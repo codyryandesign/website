@@ -30,8 +30,10 @@ function setup() {
   //then randomly place loaded images into the scene
   for(let i = 1; i < 22; i++) {
     push();
-    translate(random(50, width-50), random(50, height))
-    console.log(img[i])
+    let randX = random(50, width-50);
+    let randY = random(50, height-50);
+    translate(randX, randY)
+    console.log(randX, randY)
     rotate(random(-.33, .33))
     scale(.1);
     image(img[i], 0, 0, img[i].width, img[i].height);
