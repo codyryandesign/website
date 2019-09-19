@@ -87,8 +87,8 @@ function colorSetup() {
 //GUI VARS
 
 //Background color and alpha GUI control
-var backgroundC = '#ffffff';
-var backgroundA = .005;
+var backgroundC = '#011d35';
+var backgroundA = .406;
 var backgroundAMin = 0;
 var backgroundAMax = 1.0;
 var backgroundAStep = .001;
@@ -181,7 +181,7 @@ var particleSpeedMin = .01;
 var particleSpeedMax = 20;
 var particleSpeedStep = .01;
 //What angle should the noise values be multiplied by?
-var angleVal = 1.56;
+var angleVal = 0;
 var angleValMin = 0.0;
 var angleValMax = 3.0;
 var angleValStep = .001;
@@ -197,7 +197,7 @@ var targetMagnitudeMax = 5;
 var targetMagnitudeStep = .0001;
 
 //Allow particles to hue-shift over time
-var rainbowTrails = false;
+var rainbowTrails = true;
 var rainbowSaturation = 70;
 var rainbowSaturationMin = 0;
 var rainbowSaturationMax = 100;
@@ -222,7 +222,7 @@ var numParticlesMax = 1000;
 var numParticlesStep = 1;
 
 //How large should the particle sizes be?
-var particleSize = .5;
+var particleSize = 1.5;
 var particleSizetMin = 0.01;
 var particleSizeMax = 30;
 var particleSizeStep = 0.01;
