@@ -137,24 +137,24 @@ function setup() {
       scale(.1);
       image(img[17], 0, 0, img[17].width, img[17].height);
     pop();
-    push();
-      translate(1736, 440)
-      rotate(-.31)
-      scale(.1);
-      image(img[18], 0, 0, img[18].width, img[18].height);
-    pop();
-    push();
-      translate(459, 510)
-      rotate(-.24)
-      scale(.1);
-      image(img[19], 0, 0, img[19].width, img[19].height);
-    pop();
-    push();
-      translate(1155, 435)
-      rotate(-.17)
-      scale(.1);
-      image(img[19], 0, 0, img[19].width, img[19].height);
-    pop();
+    // push();
+    //   translate(1736, 440)
+    //   rotate(-.31)
+    //   scale(.1);
+    //   image(img[18], 0, 0, img[18].width, img[18].height);
+    // pop();
+    // push();
+    //   translate(459, 510)
+    //   rotate(-.24)
+    //   scale(.1);
+    //   image(img[19], 0, 0, img[19].width, img[19].height);
+    // pop();
+    // push();
+    //   translate(1155, 435)
+    //   rotate(-.17)
+    //   scale(.1);
+    //   image(img[19], 0, 0, img[19].width, img[19].height);
+    // pop();
   // }
 
 }
