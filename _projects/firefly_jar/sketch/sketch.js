@@ -128,7 +128,7 @@ function draw() {
   let bColor = color(backgroundC);
   background(hue(bColor), saturation(bColor), brightness(bColor), backgroundA);
 
-  background(pngGlassJar);
+  // background(pngGlassJar);
   //Custom function for adding and removing particles
   handleParticles();
   //monitor keys for User activity

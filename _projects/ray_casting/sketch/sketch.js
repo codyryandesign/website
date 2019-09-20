@@ -38,7 +38,7 @@ var rayAlphaMin = 0;
 var rayAlphaMax = 1.0;
 var rayAlphaStep = .001;
 
-numParticles = 1;
+numParticles = 2;
 numParticlesMin = 1;
 numParticlesMax = 10;
 numParticlesStep = 1;
@@ -64,7 +64,7 @@ var angleValMin = 0;
 var angleValMax = 360;
 var angleValStep  = 1;
 
-var randomizeRayColors = false;
+var randomizeRayColors = true;
 var mouseFollowEnabled = true;
 var enablePageText = true;
 //END GUI VARS
@@ -146,8 +146,7 @@ function draw() {
   for(let i = 0; i < particles.length; i++) {
 		// push();
 		// translate(mouseX, mouseY);
-		noiseVector = createVector((noise(xoff+(i*1000))*(width)), (noise(yoff+(i*1000))*(height)));
-		// noiseVector = createVector(noise(xoff, yoff));
+		noiseVector = createVector((noise(xoff+i)*(window.innerWidth)), (noise(yoff+i)*(window.innerHeight)))
     if(mouseIsPressed && mouseX < width &&
     mouseX > 0 &&
     mouseY < height &&
